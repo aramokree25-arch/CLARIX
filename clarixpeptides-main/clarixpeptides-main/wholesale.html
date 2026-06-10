@@ -1,0 +1,1116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="brand_assets/clarix_logomark.png" type="image/png">
+<link rel="apple-touch-icon" href="brand_assets/clarix_logomark.png">
+<title>Wholesale Research Peptides UK | Bulk Orders | Clarix Peptides</title>
+<meta name="description" content="Wholesale and bulk peptide orders for UK research labs and institutions. Competitive pricing, consistent quality, dedicated account management.">
+<meta name="keywords" content="wholesale peptides UK, bulk peptide orders, research peptide supplier UK, peptide distributor UK">
+<meta name="robots" content="index, follow">
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
+
+<!--
+  ═══════════════════════════════════════════════════════════
+  EMAIL SETUP — Required to activate form submissions
+  ═══════════════════════════════════════════════════════════
+  This form uses Web3Forms (free, no backend needed).
+
+  To activate:
+  1. Go to → https://web3forms.com/
+  2. Enter:   info@clarixpeptides.com
+  3. Click    "Create Access Key" and check your inbox
+  4. Copy the key and paste it below where it says
+     YOUR_WEB3FORMS_ACCESS_KEY
+
+  That's it — the form will then email every submission
+  directly to info@clarixpeptides.com.
+  ═══════════════════════════════════════════════════════════
+-->
+
+<style>
+:root{
+  --navy:#0F2240;--navy-mid:#1A3560;--navy-deep:#08172E;
+  --teal:#2BB5A5;--teal-dark:#229E8F;--teal-light:#3DCFBF;
+  --white:#FFFFFF;--off-white:#F7FAFC;--gray-50:#F0F4FA;
+  --gray-100:#E1E8F5;--muted:#6B7A99;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'DM Sans',sans-serif;background:#fff;color:var(--navy);overflow-x:hidden}
+h1,h2,h3,h4,h5,h6{font-family:'Outfit',sans-serif}
+
+/* ── DISCLAIMER ── */
+#disc-bar{background:var(--navy);color:rgba(255,255,255,.8);font-size:.7rem;letter-spacing:.07em;text-transform:uppercase;padding:9px 48px 9px 20px;text-align:center;position:relative;line-height:1.4}
+#disc-bar button{position:absolute;right:14px;top:50%;transform:translateY(-50%);background:none;border:none;color:rgba(255,255,255,.45);cursor:pointer;font-size:1.1rem;transition:color .2s}
+#disc-bar button:hover{color:#fff}
+
+/* ── NAV ── */
+#main-nav{position:sticky;top:0;z-index:100;background:#fff;border-bottom:1px solid var(--gray-100);transition:box-shadow .3s}
+#main-nav.scrolled{box-shadow:0 4px 24px rgba(15,34,64,.08)}
+.nav-inner{max-width:1400px;margin:0 auto;padding:0 24px;display:flex;align-items:center;gap:24px;height:120px}
+.nav-logo{flex-shrink:0}
+.nav-logo img{height:110px;width:auto}
+.nav-links{display:flex;align-items:center;gap:2px;flex:1;justify-content:center}
+.nav-links a{font-size:.85rem;font-weight:500;color:var(--navy);text-decoration:none;padding:7px 13px;border-radius:7px;transition:color .2s,background .2s;white-space:nowrap}
+.nav-links a:hover,.nav-links a.active{color:var(--teal);background:rgba(43,181,165,.07)}
+.nav-actions{display:flex;align-items:center;gap:2px;flex-shrink:0}
+.nib{width:40px;height:40px;border-radius:8px;border:none;background:none;cursor:pointer;display:flex;align-items:center;justify-content:center;color:var(--navy);position:relative;transition:color .2s,background .2s}
+.nib:hover{color:var(--teal);background:rgba(43,181,165,.07)}
+.cart-badge{position:absolute;top:4px;right:4px;min-width:17px;height:17px;background:var(--teal);color:#fff;font-size:.6rem;font-weight:700;border-radius:50%;display:flex;align-items:center;justify-content:center;opacity:0;transform:scale(0);transition:opacity .2s,transform .2s}
+.cart-badge.show{opacity:1;transform:scale(1)}
+#hamburger{display:none}
+@media(max-width:900px){.nav-links{display:none}}
+@media(max-width:640px){#hamburger{display:flex}}
+
+/* ── SEARCH OVERLAY ── */
+#search-overlay{position:fixed;inset:0;z-index:200;background:rgba(15,34,64,.55);backdrop-filter:blur(8px);opacity:0;pointer-events:none;transition:opacity .25s}
+#search-overlay.open{opacity:1;pointer-events:all}
+.search-panel{background:#fff;padding:28px 32px}
+.search-wrap{max-width:680px;margin:0 auto;position:relative}
+.search-wrap input{width:100%;padding:15px 52px;font-size:1.05rem;font-family:'DM Sans',sans-serif;border:2px solid var(--teal);border-radius:50px;outline:none;color:var(--navy)}
+.search-wrap .si{position:absolute;left:18px;top:50%;transform:translateY(-50%);color:var(--teal);pointer-events:none}
+.search-wrap .sc-btn{position:absolute;right:14px;top:50%;transform:translateY(-50%);background:none;border:none;cursor:pointer;color:var(--muted);padding:6px;border-radius:50%;transition:color .2s}
+#search-results{max-width:680px;margin:10px auto 0;background:#fff;border-radius:12px;border:1px solid var(--gray-100);box-shadow:0 8px 32px rgba(15,34,64,.12);overflow:hidden;max-height:380px;overflow-y:auto;display:none}
+#search-results.show{display:block}
+.sr-item{padding:13px 20px;display:flex;align-items:center;justify-content:space-between;cursor:pointer;border-bottom:1px solid var(--gray-50);transition:background .15s}
+.sr-item:hover{background:var(--gray-50)}
+.sr-name{font-weight:600;font-size:.9rem;color:var(--navy)}
+.sr-cat{font-size:.75rem;color:var(--muted);margin-top:2px}
+.sr-price{font-weight:700;font-size:.9rem;color:var(--teal);font-family:'Outfit',sans-serif}
+
+/* ── WHOLESALE HERO ── */
+.ws-hero{background:var(--navy-deep);padding:72px 24px 80px;position:relative;overflow:hidden}
+.ws-hero-pattern{position:absolute;inset:0;opacity:.04;background-image:repeating-linear-gradient(0deg,rgba(255,255,255,1) 0px,rgba(255,255,255,1) 1px,transparent 1px,transparent 60px),repeating-linear-gradient(90deg,rgba(255,255,255,1) 0px,rgba(255,255,255,1) 1px,transparent 1px,transparent 60px);pointer-events:none}
+.ws-hero-glow{position:absolute;width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,rgba(43,181,165,.15) 0%,rgba(43,181,165,.04) 50%,transparent 70%);top:-100px;right:-100px;pointer-events:none}
+.ws-hero-glow2{position:absolute;width:400px;height:400px;border-radius:50%;background:radial-gradient(circle,rgba(79,145,255,.08) 0%,transparent 70%);bottom:-80px;left:-80px;pointer-events:none}
+.ws-hero-inner{max-width:1200px;margin:0 auto;position:relative;z-index:1;display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center}
+@media(max-width:900px){.ws-hero-inner{grid-template-columns:1fr}.ws-hero-right{display:none}}
+.ws-hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(43,181,165,.15);border:1px solid rgba(43,181,165,.3);border-radius:20px;padding:7px 16px;font-size:.75rem;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--teal);margin-bottom:20px}
+.ws-hero h1{font-size:clamp(2.4rem,4vw,3.6rem);font-weight:800;color:#fff;letter-spacing:-.03em;line-height:1.07;margin-bottom:18px}
+.ws-hero h1 .acc{color:var(--teal)}
+.ws-hero p{font-size:.9375rem;color:rgba(255,255,255,.58);line-height:1.72;margin-bottom:32px;max-width:480px}
+.ws-hero-ctas{display:flex;gap:12px;flex-wrap:wrap}
+.ws-cta-primary{padding:14px 28px;background:var(--teal);color:#fff;font-family:'Outfit',sans-serif;font-weight:700;font-size:.95rem;border:none;border-radius:10px;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;gap:8px;transition:background .2s,transform .15s}
+.ws-cta-primary:hover{background:var(--teal-light);transform:translateY(-1px)}
+.ws-cta-secondary{padding:14px 22px;background:rgba(255,255,255,.07);color:#fff;font-family:'Outfit',sans-serif;font-weight:600;font-size:.95rem;border:1px solid rgba(255,255,255,.15);border-radius:10px;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;gap:8px;transition:background .2s,border-color .2s}
+.ws-cta-secondary:hover{background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.3)}
+
+/* Hero right — discount showcase */
+.ws-hero-right{display:flex;flex-direction:column;gap:16px;align-items:flex-end}
+.ws-disc-card{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:16px;padding:24px 28px;width:100%;max-width:320px;backdrop-filter:blur(8px);transition:background .2s}
+.ws-disc-card:hover{background:rgba(43,181,165,.1)}
+.ws-disc-pct{font-size:3rem;font-weight:900;color:#fff;line-height:1;letter-spacing:-.04em;font-family:'Outfit',sans-serif}
+.ws-disc-pct span{color:var(--teal)}
+.ws-disc-label{font-size:.8rem;color:rgba(255,255,255,.5);margin-top:4px;margin-bottom:12px}
+.ws-disc-moq{font-size:.8rem;font-weight:600;color:rgba(255,255,255,.75);background:rgba(43,181,165,.15);border-radius:6px;padding:5px 11px;display:inline-block}
+.ws-disc-divider{width:100%;max-width:320px;display:flex;align-items:center;gap:12px;color:rgba(255,255,255,.2);font-size:.7rem;letter-spacing:.1em;text-transform:uppercase}
+.ws-disc-divider::before,.ws-disc-divider::after{content:'';flex:1;height:1px;background:rgba(255,255,255,.08)}
+
+/* ── STATS STRIP ── */
+.ws-stats{background:var(--teal);padding:28px 24px}
+.ws-stats-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);text-align:center}
+.ws-stat{padding:12px;border-right:1px solid rgba(255,255,255,.2)}
+.ws-stat:last-child{border-right:none}
+.ws-stat-num{font-size:1.9rem;font-weight:800;color:#fff;line-height:1;margin-bottom:5px;font-family:'Outfit',sans-serif;letter-spacing:-.02em}
+.ws-stat-lbl{font-size:.75rem;color:rgba(255,255,255,.75);font-weight:500}
+@media(max-width:640px){.ws-stats-inner{grid-template-columns:1fr 1fr}}
+
+/* ── BENEFITS ── */
+.ws-benefits{padding:80px 24px;background:#fff}
+.wb-inner{max-width:1200px;margin:0 auto}
+.wb-hd{text-align:center;margin-bottom:52px}
+.wb-eyebrow{font-size:.75rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--teal);margin-bottom:10px}
+.wb-hd h2{font-size:2.1rem;font-weight:700;color:var(--navy);letter-spacing:-.025em;margin-bottom:10px}
+.wb-hd p{font-size:.9rem;color:var(--muted);max-width:480px;margin:0 auto;line-height:1.65}
+.wb-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+@media(max-width:960px){.wb-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){.wb-grid{grid-template-columns:1fr}}
+.wb-card{padding:28px 24px;border-radius:18px;border:1.5px solid var(--gray-100);background:#fff;transition:box-shadow .25s,border-color .25s,transform .25s cubic-bezier(.34,1.56,.64,1)}
+.wb-card:hover{box-shadow:0 12px 40px rgba(15,34,64,.09);border-color:rgba(43,181,165,.25);transform:translateY(-4px)}
+.wb-icon{width:52px;height:52px;border-radius:14px;background:rgba(43,181,165,.1);display:flex;align-items:center;justify-content:center;color:var(--teal);margin-bottom:18px;transition:background .2s}
+.wb-card:hover .wb-icon{background:var(--teal)}
+.wb-card:hover .wb-icon svg{color:#fff}
+.wb-card h3{font-size:1rem;font-weight:700;color:var(--navy);margin-bottom:8px}
+.wb-card p{font-size:.83rem;color:var(--muted);line-height:1.65}
+
+/* ── HOW IT WORKS ── */
+.ws-process{padding:80px 24px;background:var(--off-white)}
+.wp-inner{max-width:900px;margin:0 auto;text-align:center}
+.wp-eyebrow{font-size:.75rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--teal);margin-bottom:10px}
+.wp-inner h2{font-size:2rem;font-weight:700;color:var(--navy);letter-spacing:-.025em;margin-bottom:48px}
+.wp-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;position:relative}
+@media(max-width:700px){.wp-steps{grid-template-columns:1fr;gap:24px}}
+.wp-steps::before{content:'';position:absolute;top:28px;left:calc(16.66% + 28px);right:calc(16.66% + 28px);height:2px;background:linear-gradient(90deg,var(--teal),rgba(43,181,165,.3));z-index:0}
+@media(max-width:700px){.wp-steps::before{display:none}}
+.wp-step{position:relative;z-index:1}
+.wp-step-num{width:56px;height:56px;border-radius:50%;background:var(--navy);border:3px solid #fff;box-shadow:0 0 0 2px var(--teal);display:flex;align-items:center;justify-content:center;font-family:'Outfit',sans-serif;font-size:1.1rem;font-weight:800;color:#fff;margin:0 auto 18px;transition:background .2s}
+.wp-step:hover .wp-step-num{background:var(--teal)}
+.wp-step h3{font-size:1rem;font-weight:700;color:var(--navy);margin-bottom:8px}
+.wp-step p{font-size:.83rem;color:var(--muted);line-height:1.65}
+
+/* ── FORM SECTION (Split Layout) ── */
+.ws-form-section{padding:0 24px 96px;background:#fff}
+.wf-inner{max-width:1100px;margin:0 auto}
+.wf-header{text-align:center;padding:80px 0 56px}
+.wf-eyebrow{font-size:.75rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--teal);margin-bottom:10px}
+.wf-header h2{font-size:2.2rem;font-weight:700;color:var(--navy);letter-spacing:-.025em;margin-bottom:10px}
+.wf-header p{font-size:.9rem;color:var(--muted);max-width:480px;margin:0 auto;line-height:1.65}
+.wf-card{border-radius:24px;overflow:hidden;box-shadow:0 24px 80px rgba(15,34,64,.13);display:grid;grid-template-columns:380px 1fr}
+@media(max-width:900px){.wf-card{grid-template-columns:1fr}}
+
+/* Form left panel */
+.wf-left{background:var(--navy);padding:48px 40px;display:flex;flex-direction:column;position:relative;overflow:hidden}
+.wf-left::before{content:'';position:absolute;top:-60px;right:-60px;width:280px;height:280px;border-radius:50%;background:radial-gradient(circle,rgba(43,181,165,.15) 0%,transparent 70%);pointer-events:none}
+.wf-left::after{content:'';position:absolute;bottom:-40px;left:-40px;width:200px;height:200px;border-radius:50%;background:radial-gradient(circle,rgba(43,181,165,.08) 0%,transparent 70%);pointer-events:none}
+.wf-left-logo{margin-bottom:32px;position:relative;z-index:1}
+.wf-left-logo img{height:36px}
+.wf-left h3{font-size:1.5rem;font-weight:700;color:#fff;letter-spacing:-.02em;margin-bottom:10px;position:relative;z-index:1}
+.wf-left p{font-size:.85rem;color:rgba(255,255,255,.5);line-height:1.7;margin-bottom:32px;position:relative;z-index:1}
+.wf-perks{display:flex;flex-direction:column;gap:14px;flex:1;position:relative;z-index:1}
+.wf-perk{display:flex;align-items:flex-start;gap:12px}
+.wf-perk-icon{width:32px;height:32px;border-radius:8px;background:rgba(43,181,165,.15);border:1px solid rgba(43,181,165,.2);display:flex;align-items:center;justify-content:center;color:var(--teal);flex-shrink:0}
+.wf-perk-text strong{display:block;font-size:.85rem;font-weight:600;color:#fff;margin-bottom:2px}
+.wf-perk-text span{font-size:.77rem;color:rgba(255,255,255,.45);line-height:1.5}
+.wf-left-contact{margin-top:36px;padding-top:28px;border-top:1px solid rgba(255,255,255,.08);position:relative;z-index:1}
+.wf-left-contact p{font-size:.78rem;color:rgba(255,255,255,.35);margin-bottom:10px;margin-top:0}
+.wf-contact-item{display:flex;align-items:center;gap:10px;font-size:.82rem;color:rgba(255,255,255,.6);margin-bottom:8px;text-decoration:none;transition:color .2s}
+.wf-contact-item:hover{color:var(--teal)}
+.wf-contact-item svg{color:var(--teal);flex-shrink:0}
+
+/* Form right panel */
+.wf-right{background:#fff;padding:48px 44px}
+@media(max-width:900px){.wf-right{padding:36px 28px}}
+.wf-form-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+@media(max-width:560px){.wf-form-grid{grid-template-columns:1fr}}
+.wf-full{grid-column:1/-1}
+.wf-label{display:block;font-size:.78rem;font-weight:700;color:var(--navy);margin-bottom:6px;letter-spacing:.02em}
+.wf-required{color:var(--teal)}
+.wf-input,.wf-select,.wf-textarea{width:100%;padding:12px 15px;border:1.5px solid var(--gray-100);border-radius:10px;font-size:.9rem;font-family:'DM Sans',sans-serif;color:var(--navy);outline:none;background:#fff;transition:border-color .2s,box-shadow .2s}
+.wf-input:focus,.wf-select:focus,.wf-textarea:focus{border-color:var(--teal);box-shadow:0 0 0 3px rgba(43,181,165,.1)}
+.wf-input::placeholder,.wf-textarea::placeholder{color:var(--muted);opacity:.6}
+.wf-select{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='none' stroke='%236B7A99' stroke-width='2' viewBox='0 0 24 24'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 13px center;cursor:pointer}
+.wf-textarea{resize:vertical;min-height:110px;line-height:1.6}
+.wf-textarea:focus{border-color:var(--teal)}
+
+/* Checkboxes */
+.wf-checks-label{font-size:.78rem;font-weight:700;color:var(--navy);margin-bottom:10px;display:block;letter-spacing:.02em}
+.wf-checks-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+@media(max-width:460px){.wf-checks-grid{grid-template-columns:1fr}}
+.wf-check-item{display:flex;align-items:center;gap:9px;padding:10px 12px;border:1.5px solid var(--gray-100);border-radius:9px;cursor:pointer;transition:border-color .2s,background .2s;user-select:none}
+.wf-check-item:hover{border-color:var(--teal);background:rgba(43,181,165,.04)}
+.wf-check-item input[type="checkbox"]{width:15px;height:15px;accent-color:var(--teal);flex-shrink:0;cursor:pointer}
+.wf-check-item.checked{border-color:var(--teal);background:rgba(43,181,165,.06)}
+.wf-check-item span{font-size:.82rem;color:var(--navy);font-weight:500}
+
+/* Terms */
+.wf-terms{display:flex;align-items:flex-start;gap:10px;cursor:pointer}
+.wf-terms input[type="checkbox"]{width:16px;height:16px;accent-color:var(--teal);flex-shrink:0;margin-top:2px;cursor:pointer}
+.wf-terms-text{font-size:.78rem;color:var(--muted);line-height:1.55}
+.wf-terms-text a{color:var(--teal);text-decoration:none}
+
+/* Submit */
+.wf-submit-row{display:flex;align-items:center;gap:16px;flex-wrap:wrap;margin-top:4px}
+.wf-submit{padding:14px 36px;background:var(--navy);color:#fff;font-family:'Outfit',sans-serif;font-size:1rem;font-weight:700;border:none;border-radius:10px;cursor:pointer;display:flex;align-items:center;gap:9px;transition:background .2s,transform .15s;flex-shrink:0}
+.wf-submit:hover{background:var(--teal);transform:translateY(-1px)}
+.wf-submit:active{transform:translateY(0)}
+.wf-submit:disabled{opacity:.6;cursor:not-allowed;transform:none}
+.wf-submit-note{font-size:.73rem;color:var(--muted);line-height:1.5}
+
+/* Form states */
+.wf-spinner{width:18px;height:18px;border:2.5px solid rgba(255,255,255,.3);border-top-color:#fff;border-radius:50%;animation:spin .7s linear infinite;display:none}
+.wf-submit.loading .wf-spinner{display:block}
+.wf-submit.loading .wf-btn-label{display:none}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+#wf-success{display:none;text-align:center;padding:48px 32px}
+#wf-success.show{display:block}
+.wf-success-icon{width:72px;height:72px;border-radius:50%;background:rgba(43,181,165,.1);display:flex;align-items:center;justify-content:center;margin:0 auto 20px;color:var(--teal)}
+#wf-success h3{font-size:1.5rem;font-weight:700;color:var(--navy);margin-bottom:10px}
+#wf-success p{font-size:.9rem;color:var(--muted);line-height:1.7;max-width:400px;margin:0 auto 24px}
+.wf-success-btn{padding:12px 28px;background:var(--navy);color:#fff;font-family:'Outfit',sans-serif;font-size:.9rem;font-weight:700;border:none;border-radius:10px;cursor:pointer;transition:background .2s}
+.wf-success-btn:hover{background:var(--teal)}
+
+#wf-error-msg{display:none;background:#FEF2F2;border:1px solid #FECACA;border-radius:8px;padding:12px 16px;font-size:.82rem;color:#DC2626;margin-top:8px}
+#wf-error-msg.show{display:block}
+
+/* Setup banner (dev only — remove before launch if preferred) */
+#setup-notice{background:#FFF8E1;border-bottom:1px solid #F9A825;padding:12px 24px;text-align:center;font-size:.8rem;color:#5D4037;display:flex;align-items:center;justify-content:center;gap:8px;flex-wrap:wrap}
+#setup-notice strong{color:#E65100}
+#setup-notice a{color:#1976D2;font-weight:600}
+#setup-notice.hidden{display:none}
+
+/* ── WHOLESALE FAQ ── */
+.ws-faq{padding:80px 24px;background:var(--off-white)}
+.wsf-inner{max-width:800px;margin:0 auto}
+.wsf-hd{text-align:center;margin-bottom:48px}
+.wsf-eyebrow{font-size:.75rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--teal);margin-bottom:10px}
+.wsf-hd h2{font-size:2rem;font-weight:700;color:var(--navy);letter-spacing:-.025em}
+.wfaq-item{border-bottom:1px solid var(--gray-100)}
+.wfaq-item:first-child{border-top:1px solid var(--gray-100)}
+.wfaq-q{width:100%;padding:20px 0;display:flex;align-items:center;justify-content:space-between;gap:16px;background:none;border:none;cursor:pointer;text-align:left;font-family:'Outfit',sans-serif;font-size:.975rem;font-weight:600;color:var(--navy);transition:color .2s}
+.wfaq-q:hover{color:var(--teal)}
+.wfaq-icon{width:28px;height:28px;border-radius:50%;background:var(--gray-100);display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:background .25s,transform .35s cubic-bezier(.34,1.56,.64,1)}
+.wfaq-item.open .wfaq-icon{background:var(--teal);transform:rotate(45deg);color:#fff}
+.wfaq-a{max-height:0;overflow:hidden;transition:max-height .4s cubic-bezier(.4,0,.2,1)}
+.wfaq-item.open .wfaq-a{max-height:300px}
+.wfaq-a-inner{padding-bottom:22px;font-size:.88rem;color:var(--muted);line-height:1.78}
+
+/* ── CART DRAWER ── */
+#cart-backdrop{position:fixed;inset:0;z-index:290;background:rgba(15,34,64,.4);opacity:0;pointer-events:none;transition:opacity .35s}
+#cart-backdrop.open{opacity:1;pointer-events:all}
+#cart-drawer{position:fixed;top:0;right:0;bottom:0;width:400px;max-width:100vw;background:#fff;z-index:300;box-shadow:-8px 0 40px rgba(15,34,64,.15);display:flex;flex-direction:column;transform:translateX(100%);transition:transform .35s cubic-bezier(.4,0,.2,1)}
+#cart-drawer.open{transform:translateX(0)}
+.cd-hdr{padding:22px;border-bottom:1px solid var(--gray-100);display:flex;align-items:center;justify-content:space-between}
+.cd-hdr h2{font-size:1.2rem;font-weight:700;color:var(--navy)}
+.xbtn{width:36px;height:36px;border-radius:8px;border:1px solid var(--gray-100);background:none;cursor:pointer;display:flex;align-items:center;justify-content:center;color:var(--muted);transition:color .2s,border-color .2s}
+.xbtn:hover{color:var(--navy);border-color:var(--navy)}
+.cd-items{flex:1;overflow-y:auto;padding:14px}
+.cart-item{display:flex;gap:12px;padding:14px;border-radius:12px;background:var(--gray-50);margin-bottom:10px}
+.ci-img{width:60px;height:60px;border-radius:8px;background:var(--gray-100);flex-shrink:0;display:flex;align-items:center;justify-content:center;overflow:hidden}
+.ci-img img{width:100%;height:100%;object-fit:contain;padding:4px}
+.ci-info{flex:1;min-width:0}
+.ci-name{font-weight:600;font-size:.875rem;color:var(--navy);margin-bottom:2px}
+.ci-str{font-size:.75rem;color:var(--teal);font-weight:500;margin-bottom:7px}
+.ci-ctrl{display:flex;align-items:center;gap:8px}
+.qty-btn{width:27px;height:27px;border-radius:6px;border:1px solid var(--gray-100);background:#fff;cursor:pointer;font-size:.9rem;display:flex;align-items:center;justify-content:center;color:var(--navy);transition:border-color .15s}
+.qty-btn:hover{border-color:var(--teal)}
+.qty-n{font-weight:600;font-size:.85rem;color:var(--navy);min-width:22px;text-align:center}
+.ci-price{font-weight:700;font-size:.9rem;color:var(--navy);font-family:'Outfit',sans-serif;white-space:nowrap;align-self:flex-start;margin-top:2px}
+.ci-rm{background:none;border:none;cursor:pointer;color:var(--muted);padding:3px;border-radius:4px;transition:color .15s;align-self:flex-start}
+.ci-rm:hover{color:#e53e3e}
+.cart-empty{text-align:center;padding:60px 20px;color:var(--muted)}
+.ce-icon{font-size:3rem;opacity:.25;margin-bottom:14px}
+.cd-footer{padding:18px 22px;border-top:1px solid var(--gray-100)}
+.cd-sub,.cd-tot{display:flex;justify-content:space-between;margin-bottom:5px}
+.cd-sub{font-size:.875rem;color:var(--muted)}
+.cd-tot{font-size:1.05rem;font-weight:700;color:var(--navy);margin-bottom:16px;font-family:'Outfit',sans-serif}
+.checkout-btn{width:100%;padding:15px;background:var(--navy);color:#fff;font-family:'Outfit',sans-serif;font-size:1rem;font-weight:700;border:none;border-radius:10px;cursor:pointer;transition:background .2s}
+.checkout-btn:hover{background:var(--teal)}
+
+/* ── ACCOUNT MODAL ── */
+#acct-modal{position:fixed;inset:0;z-index:250;background:rgba(15,34,64,.5);backdrop-filter:blur(6px);display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity .25s;padding:16px}
+#acct-modal.open{opacity:1;pointer-events:all}
+.modal-box{background:#fff;border-radius:20px;padding:36px;width:100%;max-width:430px;max-height:90vh;overflow-y:auto;position:relative;box-shadow:0 24px 80px rgba(15,34,64,.2);transform:scale(.95) translateY(10px);transition:transform .25s cubic-bezier(.34,1.56,.64,1)}
+#acct-modal.open .modal-box{transform:scale(1) translateY(0)}
+.ml{display:flex;justify-content:center;margin-bottom:24px}
+.ml img{height:34px}
+.mtabs{display:flex;border-bottom:1px solid var(--gray-100);margin-bottom:24px}
+.mtab{flex:1;padding:11px;text-align:center;font-size:.875rem;font-weight:600;color:var(--muted);cursor:pointer;border:none;border-bottom:2px solid transparent;margin-bottom:-1px;background:none;font-family:'DM Sans',sans-serif;transition:color .2s,border-color .2s}
+.mtab.active{color:var(--teal);border-bottom-color:var(--teal)}
+.fg{margin-bottom:14px}
+.fl{display:block;font-size:.8rem;font-weight:600;color:var(--navy);margin-bottom:5px}
+.fi{width:100%;padding:12px 15px;border:1.5px solid var(--gray-100);border-radius:10px;font-size:.9375rem;font-family:'DM Sans',sans-serif;color:var(--navy);outline:none;transition:border-color .2s}
+.fi:focus{border-color:var(--teal)}
+.fb{width:100%;padding:13px;background:var(--navy);color:#fff;font-family:'Outfit',sans-serif;font-size:.975rem;font-weight:700;border:none;border-radius:10px;cursor:pointer;margin-top:6px;transition:background .2s}
+.fb:hover{background:var(--teal)}
+.merr{color:#e53e3e;font-size:.8rem;margin-top:7px;text-align:center}
+.loggedin{text-align:center}
+.loggedin h3{font-size:1.2rem;font-weight:700;color:var(--navy);margin-bottom:6px}
+.loggedin p{font-size:.875rem;color:var(--muted);margin-bottom:22px}
+.signout-btn{padding:11px 28px;background:var(--gray-50);color:var(--navy);border:1px solid var(--gray-100);border-radius:8px;font-family:'DM Sans',sans-serif;font-size:.875rem;font-weight:600;cursor:pointer;transition:background .2s}
+.signout-btn:hover{background:var(--gray-100)}
+
+/* ── POPUP ── */
+#popup-overlay{position:fixed;inset:0;z-index:400;background:rgba(15,34,64,.6);backdrop-filter:blur(6px);display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity .3s;padding:16px}
+#popup-overlay.open{opacity:1;pointer-events:all}
+.popup-box{background:#fff;border-radius:20px;width:100%;max-width:540px;overflow:hidden;box-shadow:0 24px 80px rgba(15,34,64,.25);transform:scale(.9);transition:transform .3s cubic-bezier(.34,1.56,.64,1)}
+#popup-overlay.open .popup-box{transform:scale(1)}
+.popup-top{background:var(--navy);padding:36px;text-align:center;position:relative}
+.popup-close{position:absolute;top:14px;right:14px;background:rgba(255,255,255,.1);border:none;color:rgba(255,255,255,.7);width:30px;height:30px;border-radius:50%;cursor:pointer;font-size:1rem;display:flex;align-items:center;justify-content:center;transition:background .2s}
+.popup-close:hover{background:rgba(255,255,255,.2);color:#fff}
+.popup-disc{display:inline-block;background:var(--teal);color:#fff;font-family:'Outfit',sans-serif;font-size:2.8rem;font-weight:900;padding:8px 24px;border-radius:10px;margin-bottom:14px;letter-spacing:-.03em}
+.popup-title{font-size:1.75rem;font-weight:700;color:#fff;letter-spacing:-.02em;margin-bottom:7px}
+.popup-sub{font-size:.85rem;color:rgba(255,255,255,.55);line-height:1.5}
+.popup-bot{padding:28px 36px 32px}
+.popup-form{display:flex;flex-direction:column;gap:10px}
+.popup-btn{padding:14px;background:var(--navy);color:#fff;font-family:'Outfit',sans-serif;font-size:.975rem;font-weight:700;border:none;border-radius:10px;cursor:pointer;transition:background .2s}
+.popup-btn:hover{background:var(--teal)}
+.popup-legal{font-size:.68rem;color:var(--muted);text-align:center;margin-top:10px;line-height:1.6}
+.popup-legal a{color:var(--teal);text-decoration:none}
+
+/* ── MOBILE MENU ── */
+#mobile-menu{position:fixed;inset:0;z-index:200;background:#fff;padding:76px 28px 28px;transform:translateX(-100%);transition:transform .3s ease}
+#mobile-menu.open{transform:translateX(0)}
+.mm-close{position:absolute;top:18px;right:18px;width:42px;height:42px;border-radius:10px;border:1px solid var(--gray-100);background:none;cursor:pointer;display:flex;align-items:center;justify-content:center;color:var(--navy)}
+.mm-link{display:block;padding:15px 0;font-size:1.2rem;font-weight:600;color:var(--navy);text-decoration:none;border-bottom:1px solid var(--gray-100);transition:color .15s}
+.mm-link:hover{color:var(--teal)}
+
+/* ── FOOTER ── */
+.footer{background:var(--navy);padding:60px 24px 28px;color:rgba(255,255,255,.6)}
+.fi2{max-width:1200px;margin:0 auto}
+.fg2{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:44px;margin-bottom:44px}
+@media(max-width:900px){.fg2{grid-template-columns:1fr 1fr;gap:32px}}
+@media(max-width:640px){.fg2{grid-template-columns:1fr}}
+.fb-brand img{height:56px;margin-bottom:14px}
+.fb-brand p{font-size:.79rem;line-height:1.7;color:rgba(255,255,255,.45);max-width:270px}
+.fc h4{font-size:.8rem;font-weight:700;color:#fff;margin-bottom:14px;text-transform:uppercase;letter-spacing:.09em}
+.fc a{display:block;font-size:.79rem;color:rgba(255,255,255,.45);text-decoration:none;margin-bottom:9px;transition:color .15s}
+.fc a:hover{color:var(--teal)}
+.footer-bot{border-top:1px solid rgba(255,255,255,.08);padding-top:26px;display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:16px}
+.f-legal{font-size:.68rem;color:rgba(255,255,255,.3);line-height:1.7;max-width:600px}
+.f-copy{font-size:.72rem;color:rgba(255,255,255,.3);white-space:nowrap}
+
+/* ── TOAST ── */
+#toast{position:fixed;bottom:22px;left:50%;transform:translateX(-50%) translateY(70px);background:var(--navy);color:#fff;padding:11px 22px;border-radius:40px;font-size:.85rem;font-weight:500;z-index:500;transition:transform .3s cubic-bezier(.34,1.56,.64,1);white-space:nowrap;box-shadow:0 8px 32px rgba(15,34,64,.25);pointer-events:none}
+#toast.show{transform:translateX(-50%) translateY(0)}
+.t-teal{color:var(--teal);font-weight:700}
+
+/* ── ANIMATIONS ── */
+@keyframes fadeInUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+.fiu{opacity:0;animation:fadeInUp .6s ease forwards}
+.d1{animation-delay:.1s}.d2{animation-delay:.2s}.d3{animation-delay:.3s}.d4{animation-delay:.4s}
+
+/* ── MOBILE NAV ── */
+@media(max-width:640px){
+  .nav-inner{height:72px;padding:0 16px}
+  .nav-logo img{height:56px}
+  .nib{width:36px;height:36px}
+  #hamburger{display:flex}
+}
+@media(max-width:480px){
+  .wh-hero-inner{padding:48px 16px}
+  .tiers-grid,.benefits-grid,.process-grid{grid-template-columns:1fr}
+  .wh-form-wrap{padding:28px 20px}
+  .cart-drawer{width:100vw;right:-100vw}
+  .cart-drawer.open{right:0}
+  .modal-box{padding:28px 20px;border-radius:16px}
+}
+</style>
+</head>
+<body>
+
+<!-- SETUP NOTICE (developers: remove once Web3Forms key is added) -->
+
+<!-- DISCLAIMER BAR -->
+<div id="disc-bar">
+  PRODUCTS SOLD ON CLARIXPEPTIDES.COM ARE FOR RESEARCH PURPOSES ONLY AND ARE NOT FOR HUMAN OR VETERINARY USE.
+  <button onclick="this.parentElement.style.display='none'" aria-label="Dismiss">×</button>
+</div>
+
+<!-- MAIN NAV -->
+<nav id="main-nav">
+  <div class="nav-inner">
+    <a class="nav-logo" href="index.html">
+      <img src="brand_assets/clarix_logo_primary.png" alt="Clarix Peptides">
+    </a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="shop.html">Shop</a>
+      <a href="wholesale.html" class="active">Wholesale</a>
+      <a href="usage-guide.html">Usage Guide</a>
+      <a href="about.html">About Us</a>
+      <a href="contact.html">Contact Us</a>
+    </div>
+    <div class="nav-actions">
+      <button class="nib" id="search-btn" aria-label="Search">
+        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+      </button>
+      <button class="nib" id="acct-btn" aria-label="Account">
+        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+      </button>
+      <button class="nib" id="cart-btn" aria-label="Basket">
+        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+        <span class="cart-badge" id="cart-badge">0</span>
+      </button>
+      <button class="nib" id="hamburger" aria-label="Menu">
+        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- MOBILE MENU -->
+<div id="mobile-menu">
+  <button class="mm-close" id="mm-close">
+    <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+  </button>
+  <a class="mm-link" href="index.html">Home</a>
+  <a class="mm-link" href="shop.html">Shop</a>
+  <a class="mm-link" href="wholesale.html">Wholesale</a>
+  <a class="mm-link" href="usage-guide.html">Usage Guide</a>
+  <a class="mm-link" href="about.html">About Us</a>
+  <a class="mm-link" href="contact.html">Contact Us</a>
+</div>
+
+<!-- SEARCH OVERLAY -->
+<div id="search-overlay">
+  <div class="search-panel">
+    <div class="search-wrap">
+      <svg class="si" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+      <input type="text" id="search-input" placeholder="Search peptides, compounds…" autocomplete="off">
+      <button class="sc-btn" id="search-close">
+        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+    <div id="search-results"></div>
+  </div>
+</div>
+
+
+<!-- BENEFITS -->
+<section class="ws-benefits">
+  <div class="wb-inner">
+    <div class="wb-hd">
+      <div class="wb-eyebrow">Why Go Wholesale</div>
+      <h2>Everything a serious research operation needs</h2>
+      <p>Clarix wholesale accounts come with tangible advantages built around research volume and reliability.</p>
+    </div>
+    <div class="wb-grid">
+      <div class="wb-card">
+        <div class="wb-icon">
+          <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+        </div>
+        <h3>Volume Pricing</h3>
+        <p>Tiered discounts starting at 20% for orders above £500, scaling further for higher volumes and regular accounts.</p>
+      </div>
+      <div class="wb-card">
+        <div class="wb-icon">
+          <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        </div>
+        <h3>Dedicated Account Manager</h3>
+        <p>Every wholesale account is assigned a named account manager available via direct line for order support and technical queries.</p>
+      </div>
+      <div class="wb-card">
+        <div class="wb-icon">
+          <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+        </div>
+        <h3>Priority Fulfilment</h3>
+        <p>Wholesale orders are processed and dispatched within 24 hours. Same-day dispatch available on orders placed before 12pm.</p>
+      </div>
+      <div class="wb-card">
+        <div class="wb-icon">
+          <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4"/><path d="M21 12c0 4.97-4.03 9-9 9s-9-4.03-9-9 4.03-9 9-9 9 4.03 9 9z"/></svg>
+        </div>
+        <h3>Batch Certificates</h3>
+        <p>Full COA documentation for every batch shipped. HPLC and mass spectrometry results included as standard, no additional charge.</p>
+      </div>
+      <div class="wb-card">
+        <div class="wb-icon">
+          <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+        </div>
+        <h3>Custom Labelling</h3>
+        <p>White-label options available for qualifying distributors. Custom concentration ranges and bulk lyophilisation on request.</p>
+      </div>
+      <div class="wb-card">
+        <div class="wb-icon">
+          <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+        </div>
+        <h3>Extended Credit Terms</h3>
+        <p>Net 30 credit terms available for established accounts after three successful orders. Subject to credit assessment.</p>
+      </div>
+      <div class="wb-card">
+        <div class="wb-icon">
+          <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+        </div>
+        <h3>Reserved Stock</h3>
+        <p>High-volume accounts can reserve stock in advance, guaranteeing availability even during periods of high demand.</p>
+      </div>
+      <div class="wb-card">
+        <div class="wb-icon">
+          <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+        </div>
+        <h3>Technical Support</h3>
+        <p>Direct access to our scientific team for research consultation, reconstitution guidance, and storage protocol queries.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="ws-process">
+  <div class="wp-inner">
+    <div class="wp-eyebrow">Simple Process</div>
+    <h2>Up and running in 48 hours</h2>
+    <div class="wp-steps">
+      <div class="wp-step">
+        <div class="wp-step-num">1</div>
+        <h3>Submit Your Application</h3>
+        <p>Complete the form below with your business details, order requirements, and products of interest. Takes under 3 minutes.</p>
+      </div>
+      <div class="wp-step">
+        <div class="wp-step-num">2</div>
+        <h3>Account Review</h3>
+        <p>Our team reviews your application within 24 hours and contacts you to discuss pricing, volume bands, and any specific requirements.</p>
+      </div>
+      <div class="wp-step">
+        <div class="wp-step-num">3</div>
+        <h3>Start Ordering</h3>
+        <p>Your wholesale account is activated. Place your first order and receive priority dispatch with your agreed volume pricing applied.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHOLESALE FORM -->
+<section class="ws-form-section" id="apply">
+  <div class="wf-inner">
+    <div class="wf-header">
+      <div class="wf-eyebrow">Wholesale Application</div>
+      <h2>Apply for a Wholesale Account</h2>
+      <p>Fill in your details and we'll come back to you within 24 hours with a tailored pricing proposal.</p>
+    </div>
+
+    <div class="wf-card">
+      <!-- LEFT PANEL -->
+      <div class="wf-left">
+        <div class="wf-left-logo">
+          <img src="brand_assets/clarix_logo_reverse.png" alt="Clarix Peptides">
+        </div>
+        <h3>Partner with Clarix</h3>
+        <p>Join UK research institutions, distributors, and labs who trust Clarix as their primary peptide supplier.</p>
+
+        <div class="wf-perks">
+          <div class="wf-perk">
+            <div class="wf-perk-icon">
+              <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+            </div>
+            <div class="wf-perk-text">
+              <strong>Volume discounts from 20%</strong>
+              <span>Tiered pricing from £500 MOQ — the more you order, the more you save.</span>
+            </div>
+          </div>
+          <div class="wf-perk">
+            <div class="wf-perk-icon">
+              <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+            </div>
+            <div class="wf-perk-text">
+              <strong>Named account manager</strong>
+              <span>Direct contact for orders, queries, and technical support.</span>
+            </div>
+          </div>
+          <div class="wf-perk">
+            <div class="wf-perk-icon">
+              <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <div class="wf-perk-text">
+              <strong>&gt;99% purity guaranteed</strong>
+              <span>COA on every batch, HPLC and mass spec verified.</span>
+            </div>
+          </div>
+          <div class="wf-perk">
+            <div class="wf-perk-icon">
+              <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+            </div>
+            <div class="wf-perk-text">
+              <strong>24-hour priority dispatch</strong>
+              <span>Wholesale orders jump the queue. Same-day before 12pm.</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="wf-left-contact">
+          <p>Prefer to speak to someone directly?</p>
+          <a class="wf-contact-item" href="mailto:info@clarixpeptides.com">
+            <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            info@clarixpeptides.com
+          </a>
+          <a class="wf-contact-item" href="#">
+            <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            Live chat available Mon–Fri
+          </a>
+        </div>
+      </div>
+
+      <!-- RIGHT PANEL — FORM -->
+      <div class="wf-right">
+        <!-- Success state -->
+        <div id="wf-success">
+          <div class="wf-success-icon">
+            <svg width="32" height="32" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          </div>
+          <h3>Application Received!</h3>
+          <p>Thank you for applying. Our wholesale team will review your application and contact you at the email address provided within 24 hours.</p>
+          <button class="wf-success-btn" onclick="resetForm()">Submit Another Application</button>
+        </div>
+
+        <!-- Form -->
+        <form id="wholesale-form" onsubmit="submitWholesaleForm(event)" novalidate>
+
+          <!-- Web3Forms hidden fields -->
+          <!-- REPLACE THE VALUE BELOW WITH YOUR WEB3FORMS ACCESS KEY -->
+          <input type="hidden" name="access_key" id="access-key" value="aa36f936-af5e-420f-8e65-6f782a43046f">
+          <input type="hidden" name="subject" value="New Wholesale Application — Clarix Peptides">
+          <input type="hidden" name="from_name" value="Clarix Peptides Wholesale Form">
+          <!-- Honeypot spam filter -->
+          <input type="checkbox" name="botcheck" style="display:none">
+
+          <div class="wf-form-grid">
+            <!-- Name -->
+            <div>
+              <label class="wf-label">First Name <span class="wf-required">*</span></label>
+              <input type="text" name="first_name" class="wf-input" placeholder="Jane" required>
+            </div>
+            <div>
+              <label class="wf-label">Last Name <span class="wf-required">*</span></label>
+              <input type="text" name="last_name" class="wf-input" placeholder="Smith" required>
+            </div>
+
+            <!-- Company -->
+            <div class="wf-full">
+              <label class="wf-label">Company / Organisation Name <span class="wf-required">*</span></label>
+              <input type="text" name="company_name" class="wf-input" placeholder="e.g. Cambridge Research Institute" required>
+            </div>
+
+            <!-- Email & Phone -->
+            <div>
+              <label class="wf-label">Email Address <span class="wf-required">*</span></label>
+              <input type="email" name="email" class="wf-input" placeholder="you@organisation.com" required>
+            </div>
+            <div>
+              <label class="wf-label">Phone Number</label>
+              <input type="tel" name="phone" class="wf-input" placeholder="+44 7700 900000">
+            </div>
+
+            <!-- Business type & Country -->
+            <div>
+              <label class="wf-label">Business Type <span class="wf-required">*</span></label>
+              <select name="business_type" class="wf-select" required>
+                <option value="" disabled selected>Select type…</option>
+                <option>Research Institution / University</option>
+                <option>Private Laboratory</option>
+                <option>Healthcare / Clinical Research Organisation</option>
+                <option>Distributor / Wholesaler</option>
+                <option>Reseller</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div>
+              <label class="wf-label">Country <span class="wf-required">*</span></label>
+              <select name="country" class="wf-select" required>
+                <option value="" disabled selected>Select country…</option>
+                <option>United Kingdom</option>
+                <option>Ireland</option>
+                <option>Germany</option>
+                <option>France</option>
+                <option>Netherlands</option>
+                <option>Belgium</option>
+                <option>Spain</option>
+                <option>Italy</option>
+                <option>Switzerland</option>
+                <option>United States</option>
+                <option>Canada</option>
+                <option>Australia</option>
+                <option>Other</option>
+              </select>
+            </div>
+
+            <!-- Monthly spend -->
+            <div class="wf-full">
+              <label class="wf-label">Estimated Monthly Spend <span class="wf-required">*</span></label>
+              <select name="monthly_spend" class="wf-select" required>
+                <option value="" disabled selected>Select range…</option>
+                <option>£500 – £1,000</option>
+                <option>£1,000 – £2,500</option>
+                <option>£2,500 – £5,000</option>
+                <option>£5,000 – £10,000</option>
+                <option>£10,000+</option>
+              </select>
+            </div>
+
+            <!-- How did you hear -->
+            <div class="wf-full">
+              <label class="wf-label">How did you hear about us?</label>
+              <select name="referral_source" class="wf-select">
+                <option value="" selected>Please select…</option>
+                <option>Google / Search Engine</option>
+                <option>Social Media</option>
+                <option>Word of Mouth / Referral</option>
+                <option>Industry Event / Conference</option>
+                <option>Email Marketing</option>
+                <option>Existing Customer</option>
+                <option>Other</option>
+              </select>
+            </div>
+
+            <!-- Message -->
+            <div class="wf-full">
+              <label class="wf-label">Additional Information</label>
+              <textarea name="message" class="wf-textarea" placeholder="Tell us about your research focus, specific compound requirements, custom concentrations, or any other details that would help us tailor our proposal…"></textarea>
+            </div>
+
+            <!-- Terms -->
+            <div class="wf-full">
+              <label class="wf-terms">
+                <input type="checkbox" id="terms-check" required>
+                <span class="wf-terms-text">
+                  I confirm I am representing a legitimate research organisation and that all products ordered will be used strictly for in-vitro laboratory research purposes only. I have read and agree to the <a href="terms.html">Terms &amp; Conditions</a> and <a href="terms.html">Privacy Policy</a>. <span class="wf-required">*</span>
+                </span>
+              </label>
+            </div>
+
+            <!-- Error message -->
+            <div class="wf-full">
+              <div id="wf-error-msg">Something went wrong. Please try again or email us directly at info@clarixpeptides.com</div>
+            </div>
+
+            <!-- Submit -->
+            <div class="wf-full">
+              <div class="wf-submit-row">
+                <button type="submit" class="wf-submit" id="wf-submit-btn">
+                  <span class="wf-btn-label">Submit Application</span>
+                  <svg class="wf-btn-label" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                  <div class="wf-spinner"></div>
+                </button>
+                <p class="wf-submit-note">We'll respond within 24 hours.<br>Your data is never sold or shared.</p>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHOLESALE FAQ -->
+<section class="ws-faq">
+  <div class="wsf-inner">
+    <div class="wsf-hd">
+      <div class="wsf-eyebrow">Wholesale FAQs</div>
+      <h2>Common Wholesale Questions</h2>
+    </div>
+    <div class="wfaq-list">
+      <div class="wfaq-item">
+        <button class="wfaq-q" onclick="toggleWFaq(this)">
+          What is the minimum order value for a wholesale account?
+          <span class="wfaq-icon"><svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+        </button>
+        <div class="wfaq-a"><div class="wfaq-a-inner">The minimum order value for our wholesale programme is £500 per order. Volume discounts begin at this level and scale upward based on your monthly spend. There is no minimum order frequency — you order when your research requires it.</div></div>
+      </div>
+      <div class="wfaq-item">
+        <button class="wfaq-q" onclick="toggleWFaq(this)">
+          How long does account approval take?
+          <span class="wfaq-icon"><svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+        </button>
+        <div class="wfaq-a"><div class="wfaq-a-inner">Applications are reviewed within 24 hours Monday to Friday. Our wholesale team will contact you to discuss your requirements, agree pricing bands, and activate your account. Most accounts are fully set up within 48 hours of application.</div></div>
+      </div>
+      <div class="wfaq-item">
+        <button class="wfaq-q" onclick="toggleWFaq(this)">
+          Can I order custom concentrations or bulk quantities?
+          <span class="wfaq-icon"><svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+        </button>
+        <div class="wfaq-a"><div class="wfaq-a-inner">Yes. For high-volume accounts, we offer custom concentrations, larger vial sizes, and bulk lyophilised powder. These require a minimum lead time of 5–7 working days and are subject to a minimum order quantity. Contact us to discuss your specific requirements.</div></div>
+      </div>
+      <div class="wfaq-item">
+        <button class="wfaq-q" onclick="toggleWFaq(this)">
+          Is white-label / own-brand supply available?
+          <span class="wfaq-icon"><svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+        </button>
+        <div class="wfaq-a"><div class="wfaq-a-inner">White-label supply is available for qualifying distributors and resellers meeting a monthly spend threshold. We can apply custom labels while supplying full batch COA documentation. Minimum monthly volume and a compliance review apply. Mention this in your application.</div></div>
+      </div>
+      <div class="wfaq-item">
+        <button class="wfaq-q" onclick="toggleWFaq(this)">
+          What payment terms are available for wholesale accounts?
+          <span class="wfaq-icon"><svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+        </button>
+        <div class="wfaq-a"><div class="wfaq-a-inner">New accounts pay on a proforma (payment before dispatch) basis. After three successful orders, accounts may apply for Net 30 credit terms, subject to a credit assessment. We accept bank transfer, all major cards, and cryptocurrency.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="fi2">
+    <div class="fg2">
+      <div class="fb-brand">
+        <img src="brand_assets/clarix_logo_reverse.png" alt="Clarix Peptides">
+        <p>Premium research peptides supplied to licensed researchers and research institutions across the UK and Europe. All products for research purposes only.</p>
+      </div>
+      <div class="fc">
+        <h4>Shop</h4>
+        <a href="shop.html">All Products</a>
+      </div>
+      <div class="fc">
+        <h4>Company</h4>
+        <a href="about.html">About Us</a>
+        <a href="wholesale.html">Wholesale</a>
+          <a href="usage-guide.html">Usage Guide</a>
+        </div>
+      <div class="fc">
+        <h4>Support</h4>
+        <a href="contact.html">Contact Us</a>
+        <a href="privacy-policy.html">Privacy Policy</a>
+        <a href="terms.html">Terms &amp; Conditions</a>
+      </div>
+    </div>
+    <div class="footer-bot">
+      <div>
+        <p class="f-legal">All products sold by Clarix Peptides are intended for research purposes only and are not approved by the MHRA, FDA, or any other regulatory body for human or veterinary use. Products must only be handled by qualified, licensed researchers. By purchasing, you confirm you are 18+ and a licensed researcher. Clarix Peptides accepts no liability for misuse.</p>
+        <p style="font-size:.65rem;color:rgba(255,255,255,.22);margin-top:8px;line-height:1.6">Clarix Research Ltd (trading as Clarix Peptides) &nbsp;|&nbsp; Registered in England and Wales &nbsp;|&nbsp; Company No. 17269311 &nbsp;|&nbsp; Registered Office: 66 Paul Street, London EC2A 4NA</p>
+      </div>
+      <div style="display:flex;align-items:center;gap:14px">
+        <img src="brand_assets/bank-transfer.webp" alt="Bank Transfer" style="height:28px;border-radius:5px">
+        <p class="f-copy">© 2026 Clarix Research Ltd</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- CART BACKDROP + DRAWER -->
+<div id="cart-backdrop" onclick="closeCart()"></div>
+<div id="cart-drawer">
+  <div class="cd-hdr">
+    <h2>Your Basket</h2>
+    <button class="xbtn" onclick="closeCart()">
+      <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+  </div>
+  <div class="cd-items" id="cart-items-el"></div>
+  <div class="cd-footer" id="cart-footer-el"></div>
+</div>
+
+<!-- ACCOUNT MODAL -->
+<div id="acct-modal">
+  <div class="modal-box">
+    <button onclick="closeAcct()" style="position:absolute;top:16px;right:16px;background:none;border:none;cursor:pointer;color:var(--muted);padding:4px;border-radius:6px;transition:color .2s" onmouseover="this.style.color='var(--navy)'" onmouseout="this.style.color='var(--muted)'">
+      <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+    <div class="ml"><img src="brand_assets/clarix_logo_primary.png" alt="Clarix Peptides"></div>
+    <div id="acct-modal-body"></div>
+  </div>
+</div>
+
+<!-- 15% OFF POPUP -->
+<div id="popup-overlay">
+  <div class="popup-box">
+    <div class="popup-top">
+      <button class="popup-close" onclick="closePopup()">×</button>
+      <div class="popup-disc">10% off</div>
+      <div class="popup-title">your first order</div>
+      <div class="popup-sub">Sign up and get a single-use 10% discount code.<br>Minimum order £40.</div>
+    </div>
+    <div class="popup-bot">
+      <form class="popup-form" onsubmit="submitPopup(event)">
+        <input class="fi" type="email" placeholder="you@example.com" required>
+        <label style="display:flex;align-items:flex-start;gap:9px;cursor:pointer;font-size:.78rem;color:var(--muted);line-height:1.5">
+          <input type="checkbox" required style="width:16px;height:16px;accent-color:var(--teal);flex-shrink:0;margin-top:2px;cursor:pointer">
+          <span>I agree to receive marketing emails from Clarix Peptides.</span>
+        </label>
+        <button type="submit" class="popup-btn">Get My 10% Discount Code</button>
+      </form>
+      <p class="popup-legal">UK only. One use per customer. <a href="terms.html">Terms apply</a>.</p>
+    </div>
+  </div>
+</div>
+
+<!-- TOAST -->
+<div id="toast"></div>
+
+<script>
+// ── PRODUCTS (shared for search) ──────────────────────────────────────────────
+const PRODUCTS = [
+  {id:1, name:"Retatrutide",          strength:"10mg",  price:69.99, category:"GLP-1"},
+  {id:2, name:"Retatrutide",          strength:"20mg",  price:94.99, category:"GLP-1"},
+  {id:5, name:"Tesamorelin",          strength:"2mg",   price:35.99, category:"Growth Hormone"},
+  {id:6, name:"Tesamorelin",          strength:"5mg",   price:49.99, category:"Growth Hormone"},
+  {id:7, name:"CJC-1295 (No DAC)",    strength:"2mg",   price:21.99, category:"Growth Hormone"},
+  {id:8, name:"CJC-1295 (No DAC)",    strength:"5mg",   price:34.99, category:"Growth Hormone"},
+  {id:9, name:"GHK-Cu",               strength:"50mg",  price:24.99, category:"Repair"},
+  {id:10,name:"GHK-Cu",               strength:"100mg", price:42.99, category:"Repair"},
+  {id:11,name:"BPC-157",              strength:"5mg",   price:21.99, category:"Repair"},
+  {id:12,name:"BPC-157",              strength:"10mg",  price:29.99, category:"Repair"},
+  {id:13,name:"TB-500",               strength:"5mg",   price:27.99, category:"Repair"},
+  {id:14,name:"TB-500",               strength:"10mg",  price:47.99, category:"Repair"},
+  {id:15,name:"Melanotan II",         strength:"10mg",  price:26.99, category:"Melanocortin"},
+  {id:16,name:"Bacteriostatic Water", strength:"10ml",  price:9.99,  category:"Reconstitution"},
+];
+
+// ── WHOLESALE FORM ─────────────────────────────────────────────────────────────
+function toggleCheck(label) {
+  setTimeout(() => label.classList.toggle('checked', label.querySelector('input').checked), 0);
+}
+
+async function submitWholesaleForm(e) {
+  e.preventDefault();
+  const form  = document.getElementById('wholesale-form');
+  const btn   = document.getElementById('wf-submit-btn');
+  const errEl = document.getElementById('wf-error-msg');
+  errEl.classList.remove('show');
+
+  // Validate
+  const required = form.querySelectorAll('[required]');
+  let valid = true;
+  required.forEach(el => {
+    if (!el.value && el.type !== 'checkbox') { el.style.borderColor = '#e53e3e'; valid = false; }
+    else if (el.type === 'checkbox' && !el.checked) valid = false;
+    else el.style.borderColor = '';
+  });
+  if (!valid) { errEl.textContent = 'Please fill in all required fields and accept the terms.'; errEl.classList.add('show'); return; }
+
+  // Collect product checkboxes
+  const checkedProducts = [...form.querySelectorAll('input[name="products"]:checked')].map(c => c.value).join(', ') || 'Not specified';
+
+  // Build FormData
+  const fd = new FormData(form);
+  fd.delete('products'); // remove raw checkbox values
+  fd.append('products_of_interest', checkedProducts);
+
+  // Add structured message summary
+  const summary = `
+WHOLESALE APPLICATION
+=====================
+Name:            ${fd.get('first_name')} ${fd.get('last_name')}
+Company:         ${fd.get('company_name')}
+Email:           ${fd.get('email')}
+Phone:           ${fd.get('phone') || 'Not provided'}
+Business Type:   ${fd.get('business_type')}
+Country:         ${fd.get('country')}
+Monthly Spend:   ${fd.get('monthly_spend')}
+Products:        ${checkedProducts}
+Referral Source: ${fd.get('referral_source') || 'Not provided'}
+
+Additional Info:
+${fd.get('message') || 'None provided'}
+  `.trim();
+  fd.append('formatted_summary', summary);
+
+  // Loading state
+  btn.classList.add('loading');
+  btn.disabled = true;
+
+  try {
+    const res  = await fetch('https://api.web3forms.com/submit', { method:'POST', body:fd });
+    const data = await res.json();
+    if (data.success) {
+      form.style.display = 'none';
+      document.getElementById('wf-success').classList.add('show');
+      window.scrollTo({top: document.getElementById('apply').offsetTop - 100, behavior:'smooth'});
+    } else {
+      throw new Error(data.message || 'Submission failed');
+    }
+  } catch(err) {
+    errEl.textContent = 'Submission failed. Please email us directly at info@clarixpeptides.com';
+    errEl.classList.add('show');
+  } finally {
+    btn.classList.remove('loading');
+    btn.disabled = false;
+  }
+}
+
+function resetForm() {
+  document.getElementById('wf-success').classList.remove('show');
+  const form = document.getElementById('wholesale-form');
+  form.reset();
+  form.style.display = '';
+  document.querySelectorAll('.wf-check-item').forEach(el => el.classList.remove('checked'));
+}
+
+// ── FAQ ───────────────────────────────────────────────────────────────────────
+function toggleWFaq(btn) {
+  const item = btn.closest('.wfaq-item');
+  const isOpen = item.classList.contains('open');
+  document.querySelectorAll('.wfaq-item.open').forEach(i => i.classList.remove('open'));
+  if (!isOpen) item.classList.add('open');
+}
+
+// ── CART ──────────────────────────────────────────────────────────────────────
+let cart = JSON.parse(localStorage.getItem('clarix_cart') || '[]');
+function saveCart() { localStorage.setItem('clarix_cart', JSON.stringify(cart)); }
+function updateCartBadge() {
+  const total = cart.reduce((s,i)=>s+i.qty,0);
+  const b = document.getElementById('cart-badge');
+  b.textContent = total; b.classList.toggle('show', total>0);
+}
+function renderCartDrawer() {
+  const el = document.getElementById('cart-items-el'), foot = document.getElementById('cart-footer-el');
+  if (!cart.length) { el.innerHTML='<div class="cart-empty"><div class="ce-icon">🧪</div><p style="font-weight:600;margin-bottom:4px">Your basket is empty</p><p style="font-size:.8rem">Browse our shop to add compounds</p></div>'; foot.innerHTML=''; return; }
+  el.innerHTML = cart.map(item=>`<div class="cart-item"><div class="ci-img">${item.img?`<img src="${item.img}" alt="${item.name}">`:'🧪'}</div><div class="ci-info"><div class="ci-name">${item.name}</div><div class="ci-str">${item.strength}</div><div class="ci-ctrl"><button class="qty-btn" onclick="changeQty(${item.id},-1)">−</button><span class="qty-n">${item.qty}</span><button class="qty-btn" onclick="changeQty(${item.id},1)">+</button></div></div><div style="display:flex;flex-direction:column;align-items:flex-end;gap:6px"><div class="ci-price">£${(item.price*item.qty).toFixed(2)}</div><button class="ci-rm" onclick="removeFromCart(${item.id})"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="3 6 5 6 21 6"/><path d="M19 6l-1 14H6L5 6"/></svg></button></div></div>`).join('');
+  const sub=cart.reduce((s,i)=>s+i.price*i.qty,0), ship=sub>=50?0:3.99;
+  foot.innerHTML=`<div class="cd-sub"><span>Subtotal</span><span>£${sub.toFixed(2)}</span></div><div class="cd-sub"><span>Shipping</span><span>${ship===0?'<span style="color:var(--teal);font-weight:600">FREE</span>':'£'+ship.toFixed(2)}</span></div><div class="cd-tot"><span>Total</span><span>£${(sub+ship).toFixed(2)}</span></div><button class="checkout-btn" onclick="proceedCheckout()">Proceed to Checkout</button>`;
+}
+function removeFromCart(id){cart=cart.filter(x=>x.id!==id);saveCart();updateCartBadge();renderCartDrawer();}
+function changeQty(id,d){const i=cart.find(x=>x.id===id);if(!i)return;i.qty=Math.max(1,i.qty+d);saveCart();updateCartBadge();renderCartDrawer();}
+function openCart(){document.getElementById('cart-drawer').classList.add('open');document.getElementById('cart-backdrop').classList.add('open');renderCartDrawer();}
+function closeCart(){document.getElementById('cart-drawer').classList.remove('open');document.getElementById('cart-backdrop').classList.remove('open');}
+function proceedCheckout(){if(!cart.length) return; window.location.href='checkout.html';}
+
+// ── ACCOUNT ───────────────────────────────────────────────────────────────────
+function getAccounts(){return JSON.parse(localStorage.getItem('clarix_accounts')||'[]');}
+function saveAccounts(a){localStorage.setItem('clarix_accounts',JSON.stringify(a));}
+function getSession(){return JSON.parse(sessionStorage.getItem('clarix_session')||'null');}
+function openAcct(){document.getElementById('acct-modal').classList.add('open');renderAcctModal();}
+function closeAcct(){document.getElementById('acct-modal').classList.remove('open');}
+function renderAcctModal(tab){
+  const s=getSession(),body=document.getElementById('acct-modal-body');
+  if(s){body.innerHTML=`<div class="loggedin"><div style="width:56px;height:56px;border-radius:50%;background:rgba(43,181,165,.12);display:flex;align-items:center;justify-content:center;margin:0 auto 14px;color:var(--teal)"><svg width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div><h3>Welcome back!</h3><p>${s.name}<br><span style="color:var(--muted);font-size:.8rem">${s.email}</span></p><div style="display:flex;gap:10px;justify-content:center"><button class="signout-btn" onclick="signOut()">Sign Out</button><button class="fb" style="flex:1;max-width:160px" onclick="closeAcct()">Close</button></div></div>`;return;}
+  const at=tab||'signin';
+  body.innerHTML=`<div class="mtabs"><button class="mtab ${at==='signin'?'active':''}" onclick="renderAcctModal('signin')">Sign In</button><button class="mtab ${at==='register'?'active':''}" onclick="renderAcctModal('register')">Create Account</button></div>${at==='signin'?`<form onsubmit="doSignIn(event)"><div class="fg"><label class="fl">Email</label><input class="fi" type="email" id="si-email" placeholder="you@example.com" required></div><div class="fg"><label class="fl">Password</label><input class="fi" type="password" id="si-pass" placeholder="••••••••" required></div><div id="si-msg"></div><button type="submit" class="fb">Sign In</button></form>`:`<form onsubmit="doRegister(event)"><div style="display:grid;grid-template-columns:1fr 1fr;gap:12px"><div class="fg"><label class="fl">First Name</label><input class="fi" type="text" id="reg-first" placeholder="Jane" required></div><div class="fg"><label class="fl">Last Name</label><input class="fi" type="text" id="reg-last" placeholder="Smith" required></div></div><div class="fg"><label class="fl">Email</label><input class="fi" type="email" id="reg-email" placeholder="you@example.com" required></div><div class="fg"><label class="fl">Password</label><input class="fi" type="password" id="reg-pass" placeholder="Min. 8 characters" required minlength="8"></div><div class="fg"><label class="fl">Confirm</label><input class="fi" type="password" id="reg-pass2" placeholder="Repeat password" required></div><div class="fg"><label class="fl">Date of Birth</label><input class="fi" type="date" id="reg-dob" required max="${new Date(new Date().setFullYear(new Date().getFullYear()-18)).toISOString().split('T')[0]}"></div><label style="display:flex;align-items:flex-start;gap:9px;cursor:pointer;font-size:.8rem;color:var(--muted);line-height:1.5;margin-bottom:14px"><input type="checkbox" required style="width:15px;height:15px;accent-color:var(--teal);flex-shrink:0;margin-top:2px">I confirm I am a licensed researcher. I agree to the <a href="terms.html" style="color:var(--teal)" target="_blank">Terms &amp; Conditions</a> and <a href="privacy-policy.html" style="color:var(--teal)" target="_blank">Privacy Policy</a>.</label><div id="reg-msg"></div><button type="submit" class="fb">Create Account</button></form>`}`;
+}
+async function hashPwd(p){const b=await crypto.subtle.digest('SHA-256',new TextEncoder().encode(p));return Array.from(new Uint8Array(b)).map(x=>x.toString(16).padStart(2,'0')).join('');}
+async function doSignIn(e){e.preventDefault();const em=document.getElementById('si-email').value.trim().toLowerCase(),pw=document.getElementById('si-pass').value,hashed=await hashPwd(pw),u=getAccounts().find(a=>a.email===em&&a.password===hashed),msg=document.getElementById('si-msg');if(!u){msg.innerHTML='<p class="merr">Invalid email or password.</p>';return;}sessionStorage.setItem('clarix_session',JSON.stringify({email:u.email,name:u.name}));renderAcctModal();showToast(`Welcome back, <span class="t-teal">${u.name.split(' ')[0]}</span>!`);}
+async function doRegister(e){e.preventDefault();const f=document.getElementById('reg-first').value.trim(),l=document.getElementById('reg-last').value.trim(),em=document.getElementById('reg-email').value.trim().toLowerCase(),pw=document.getElementById('reg-pass').value,pw2=document.getElementById('reg-pass2').value,dob=document.getElementById('reg-dob').value,msg=document.getElementById('reg-msg');if(pw!==pw2){msg.innerHTML='<p class="merr">Passwords do not match.</p>';return;}if(dob){const dobDate=new Date(dob);const today=new Date();let age=today.getFullYear()-dobDate.getFullYear();const m=today.getMonth()-dobDate.getMonth();if(m<0||(m===0&&today.getDate()<dobDate.getDate()))age--;if(age<18){msg.innerHTML='<p class="merr">You must be 18 or older to create an account.</p>';return;}}const acc=getAccounts();if(acc.find(a=>a.email===em)){msg.innerHTML='<p class="merr">Account already exists.</p>';return;}const name=`${f} ${l}`;const hashed=await hashPwd(pw);acc.push({email:em,password:hashed,name,dob});saveAccounts(acc);sessionStorage.setItem('clarix_session',JSON.stringify({email:em,name}));renderAcctModal();showToast(`Welcome, <span class="t-teal">${f}</span>!`);notifySignup(em,name);}
+function notifySignup(em,nm){const K='aa36f936-af5e-420f-8e65-6f782a43046f';fetch('https://api.web3forms.com/submit',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({access_key:K,subject:'New Account Registration: '+em,from_name:'Clarix Peptides Website',message:'NEW ACCOUNT SIGNUP\n\nName: '+nm+'\nEmail: '+em+'\nDate: '+new Date().toLocaleString('en-GB')})}).catch(()=>{});}
+function signOut(){sessionStorage.removeItem('clarix_session');renderAcctModal('signin');showToast('You have been signed out');}
+
+// ── SEARCH ────────────────────────────────────────────────────────────────────
+function openSearch(){document.getElementById('search-overlay').classList.add('open');setTimeout(()=>document.getElementById('search-input').focus(),100);}
+function closeSearch(){document.getElementById('search-overlay').classList.remove('open');document.getElementById('search-results').classList.remove('show');document.getElementById('search-input').value='';}
+document.getElementById('search-input').addEventListener('input',function(){
+  const q=this.value.toLowerCase().trim(),res=document.getElementById('search-results');
+  if(!q){res.classList.remove('show');return;}
+  const m=PRODUCTS.filter(p=>p.name.toLowerCase().includes(q)||p.category.toLowerCase().includes(q));
+  if(!m.length){res.innerHTML='<div class="sr-item"><div class="sr-name">No results found</div></div>';res.classList.add('show');return;}
+  res.innerHTML=m.slice(0,8).map(p=>`<a class="sr-item" href="shop.html" style="text-decoration:none"><div><div class="sr-name">${p.name} ${p.strength}</div><div class="sr-cat">${p.category}</div></div><div class="sr-price">£${p.price.toFixed(2)}</div></a>`).join('');
+  res.classList.add('show');
+});
+
+// ── POPUP ─────────────────────────────────────────────────────────────────────
+function closePopup(){document.getElementById('popup-overlay').classList.remove('open');}
+function submitPopup(e){e.preventDefault();localStorage.setItem('clarix_popup_seen','1');closePopup();showToast('🎉 Your code <span class="t-teal">CLARIX10</span> has been emailed to you!');}
+
+// ── TOAST ─────────────────────────────────────────────────────────────────────
+let toastTimer;
+function showToast(msg){const t=document.getElementById('toast');t.innerHTML=msg;t.classList.add('show');clearTimeout(toastTimer);toastTimer=setTimeout(()=>t.classList.remove('show'),3200);}
+
+// ── NAV + MOBILE ──────────────────────────────────────────────────────────────
+window.addEventListener('scroll',()=>document.getElementById('main-nav').classList.toggle('scrolled',window.scrollY>10));
+document.getElementById('hamburger').addEventListener('click',()=>document.getElementById('mobile-menu').classList.add('open'));
+document.getElementById('mm-close').addEventListener('click',()=>document.getElementById('mobile-menu').classList.remove('open'));
+document.addEventListener('keydown',e=>{if(e.key==='Escape'){closeSearch();closeAcct();closePopup();}});
+document.getElementById('acct-modal').addEventListener('click',e=>{if(e.target===e.currentTarget)closeAcct();});
+document.getElementById('search-overlay').addEventListener('click',e=>{if(e.target===e.currentTarget)closeSearch();});
+document.getElementById('popup-overlay').addEventListener('click',e=>{if(e.target===e.currentTarget)closePopup();});
+document.getElementById('search-btn').addEventListener('click',openSearch);
+document.getElementById('search-close').addEventListener('click',closeSearch);
+document.getElementById('acct-btn').addEventListener('click',openAcct);
+document.getElementById('cart-btn').addEventListener('click',openCart);
+
+// ── INIT ──────────────────────────────────────────────────────────────────────
+updateCartBadge();
+if(!localStorage.getItem('clarix_popup_seen')){
+  setTimeout(()=>document.getElementById('popup-overlay').classList.add('open'),4000);
+}
+
+// Smooth scroll for Apply Now CTA
+document.querySelectorAll('a[href="#apply"]').forEach(a=>{
+  a.addEventListener('click',e=>{e.preventDefault();document.getElementById('apply').scrollIntoView({behavior:'smooth',block:'start'});});
+});
+
+// Input field focus styling
+document.querySelectorAll('.wf-input,.wf-select,.wf-textarea').forEach(el=>{
+  el.addEventListener('blur',()=>{if(el.required&&!el.value)el.style.borderColor='#FECACA';else el.style.borderColor='';});
+  el.addEventListener('focus',()=>el.style.borderColor='');
+});
+</script>
+<!-- COOKIE CONSENT BANNER -->
+<div id="cookie-bar" style="position:fixed;bottom:0;left:0;right:0;z-index:9999;background:rgba(15,34,64,.97);backdrop-filter:blur(12px);border-top:1px solid rgba(255,255,255,.1);padding:16px 24px;display:flex;align-items:center;flex-wrap:wrap;gap:12px 20px;font-family:'DM Sans',sans-serif;box-shadow:0 -4px 24px rgba(0,0,0,.3);transition:transform .4s ease">
+  <div style="flex:1;min-width:280px">
+    <p style="font-size:.78rem;color:rgba(255,255,255,.7);line-height:1.65;margin:0"><strong style="color:#fff;font-weight:600">We use cookies &amp; local storage</strong> for essential website functions (cart, account, session) and load third-party scripts (Tailwind CSS, Google Fonts) that may process your IP address. <a href="privacy-policy.html" style="color:#2BB5A5;text-decoration:underline">Privacy Policy</a></p>
+  </div>
+  <div style="display:flex;gap:8px;flex-shrink:0">
+    <button onclick="setCookieChoice('declined')" style="padding:8px 16px;font-size:.78rem;font-weight:600;border-radius:7px;border:1px solid rgba(255,255,255,.2);background:none;color:rgba(255,255,255,.6);cursor:pointer;font-family:'DM Sans',sans-serif">Decline</button>
+    <button onclick="setCookieChoice('accepted')" style="padding:8px 18px;font-size:.78rem;font-weight:600;border-radius:7px;border:none;background:#2BB5A5;color:#fff;cursor:pointer;font-family:'DM Sans',sans-serif">Accept All</button>
+  </div>
+</div>
+<script>
+(function(){
+  function setCookieChoice(c){localStorage.setItem('clarix_cookies',c);var b=document.getElementById('cookie-bar');if(b){b.style.transform='translateY(110%)';setTimeout(function(){b.style.display='none'},400)}}
+  window.setCookieChoice=setCookieChoice;
+  if(localStorage.getItem('clarix_cookies')){var b=document.getElementById('cookie-bar');if(b)b.style.display='none'}
+})();
+</script>
+</body>
+</html>

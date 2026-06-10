@@ -1,0 +1,1144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="brand_assets/clarix_logomark.png" type="image/png">
+<link rel="apple-touch-icon" href="brand_assets/clarix_logomark.png">
+<title>Checkout | Clarix Peptides</title>
+<meta name="robots" content="noindex, nofollow">
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#0F2240;--navy-mid:#1A3560;--teal:#2BB5A5;--teal-dark:#229E8F;--white:#FFFFFF;--gray-50:#F0F4FA;--gray-100:#E1E8F5;--muted:#6B7A99;--red:#e74c3c}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'DM Sans',sans-serif;background:var(--gray-50);color:var(--navy);min-height:100vh}
+h1,h2,h3,h4{font-family:'Outfit',sans-serif}
+
+/* NAV */
+.co-nav{background:#fff;border-bottom:1px solid var(--gray-100);padding:0 24px}
+.co-nav-i{max-width:1120px;margin:0 auto;height:72px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.co-logo img{height:58px;width:auto}
+.co-secure{display:flex;align-items:center;gap:6px;font-size:.78rem;color:var(--muted);font-weight:500}
+.co-secure svg{color:var(--teal)}
+.co-back{display:flex;align-items:center;gap:5px;font-size:.82rem;font-weight:600;color:var(--muted);text-decoration:none;transition:color .15s}
+.co-back:hover{color:var(--navy)}
+
+/* STEP BAR */
+.st-bar{background:#fff;border-bottom:1px solid var(--gray-100);padding:14px 24px}
+.st-inner{max-width:1120px;margin:0 auto;display:flex;align-items:center}
+.st-item{display:flex;align-items:center;gap:9px}
+.st-conn{flex:1;height:2px;background:var(--gray-100);margin:0 8px;border-radius:2px;transition:background .4s;min-width:20px}
+.st-conn.done{background:var(--teal)}
+.st-dot{width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.73rem;font-weight:700;font-family:'Outfit',sans-serif;flex-shrink:0;transition:all .3s}
+.st-dot.done{background:var(--teal);color:#fff}
+.st-dot.active{background:var(--navy);color:#fff;box-shadow:0 0 0 4px rgba(15,34,64,.1)}
+.st-dot.pending{background:var(--gray-100);color:var(--muted)}
+.st-lbl{font-size:.75rem;font-weight:600;white-space:nowrap;transition:color .3s}
+.st-lbl.active{color:var(--navy)}
+.st-lbl.done{color:var(--teal)}
+.st-lbl.pending{color:var(--muted)}
+@media(max-width:540px){.st-lbl{display:none}}
+
+/* LAYOUT */
+.co-wrap{max-width:1120px;margin:0 auto;padding:32px 24px 80px;display:grid;grid-template-columns:1fr 360px;gap:26px;align-items:start}
+@media(max-width:820px){.co-wrap{grid-template-columns:1fr}}
+.co-sidebar{position:sticky;top:24px}
+@media(max-width:820px){.co-sidebar{order:-1;position:static}}
+
+/* CARD */
+.card{background:#fff;border-radius:16px;border:1.5px solid var(--gray-100);margin-bottom:18px;overflow:hidden}
+.card:last-child{margin-bottom:0}
+.card-hdr{padding:20px 24px;border-bottom:1px solid var(--gray-100);display:flex;align-items:center;justify-content:space-between}
+.card-hdr h2{font-size:1rem;font-weight:700;color:var(--navy)}
+.card-edit{background:none;border:none;cursor:pointer;font-size:.8rem;font-weight:600;color:var(--teal);padding:4px 8px;border-radius:6px;font-family:'DM Sans',sans-serif;transition:background .15s}
+.card-edit:hover{background:rgba(43,181,165,.08)}
+.card-body{padding:24px}
+
+/* FORM */
+.fg{margin-bottom:16px}
+.fg:last-child{margin-bottom:0}
+.fl{display:block;font-size:.78rem;font-weight:600;color:var(--navy);margin-bottom:6px}
+.fl em{color:var(--red);margin-left:2px;font-style:normal}
+.fi,.fs{width:100%;padding:12px 14px;border:1.5px solid var(--gray-100);border-radius:10px;font-size:.9rem;font-family:'DM Sans',sans-serif;color:var(--navy);outline:none;transition:border-color .2s,box-shadow .2s;background:#fff;-webkit-appearance:none;appearance:none}
+.fi:focus,.fs:focus{border-color:var(--teal);box-shadow:0 0 0 3px rgba(43,181,165,.1)}
+.fi.err{border-color:var(--red)}
+.fg-2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:480px){.fg-2{grid-template-columns:1fr}}
+.field-err{font-size:.75rem;color:var(--red);margin-top:4px;display:none}
+.form-alert{padding:11px 14px;background:rgba(231,76,60,.06);border:1.5px solid rgba(231,76,60,.2);border-radius:9px;color:var(--red);font-size:.82rem;font-weight:600;margin-bottom:16px;display:none}
+.form-alert.show{display:block}
+
+/* COMPLIANCE */
+.comp-box{border:1.5px solid var(--gray-100);border-radius:12px;padding:15px 16px;margin-bottom:10px;cursor:pointer;transition:border-color .25s,background .25s;display:flex;align-items:flex-start;gap:13px}
+.comp-box:last-of-type{margin-bottom:0}
+.comp-box.ticked{border-color:var(--teal);background:rgba(43,181,165,.04)}
+.comp-icon-wrap{width:36px;height:36px;border-radius:9px;background:var(--gray-50);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:1.15rem;margin-top:1px;transition:background .25s}
+.comp-box.ticked .comp-icon-wrap{background:rgba(43,181,165,.12)}
+.comp-text{flex:1}
+.comp-text strong{display:block;font-size:.875rem;font-weight:700;color:var(--navy);margin-bottom:3px;line-height:1.3}
+.comp-text p{font-size:.78rem;color:var(--muted);line-height:1.55}
+.comp-cb{width:22px;height:22px;border-radius:6px;border:2px solid var(--gray-100);background:#fff;flex-shrink:0;margin-top:6px;display:flex;align-items:center;justify-content:center;transition:all .2s}
+.comp-box.ticked .comp-cb{background:var(--teal);border-color:var(--teal)}
+.comp-err{display:none;padding:10px 13px;background:rgba(231,76,60,.06);border:1.5px solid rgba(231,76,60,.2);border-radius:8px;color:var(--red);font-size:.8rem;font-weight:600;margin-top:12px}
+.comp-err.show{display:block}
+
+/* BUTTONS */
+.btn-p{width:100%;padding:15px;background:var(--navy);color:#fff;font-family:'Outfit',sans-serif;font-size:.975rem;font-weight:700;border:none;border-radius:12px;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:8px;transition:background .2s;margin-top:4px}
+.btn-p:hover{background:var(--teal)}
+.btn-p:disabled{opacity:.5;cursor:not-allowed}
+.btn-s{padding:12px 22px;background:var(--gray-50);color:var(--navy);border:1.5px solid var(--gray-100);border-radius:10px;cursor:pointer;font-family:'DM Sans',sans-serif;font-size:.875rem;font-weight:600;transition:background .15s}
+.btn-s:hover{background:var(--gray-100)}
+.btn-row{display:flex;gap:12px;align-items:center;margin-top:22px}
+.btn-row .btn-p{flex:1}
+.spin{width:17px;height:17px;border:2px solid rgba(255,255,255,.3);border-top-color:#fff;border-radius:50%;animation:spin .7s linear infinite;display:none}
+@keyframes spin{to{transform:rotate(360deg)}}
+.btn-p.loading .spin{display:block}
+.btn-p.loading .btn-lbl{display:none}
+
+/* SIDEBAR */
+.sb-item{display:flex;align-items:center;gap:11px;padding:11px 0;border-bottom:1px solid var(--gray-100)}
+.sb-item:last-child{border-bottom:none}
+.sb-img{width:52px;height:52px;border-radius:9px;background:var(--gray-50);flex-shrink:0;overflow:hidden;display:flex;align-items:center;justify-content:center}
+.sb-img img{width:100%;height:100%;object-fit:contain;padding:4px}
+.sb-name{font-size:.82rem;font-weight:700;color:var(--navy);line-height:1.3}
+.sb-sub{font-size:.75rem;color:var(--muted);margin-top:2px}
+.sb-price{font-size:.87rem;font-weight:700;color:var(--navy);font-family:'Outfit',sans-serif;margin-left:auto;flex-shrink:0}
+.tot-row{display:flex;justify-content:space-between;font-size:.875rem;margin-bottom:8px}
+.tot-row span:last-child{font-weight:600}
+.tot-row.free span:last-child{color:var(--teal)}
+.tot-grand{display:flex;justify-content:space-between;padding-top:10px;border-top:2px solid var(--gray-100);margin-top:6px;font-weight:800;font-family:'Outfit',sans-serif;font-size:1.1rem;color:var(--navy)}
+
+/* REVIEW QTY */
+.rv-item{display:flex;align-items:center;gap:13px;padding:13px;background:var(--gray-50);border-radius:11px;border:1.5px solid var(--gray-100);margin-bottom:10px}
+.rv-item:last-child{margin-bottom:0}
+.rv-img{width:60px;height:60px;border-radius:9px;background:#fff;flex-shrink:0;overflow:hidden;display:flex;align-items:center;justify-content:center}
+.rv-img img{width:100%;height:100%;object-fit:contain;padding:5px}
+.rv-name{font-size:.875rem;font-weight:700;color:var(--navy)}
+.rv-str{font-size:.77rem;color:var(--muted);margin-top:2px}
+.rv-qrow{display:flex;align-items:center;gap:8px;margin-top:8px}
+.qb{width:27px;height:27px;border-radius:7px;border:1.5px solid var(--gray-100);background:#fff;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:.9rem;color:var(--navy);transition:border-color .15s}
+.qb:hover{border-color:var(--teal);color:var(--teal)}
+.qn{font-size:.875rem;font-weight:600;min-width:20px;text-align:center}
+.rm-btn{background:none;border:none;cursor:pointer;color:var(--muted);padding:4px;border-radius:6px;margin-left:6px;transition:color .15s}
+.rm-btn:hover{color:var(--red)}
+.rv-price{font-weight:700;font-family:'Outfit',sans-serif;font-size:.9rem;color:var(--navy);margin-left:auto;flex-shrink:0}
+
+/* STEP PANELS */
+.step-panel{display:none}
+.step-panel.on{display:block}
+
+/* BANK TRANSFER SUCCESS */
+.bt-hero{background:var(--navy);padding:38px 30px 32px;text-align:center;position:relative;overflow:hidden}
+.bt-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 60% 0%,rgba(43,181,165,.18) 0%,transparent 65%);pointer-events:none}
+.bt-tick{width:60px;height:60px;background:var(--teal);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 14px;position:relative;z-index:1}
+.bt-hero h2{font-size:1.5rem;font-weight:800;color:#fff;margin-bottom:7px;position:relative;z-index:1}
+.bt-hero p{font-size:.85rem;color:rgba(255,255,255,.55);position:relative;z-index:1;line-height:1.6}
+.bt-ref-pill{display:inline-block;padding:6px 18px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.18);border-radius:20px;font-size:.9rem;font-weight:700;color:#fff;font-family:'Outfit',sans-serif;margin-top:14px;position:relative;z-index:1;letter-spacing:.05em}
+
+.bt-body{padding:26px 28px}
+.bt-section{font-size:.7rem;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:var(--muted);margin-bottom:12px}
+
+.amt-box{background:var(--gray-50);border:2px solid var(--teal);border-radius:13px;padding:20px 22px;margin-bottom:22px;display:flex;align-items:center;justify-content:space-between;gap:14px}
+.amt-lbl{font-size:.8rem;color:var(--muted);margin-bottom:4px}
+.amt-num{font-size:2.1rem;font-weight:800;color:var(--navy);font-family:'Outfit',sans-serif;letter-spacing:-.03em}
+.amt-note{font-size:.73rem;color:var(--muted);margin-top:4px}
+.copy-btn{padding:10px 16px;background:var(--teal);color:#fff;border:none;border-radius:8px;cursor:pointer;font-family:'Outfit',sans-serif;font-weight:700;font-size:.82rem;white-space:nowrap;transition:background .2s;display:flex;align-items:center;gap:6px;flex-shrink:0}
+.copy-btn:hover{background:var(--teal-dark)}
+.copy-btn.done{background:var(--navy)}
+
+.bk-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:22px}
+@media(max-width:520px){.bk-grid{grid-template-columns:1fr}}
+.bk-cell{background:var(--gray-50);border:1.5px solid var(--gray-100);border-radius:11px;padding:14px 16px;position:relative}
+.bk-cell.ref{background:rgba(43,181,165,.05);border-color:var(--teal);grid-column:1/-1}
+.bk-label{font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);display:block;margin-bottom:5px}
+.bk-val{font-size:1.05rem;font-weight:700;color:var(--navy);font-family:'Outfit',sans-serif;letter-spacing:.03em}
+.bk-cell.ref .bk-val{color:var(--teal)}
+.bk-cp{position:absolute;top:10px;right:10px;background:none;border:none;cursor:pointer;color:var(--muted);padding:5px;border-radius:6px;transition:color .2s}
+.bk-cp:hover{color:var(--teal)}
+
+.disc-note{background:rgba(15,34,64,.04);border-left:3px solid var(--navy);border-radius:0 10px 10px 0;padding:13px 16px;font-size:.8rem;color:var(--muted);line-height:1.65;margin-bottom:22px}
+.disc-note strong{color:var(--navy)}
+
+.whn-steps{background:var(--gray-50);border:1.5px solid var(--gray-100);border-radius:12px;overflow:hidden;margin-bottom:24px}
+.whn-step{display:flex;gap:14px;padding:15px 18px;border-bottom:1px solid var(--gray-100)}
+.whn-step:last-child{border-bottom:none}
+.whn-num{width:26px;height:26px;border-radius:50%;background:var(--teal);color:#fff;display:flex;align-items:center;justify-content:center;font-size:.73rem;font-weight:700;font-family:'Outfit',sans-serif;flex-shrink:0;margin-top:2px}
+.whn-txt strong{display:block;font-size:.85rem;font-weight:700;color:var(--navy);margin-bottom:3px}
+.whn-txt p{font-size:.78rem;color:var(--muted);line-height:1.55}
+
+.bt-acts{display:flex;gap:12px;flex-wrap:wrap}
+.bt-acts a,.bt-acts button{flex:1;min-width:130px;padding:12px 16px;text-align:center;border-radius:10px;font-family:'DM Sans',sans-serif;font-size:.875rem;font-weight:600;cursor:pointer;text-decoration:none;transition:all .2s;display:flex;align-items:center;justify-content:center;gap:6px}
+.bt-act-p{background:var(--navy);color:#fff;border:none}
+.bt-act-p:hover{background:var(--teal)}
+.bt-act-s{background:var(--gray-50);color:var(--navy);border:1.5px solid var(--gray-100)}
+.bt-act-s:hover{background:var(--gray-100)}
+
+/* TRUST ROW */
+.trust{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}
+.tb{display:flex;align-items:center;gap:6px;font-size:.72rem;font-weight:600;color:var(--muted);padding:6px 11px;background:var(--gray-50);border-radius:20px;border:1px solid var(--gray-100)}
+.tb svg{color:var(--teal)}
+
+/* EMPTY */
+#empty-s{display:none;text-align:center;padding:80px 24px;max-width:1120px;margin:0 auto}
+
+/* SUMMARY ADDR */
+.s-addr{margin-top:10px;padding-top:10px;border-top:1px solid var(--gray-100);font-size:.8rem;color:var(--muted);line-height:1.6}
+.s-addr strong{display:block;color:var(--navy);font-weight:600;margin-bottom:2px}
+
+/* NOTICE */
+.notice-bar{background:var(--navy);color:rgba(255,255,255,.7);text-align:center;padding:8px 24px;font-size:.69rem;letter-spacing:.08em;text-transform:uppercase}
+
+/* ── STEP 4 REDESIGN ───────────────────────────────────────────────────────── */
+.conf-hdr{background:#fff;border-radius:16px;border:1.5px solid var(--gray-100);padding:26px;margin-bottom:18px;display:flex;align-items:flex-start;gap:16px}
+.conf-tick-wrap{width:50px;height:50px;border-radius:50%;background:rgba(43,181,165,.12);border:2px solid rgba(43,181,165,.2);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.conf-eyebrow{font-size:.7rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--teal);margin-bottom:6px}
+.conf-name{font-size:1.45rem;font-weight:800;color:var(--navy);font-family:'Outfit',sans-serif;letter-spacing:-.025em;margin-bottom:12px;line-height:1.1}
+.conf-ref-row{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.conf-ref-lbl{font-size:.78rem;color:var(--muted)}
+.conf-ref-pill{padding:5px 13px;background:var(--gray-50);border:1.5px solid var(--gray-100);border-radius:20px;font-size:.84rem;font-weight:700;color:var(--navy);font-family:'Outfit',sans-serif;letter-spacing:.05em}
+
+.amt-transfer{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:20px 22px;background:rgba(43,181,165,.05);border:2px solid var(--teal);border-radius:13px;margin-bottom:14px}
+.amt-big{font-size:2.6rem;font-weight:800;color:var(--navy);font-family:'Outfit',sans-serif;letter-spacing:-.03em;line-height:1}
+.amt-lbl2{font-size:.78rem;color:var(--muted);margin-bottom:6px}
+.amt-note2{font-size:.73rem;color:var(--muted);margin-top:5px}
+.time-warn{display:flex;align-items:flex-start;gap:9px;padding:11px 14px;background:rgba(231,76,60,.05);border:1px solid rgba(231,76,60,.18);border-radius:9px;font-size:.8rem;color:#c0392b;line-height:1.5}
+.time-warn svg{flex-shrink:0;margin-top:1px}
+
+.bk-rows{display:flex;flex-direction:column}
+.bk-row2{display:flex;align-items:center;padding:13px 0;border-bottom:1px solid var(--gray-100);gap:10px}
+.bk-row2:last-child{border-bottom:none}
+.bk-key2{font-size:.78rem;font-weight:600;color:var(--muted);width:130px;flex-shrink:0;line-height:1.4}
+.bk-val2{font-size:.95rem;font-weight:700;color:var(--navy);font-family:'Outfit',sans-serif;flex:1;letter-spacing:.02em}
+.bk-val2.ref{color:var(--teal);font-size:1rem;letter-spacing:.04em}
+.bk-inline-cp{background:none;border:1.5px solid var(--gray-100);border-radius:7px;padding:5px 11px;cursor:pointer;font-size:.72rem;font-weight:600;color:var(--muted);font-family:'DM Sans',sans-serif;transition:all .15s;white-space:nowrap;flex-shrink:0}
+.bk-inline-cp:hover{border-color:var(--teal);color:var(--teal);background:rgba(43,181,165,.05)}
+.bk-inline-cp.done{border-color:var(--teal);color:var(--teal)}
+.bk-ref-note{font-size:.68rem;color:var(--red);font-weight:600;margin-top:2px}
+
+/* PAYMENT METHOD */
+.pm-opt{display:flex;align-items:center;gap:14px;padding:14px 16px;border:1.5px solid var(--gray-100);border-radius:12px;cursor:pointer;transition:border-color .2s,background .2s}
+.pm-opt:hover{border-color:rgba(43,181,165,.4);background:rgba(43,181,165,.02)}
+.pm-opt-active{border-color:var(--teal);background:rgba(43,181,165,.04)}
+.pm-radio{width:20px;height:20px;border-radius:50%;border:2px solid var(--gray-100);display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:border-color .2s}
+.pm-opt-active .pm-radio{border-color:var(--teal)}
+.pm-dot{width:10px;height:10px;border-radius:50%;background:var(--teal);display:none}
+.pm-opt-active .pm-dot{display:block}
+.pm-icon-wrap{width:44px;height:32px;border-radius:6px;background:transparent;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+
+.od-grid2{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+@media(max-width:500px){.od-grid2{grid-template-columns:1fr}}
+.od-lbl2{font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);margin-bottom:7px}
+.od-val2{font-size:.85rem;color:var(--navy);line-height:1.7}
+.od-val2 strong{font-weight:700;display:block}
+.od-val2 .sub{font-size:.78rem;color:var(--muted)}
+
+.wn-sb{background:var(--gray-50);border:1.5px solid var(--gray-100);border-radius:12px;overflow:hidden;margin-top:14px}
+.wn-sb-row{display:flex;gap:12px;padding:12px 16px;border-bottom:1px solid var(--gray-100);align-items:flex-start}
+.wn-sb-row:last-child{border-bottom:none}
+.wn-n{width:20px;height:20px;border-radius:50%;background:var(--teal);color:#fff;display:flex;align-items:center;justify-content:center;font-size:.62rem;font-weight:700;font-family:'Outfit',sans-serif;flex-shrink:0;margin-top:2px}
+.wn-t strong{font-size:.8rem;color:var(--navy);font-weight:700}
+.wn-t p{font-size:.74rem;color:var(--muted);line-height:1.5;margin-top:1px}
+
+/* ── MOBILE NAV ── */
+@media(max-width:640px){
+  .nav-inner{height:72px;padding:0 16px}
+  .nav-logo img{height:56px}
+  .nib{width:36px;height:36px}
+  #hamburger{display:flex}
+}
+@media(max-width:480px){
+  .co-wrap{padding:0 16px 60px}
+  .step-badge{width:28px;height:28px;font-size:.7rem}
+  .step-label{font-size:.7rem}
+  .form-card{padding:20px 16px}
+  .btn-primary{font-size:.9rem;padding:14px 20px}
+}
+</style>
+</head>
+<body>
+
+<div class="notice-bar">All products for in-vitro research use only &nbsp;·&nbsp; Not for human or veterinary use</div>
+
+<!-- NAV -->
+<nav class="co-nav">
+  <div class="co-nav-i">
+    <a href="index.html" class="co-logo"><img src="brand_assets/clarix_logo_primary.png" alt="Clarix Peptides"></a>
+    <div class="co-secure">
+      <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+      Secure Checkout
+    </div>
+    <a href="shop.html" class="co-back">
+      <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+      Back to shop
+    </a>
+  </div>
+</nav>
+
+<!-- STEP BAR -->
+<div class="st-bar">
+  <div class="st-inner" id="st-inner">
+    <div class="st-item">
+      <div class="st-dot active" id="d1">1</div>
+      <span class="st-lbl active" id="l1">Your Details</span>
+    </div>
+    <div class="st-conn" id="c1"></div>
+    <div class="st-item">
+      <div class="st-dot pending" id="d2">2</div>
+      <span class="st-lbl pending" id="l2">Review</span>
+    </div>
+    <div class="st-conn" id="c2"></div>
+    <div class="st-item">
+      <div class="st-dot pending" id="d3">3</div>
+      <span class="st-lbl pending" id="l3">Compliance</span>
+    </div>
+    <div class="st-conn" id="c3"></div>
+    <div class="st-item">
+      <div class="st-dot pending" id="d4">
+        <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+      </div>
+      <span class="st-lbl pending" id="l4">Payment</span>
+    </div>
+  </div>
+</div>
+
+<!-- EMPTY CART -->
+<div id="empty-s">
+  <div style="font-size:3.5rem;margin-bottom:18px">🧪</div>
+  <h2 style="font-size:1.7rem;font-weight:700;color:var(--navy);margin-bottom:10px">Your basket is empty</h2>
+  <p style="color:var(--muted);margin-bottom:26px">Add research compounds to your basket before proceeding to checkout.</p>
+  <a href="shop.html" style="display:inline-block;padding:13px 30px;background:var(--navy);color:#fff;text-decoration:none;border-radius:11px;font-family:'Outfit',sans-serif;font-weight:700">Browse Products</a>
+</div>
+
+<!-- MAIN -->
+<div class="co-wrap" id="co-main">
+
+  <!-- LEFT: STEPS -->
+  <div>
+
+    <!-- STEP 1: DETAILS -->
+    <div class="step-panel on" id="sp1">
+      <div class="card">
+        <div class="card-hdr"><h2>Your Contact &amp; Delivery Details</h2></div>
+        <div class="card-body">
+          <div class="form-alert" id="s1-alert">Please complete all required fields.</div>
+          <div class="fg-2">
+            <div class="fg">
+              <label class="fl">First Name <em>*</em></label>
+              <input type="text" class="fi" id="s1-fn" autocomplete="given-name" placeholder="Jane">
+            </div>
+            <div class="fg">
+              <label class="fl">Last Name <em>*</em></label>
+              <input type="text" class="fi" id="s1-ln" autocomplete="family-name" placeholder="Smith">
+            </div>
+          </div>
+          <div class="fg">
+            <label class="fl">Email Address <em>*</em></label>
+            <input type="email" class="fi" id="s1-em" autocomplete="email" placeholder="jane@laboratory.ac.uk">
+          </div>
+          <div class="fg">
+            <label class="fl">Phone Number</label>
+            <input type="tel" class="fi" id="s1-ph" autocomplete="tel" placeholder="+44 7700 900000">
+          </div>
+          <div style="height:1px;background:var(--gray-100);margin:20px 0"></div>
+          <p style="font-size:.75rem;font-weight:700;color:var(--navy);margin-bottom:14px;text-transform:uppercase;letter-spacing:.08em">Delivery Address</p>
+          <div class="fg">
+            <label class="fl">Address Line 1 <em>*</em></label>
+            <input type="text" class="fi" id="s1-a1" autocomplete="address-line1" placeholder="12 Science Park Road">
+          </div>
+          <div class="fg">
+            <label class="fl">Address Line 2</label>
+            <input type="text" class="fi" id="s1-a2" autocomplete="address-line2" placeholder="Unit 4, Building B">
+          </div>
+          <div class="fg-2">
+            <div class="fg">
+              <label class="fl">City <em>*</em></label>
+              <input type="text" class="fi" id="s1-ci" autocomplete="address-level2" placeholder="Cambridge">
+            </div>
+            <div class="fg">
+              <label class="fl">Postcode <em>*</em></label>
+              <input type="text" class="fi" id="s1-pc" autocomplete="postal-code" placeholder="CB1 2AB">
+            </div>
+          </div>
+          <div class="fg">
+            <label class="fl">Country</label>
+            <select class="fs" id="s1-co">
+              <option value="GB" selected>United Kingdom</option>
+              <option value="IE">Ireland</option>
+            </select>
+          </div>
+          <div class="btn-row" style="margin-top:22px">
+            <button class="btn-p" onclick="go2()">
+              <span class="btn-lbl">Continue to Order Review</span>
+              <div class="spin"></div>
+              <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </button>
+          </div>
+          <div class="trust">
+            <div class="tb"><svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>SSL encrypted</div>
+            <div class="tb"><svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>UK Supplier</div>
+            <div class="tb"><svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>COA on every batch</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- STEP 2: REVIEW -->
+    <div class="step-panel" id="sp2">
+      <div class="card">
+        <div class="card-hdr">
+          <h2>Review Your Order</h2>
+          <button class="card-edit" onclick="go1()">Edit details</button>
+        </div>
+        <div class="card-body">
+          <div id="rv-items"></div>
+          <div id="rv-totals" style="margin-top:16px;padding-top:14px;border-top:2px solid var(--gray-100)"></div>
+          <div class="s-addr" id="rv-addr"></div>
+          <div style="margin-top:14px;padding-top:12px;border-top:1px solid var(--gray-100)">
+            <div style="display:flex;gap:8px;align-items:center">
+              <input class="fi" type="text" id="disc-input" placeholder="Enter discount code" style="text-transform:uppercase;font-size:.85rem">
+              <button type="button" class="btn-s" onclick="applyDiscount()" style="white-space:nowrap;padding:11px 18px">Apply</button>
+            </div>
+            <div id="disc-msg" style="font-size:.78rem;margin-top:6px;font-weight:600"></div>
+          </div>
+          <div class="btn-row">
+            <button class="btn-s" onclick="go1()">Back</button>
+            <button class="btn-p" onclick="go3()">
+              <span class="btn-lbl">Continue to Compliance</span>
+              <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- STEP 3: COMPLIANCE -->
+    <div class="step-panel" id="sp3">
+      <div class="card">
+        <div class="card-hdr">
+          <h2>Compliance Confirmation</h2>
+          <button class="card-edit" onclick="go1()">Edit details</button>
+        </div>
+        <div class="card-body">
+          <p style="font-size:.84rem;color:var(--muted);line-height:1.72;margin-bottom:20px">As a supplier of research-grade peptides, we are legally required to obtain the following confirmations before processing your order. Please read each statement carefully and tick to confirm.</p>
+
+          <div class="comp-box" id="cb1" onclick="tick(1)">
+            <div class="comp-icon-wrap">🔞</div>
+            <div class="comp-text">
+              <strong>I am 18 years of age or older</strong>
+              <p>I confirm that I am at least 18 years old. I understand Clarix Peptides reserves the right to request proof of age and to cancel any order where this cannot be confirmed.</p>
+            </div>
+            <div class="comp-cb" id="cbx1">
+              <svg id="ck1" width="12" height="12" fill="none" stroke="white" stroke-width="3" viewBox="0 0 24 24" style="display:none"><polyline points="20 6 9 17 4 12"/></svg>
+            </div>
+          </div>
+
+          <div class="comp-box" id="cb2" onclick="tick(2)">
+            <div class="comp-icon-wrap">🔬</div>
+            <div class="comp-text">
+              <strong>I am a licensed or qualified researcher</strong>
+              <p>I confirm that I am a licensed, qualified, or academic researcher, scientist, or professional acting within the scope of legitimate scientific activity. I am not purchasing for personal use or self-administration.</p>
+            </div>
+            <div class="comp-cb" id="cbx2">
+              <svg id="ck2" width="12" height="12" fill="none" stroke="white" stroke-width="3" viewBox="0 0 24 24" style="display:none"><polyline points="20 6 9 17 4 12"/></svg>
+            </div>
+          </div>
+
+          <div class="comp-box" id="cb3" onclick="tick(3)">
+            <div class="comp-icon-wrap">🧫</div>
+            <div class="comp-text">
+              <strong>Products are for in-vitro research use only</strong>
+              <p>I confirm that all products purchased will be used solely for in-vitro (outside the body) laboratory research and will not be administered to, or consumed by, any human or animal.</p>
+            </div>
+            <div class="comp-cb" id="cbx3">
+              <svg id="ck3" width="12" height="12" fill="none" stroke="white" stroke-width="3" viewBox="0 0 24 24" style="display:none"><polyline points="20 6 9 17 4 12"/></svg>
+            </div>
+          </div>
+
+          <div class="comp-box" id="cb4" onclick="tick(4)">
+            <div class="comp-icon-wrap">📋</div>
+            <div class="comp-text">
+              <strong>I agree to the Terms &amp; Conditions</strong>
+              <p>I have read and agree to Clarix Peptides' <a href="terms.html" target="_blank" style="color:var(--teal);font-weight:600;text-decoration:none" onclick="event.stopPropagation()">Terms &amp; Conditions</a>. I understand that my personal data will be used solely to process this order and will not be sold or shared with third parties.</p>
+            </div>
+            <div class="comp-cb" id="cbx4">
+              <svg id="ck4" width="12" height="12" fill="none" stroke="white" stroke-width="3" viewBox="0 0 24 24" style="display:none"><polyline points="20 6 9 17 4 12"/></svg>
+            </div>
+          </div>
+
+          <div class="comp-err" id="comp-err">You must confirm all four statements above to proceed.</div>
+
+          <div class="btn-row">
+            <button class="btn-s" onclick="go2()">Back</button>
+            <button class="btn-p" id="comp-btn" onclick="go4()">
+              <span class="btn-lbl">Confirm &amp; View Payment Details</span>
+              <div class="spin"></div>
+              <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- STEP 4: CONFIRMATION + BANK TRANSFER -->
+    <div class="step-panel" id="sp4">
+
+      <!-- ① Confirmation header -->
+      <div class="conf-hdr">
+
+        <div class="conf-tick-wrap">
+          <svg width="22" height="22" fill="none" stroke="var(--teal)" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+        </div>
+        <div>
+          <div class="conf-eyebrow">Order Confirmed</div>
+          <div class="conf-name">Thank you, <span id="bt-name">there</span>!</div>
+          <div class="conf-ref-row">
+            <span class="conf-ref-lbl">Confirmation #</span>
+            <span class="conf-ref-pill" id="bt-ref-hero">CLX-2026-XXXXXX</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ② Payment method choice -->
+      <div class="card" style="margin-bottom:18px">
+        <div class="card-hdr"><h2>Choose Payment Method</h2></div>
+        <div class="card-body" style="display:flex;flex-direction:column;gap:12px">
+
+          <!-- Open Banking -->
+          <div id="pm-ob" class="pm-opt pm-opt-active" onclick="selectPayMethod('ob')">
+            <div class="pm-radio" id="pmr-ob"><div class="pm-dot"></div></div>
+            <div class="pm-icon-wrap">
+              <img src="brand_assets/bank-transfer.webp" alt="Bank Transfer" style="height:20px;border-radius:3px">
+            </div>
+            <div>
+              <strong style="font-size:.88rem;color:var(--navy)">Open Bank Transfer</strong>
+              <p style="font-size:.75rem;color:var(--muted);margin-top:2px">Fast &amp; secure — pay directly from your banking app via Fena</p>
+            </div>
+          </div>
+
+          <!-- Manual bank transfer -->
+          <div id="pm-manual" class="pm-opt" onclick="selectPayMethod('manual')">
+            <div class="pm-radio" id="pmr-manual"><div class="pm-dot"></div></div>
+            <div class="pm-icon-wrap">
+              <img src="brand_assets/bank-transfer.webp" alt="Bank Transfer" style="height:20px;border-radius:3px">
+            </div>
+            <div>
+              <strong style="font-size:.88rem;color:var(--navy)">Manual Bank Transfer</strong>
+              <p style="font-size:.75rem;color:var(--muted);margin-top:2px">Transfer directly using our bank details below</p>
+            </div>
+          </div>
+
+          <!-- Open banking CTA (shown when OB selected) -->
+          <div id="ob-cta" style="margin-top:4px">
+            <button id="ob-pay-btn" onclick="initiateOpenBanking()" class="btn-p" style="width:100%;display:inline-flex;align-items:center;justify-content:center;gap:8px;border:none;cursor:pointer">
+              <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 0 20A10 10 0 0 0 12 2z"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10A15.3 15.3 0 0 1 12 2z"/></svg>
+              Pay Now via Open Banking
+            </button>
+            <div id="ob-error" style="display:none;font-size:.78rem;color:#e53e3e;text-align:center;margin-top:8px;padding:8px 12px;background:#fff5f5;border-radius:6px;border:1px solid #fed7d7">
+              Payment creation failed — please try again or use manual bank transfer.
+            </div>
+            <p style="font-size:.72rem;color:var(--muted);text-align:center;margin-top:8px">You'll be redirected to Fena to complete payment securely via your bank app</p>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ③ Transfer amount -->
+      <div class="card" id="manual-transfer-card">
+        <div class="card-hdr">
+          <h2>Complete Your Bank Transfer</h2>
+          <span style="font-size:.75rem;color:var(--muted);font-weight:500">Transfer within 48 hours</span>
+        </div>
+        <div class="card-body">
+          <div class="amt-transfer">
+            <div>
+              <div class="amt-lbl2">Send exactly this amount</div>
+              <div class="amt-big" id="bt-amt">£0.00</div>
+              <div class="amt-note2">Use your order reference as the payment reference</div>
+            </div>
+            <button class="copy-btn" id="cpy-amt" onclick="doCopy(document.getElementById('bt-amt').textContent,'cpy-amt')">
+              <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+              Copy
+            </button>
+          </div>
+          <div class="time-warn">
+            <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+            <span>Your order will be held for <strong>48 hours</strong>. If we don't receive your transfer within this time your order will be automatically cancelled.</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ③ Bank details -->
+      <div class="card" id="bank-details-card" style="display:none">
+        <div class="card-hdr"><h2>Bank Transfer Details</h2></div>
+        <div class="card-body" style="padding-top:4px;padding-bottom:4px">
+          <div class="bk-rows">
+            <div class="bk-row2">
+              <span class="bk-key2">Account name</span>
+              <span class="bk-val2">Clarix Research Ltd</span>
+              <button class="bk-inline-cp" onclick="doCopy('Clarix Research Ltd',this)">Copy</button>
+            </div>
+            <div class="bk-row2">
+              <span class="bk-key2">Bank</span>
+              <span class="bk-val2">Tide</span>
+            </div>
+            <div class="bk-row2">
+              <span class="bk-key2">Sort code</span>
+              <span class="bk-val2">04-06-05</span>
+              <button class="bk-inline-cp" onclick="doCopy('040605',this)">Copy</button>
+            </div>
+            <div class="bk-row2">
+              <span class="bk-key2">Account number</span>
+              <span class="bk-val2">32168370</span>
+              <button class="bk-inline-cp" onclick="doCopy('32168370',this)">Copy</button>
+            </div>
+            <div class="bk-row2">
+              <span class="bk-key2">Payment reference</span>
+              <span class="bk-val2 ref" id="bt-ref-field">CLX-2026-XXXXXX</span>
+              <button class="bk-inline-cp" onclick="doCopy(document.getElementById('bt-ref-field').textContent,this)">Copy</button>
+            </div>
+          </div>
+        </div>
+        <div style="padding:14px 24px;background:var(--gray-50);border-top:1px solid var(--gray-100);font-size:.78rem;color:var(--muted);line-height:1.6">
+          Bank address: 4th Floor, The Featherstone Building, 66 City Road, London, EC1Y 2AL
+        </div>
+      </div>
+
+      <!-- ④ Order details -->
+      <div class="card">
+        <div class="card-hdr"><h2>Order Details</h2></div>
+        <div class="card-body">
+          <div class="od-grid2">
+            <div>
+              <div class="od-lbl2">Contact information</div>
+              <div class="od-val2" id="od-contact"></div>
+            </div>
+            <div>
+              <div class="od-lbl2">Payment method</div>
+              <div class="od-val2">
+                <strong>Bank Transfer</strong>
+                <span class="sub">Awaiting transfer</span>
+              </div>
+            </div>
+            <div>
+              <div class="od-lbl2">Shipping address</div>
+              <div class="od-val2" id="od-addr"></div>
+            </div>
+            <div>
+              <div class="od-lbl2">Shipping method</div>
+              <div class="od-val2">
+                <strong>Royal Mail Tracked</strong>
+                <span class="sub">1–2 working days after payment confirmed</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ⑤ Actions -->
+      <div class="bt-acts" style="margin-top:4px">
+        <a href="shop.html" class="bt-act-s">Continue Shopping</a>
+        <button onclick="window.print()" class="bt-act-p">
+          <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+          Save / Print
+        </button>
+      </div>
+      <p style="text-align:center;margin-top:16px;font-size:.79rem;color:var(--muted)">
+        Need help? <a href="contact.html" style="color:var(--teal);font-weight:600">Contact us</a> or email <a href="mailto:info@clarixpeptides.com" style="color:var(--teal);font-weight:600">info@clarixpeptides.com</a>
+      </p>
+
+    </div>
+
+  </div><!-- /left -->
+
+  <!-- SIDEBAR: ORDER SUMMARY -->
+  <div class="co-sidebar">
+    <div class="card">
+      <div class="card-hdr"><h2>Order Summary</h2></div>
+      <div class="card-body" style="padding-top:14px;padding-bottom:20px">
+        <div id="sb-items"></div>
+        <div id="sb-tots" style="margin-top:14px;padding-top:12px;border-top:1px solid var(--gray-100)"></div>
+      </div>
+    </div>
+    <div style="margin-top:12px;padding:14px 16px;background:#fff;border-radius:12px;border:1.5px solid var(--gray-100);text-align:center">
+      <p style="font-size:.75rem;color:var(--muted);line-height:1.65">
+        <strong style="color:var(--navy);display:block;margin-bottom:3px">Research Use Only</strong>
+        All products are for in-vitro laboratory research only. Not for human or veterinary use. By placing this order you confirm you are a licensed researcher aged 18+.
+      </p>
+    </div>
+  </div>
+
+</div><!-- /co-main -->
+
+<script src="products-data.js"></script>
+<script>
+// ── STATE ─────────────────────────────────────────────────────────────────────
+let cart = JSON.parse(localStorage.getItem('clarix_cart') || '[]');
+let cust = {};
+let orderRef = '';
+const ticks = {1:false,2:false,3:false,4:false};
+let discountPct = 0;
+let discountCode = '';
+
+// ── INIT ─────────────────────────────────────────────────────────────────────
+// Handle Buy Now (single item direct checkout from product page)
+const _urlP = new URLSearchParams(window.location.search);
+if (_urlP.get('buynow') === '1') {
+  const _bn = JSON.parse(sessionStorage.getItem('clarix_checkout_items') || '[]');
+  if (_bn.length) { cart = _bn; localStorage.setItem('clarix_cart', JSON.stringify(cart)); }
+}
+if (!cart.length) {
+  document.getElementById('co-main').style.display = 'none';
+  document.getElementById('empty-s').style.display = 'block';
+  document.querySelector('.st-bar').style.display = 'none';
+} else {
+  renderSidebar();
+}
+
+// ── TOTALS ─────────────────────────────────────────────────────────────────────
+function sub()     { return cart.reduce((s,i) => s + i.price * i.qty, 0); }
+function discAmt() { return +(sub() * discountPct / 100).toFixed(2); }
+function ship()    { return (sub() - discAmt()) >= 50 ? 0 : 3.99; }
+function tot()     { return sub() - discAmt() + ship(); }
+
+// ── SIDEBAR ───────────────────────────────────────────────────────────────────
+function renderSidebar() {
+  document.getElementById('sb-items').innerHTML = cart.map(i => `
+    <div class="sb-item">
+      <div class="sb-img"><img src="${i.img}" alt="${i.name}"></div>
+      <div style="flex:1;min-width:0">
+        <div class="sb-name">${i.name}</div>
+        <div class="sb-sub">${i.strength} · Qty ${i.qty}</div>
+      </div>
+      <div class="sb-price">£${(i.price*i.qty).toFixed(2)}</div>
+    </div>`).join('');
+
+  const s = sub(), da = discAmt(), sh = ship(), t = tot();
+  document.getElementById('sb-tots').innerHTML = `
+    <div class="tot-row"><span style="color:var(--muted)">Subtotal</span><span>£${s.toFixed(2)}</span></div>
+    ${da>0?`<div class="tot-row"><span style="color:var(--teal)">Discount (${discountCode})</span><span style="color:var(--teal)">−£${da.toFixed(2)}</span></div>`:''}
+    <div class="tot-row ${sh===0?'free':''}"><span style="color:var(--muted)">Shipping</span><span>${sh===0?'FREE':'£'+sh.toFixed(2)}</span></div>
+    ${(s-da)<50?`<div style="font-size:.71rem;color:var(--muted);margin-top:-4px">Add £${(50-(s-da)).toFixed(2)} more for free shipping</div>`:''}
+    <div class="tot-grand"><span>Total</span><span>£${t.toFixed(2)}</span></div>`;
+}
+
+// ── REVIEW STEP ───────────────────────────────────────────────────────────────
+function renderReview() {
+  document.getElementById('rv-items').innerHTML = cart.map(i => `
+    <div class="rv-item" id="rv${i.id}">
+      <div class="rv-img"><img src="${i.img}" alt="${i.name}"></div>
+      <div style="flex:1">
+        <div class="rv-name">${i.name}</div>
+        <div class="rv-str">${i.strength} · £${i.price.toFixed(2)} each</div>
+        <div class="rv-qrow">
+          <button class="qb" onclick="adjQty(${i.id},-1)">−</button>
+          <span class="qn" id="rqn${i.id}">${i.qty}</span>
+          <button class="qb" onclick="adjQty(${i.id},1)">+</button>
+          <button class="rm-btn" onclick="rmItem(${i.id})">
+            <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="3 6 5 6 21 6"/><path d="M19 6l-1 14H6L5 6"/><path d="M10 11v6"/><path d="M14 11v6"/><path d="M9 6V4h6v2"/></svg>
+          </button>
+        </div>
+      </div>
+      <div class="rv-price" id="rp${i.id}">£${(i.price*i.qty).toFixed(2)}</div>
+    </div>`).join('');
+
+  const s=sub(),da=discAmt(),sh=ship(),t=tot();
+  document.getElementById('rv-totals').innerHTML=`
+    <div style="display:flex;justify-content:space-between;font-size:.85rem;margin-bottom:6px"><span style="color:var(--muted)">Subtotal</span><span style="font-weight:600">£${s.toFixed(2)}</span></div>
+    ${da>0?`<div style="display:flex;justify-content:space-between;font-size:.85rem;margin-bottom:6px"><span style="color:var(--teal)">Discount (${discountCode})</span><span style="font-weight:600;color:var(--teal)">−£${da.toFixed(2)}</span></div>`:''}
+    <div style="display:flex;justify-content:space-between;font-size:.85rem;margin-bottom:6px"><span style="color:var(--muted)">Shipping</span><span style="font-weight:600;color:${sh===0?'var(--teal)':'var(--navy)'}">${sh===0?'FREE':'£'+sh.toFixed(2)}</span></div>
+    <div style="display:flex;justify-content:space-between;font-size:1rem;font-weight:700;font-family:Outfit,sans-serif;margin-top:8px;padding-top:8px;border-top:1px solid var(--gray-100)"><span>Total</span><span>£${t.toFixed(2)}</span></div>`;
+
+  const a=[cust.a1,cust.a2,cust.ci,cust.pc].filter(Boolean).join(', ');
+  document.getElementById('rv-addr').innerHTML=`<strong>${cust.fn} ${cust.ln} · ${cust.em}</strong>${a}`;
+}
+
+function adjQty(id,d){
+  const item=cart.find(x=>x.id===id); if(!item) return;
+  item.qty=Math.max(1,item.qty+d);
+  document.getElementById('rqn'+id).textContent=item.qty;
+  document.getElementById('rp'+id).textContent='£'+(item.price*item.qty).toFixed(2);
+  saveCart(); renderSidebar();
+  const s=sub(),da=discAmt(),sh=ship(),t=tot();
+  document.getElementById('rv-totals').innerHTML=`
+    <div style="display:flex;justify-content:space-between;font-size:.85rem;margin-bottom:6px"><span style="color:var(--muted)">Subtotal</span><span style="font-weight:600">£${s.toFixed(2)}</span></div>
+    ${da>0?`<div style="display:flex;justify-content:space-between;font-size:.85rem;margin-bottom:6px"><span style="color:var(--teal)">Discount (${discountCode})</span><span style="font-weight:600;color:var(--teal)">−£${da.toFixed(2)}</span></div>`:''}
+    <div style="display:flex;justify-content:space-between;font-size:.85rem;margin-bottom:6px"><span style="color:var(--muted)">Shipping</span><span style="font-weight:600;color:${sh===0?'var(--teal)':'var(--navy)'}">${sh===0?'FREE':'£'+sh.toFixed(2)}</span></div>
+    <div style="display:flex;justify-content:space-between;font-size:1rem;font-weight:700;font-family:Outfit,sans-serif;margin-top:8px;padding-top:8px;border-top:1px solid var(--gray-100)"><span>Total</span><span>£${t.toFixed(2)}</span></div>`;
+}
+
+function rmItem(id){
+  cart=cart.filter(x=>x.id!==id);
+  saveCart(); renderSidebar(); renderReview();
+  if(!cart.length){document.getElementById('co-main').style.display='none';document.getElementById('empty-s').style.display='block';}
+}
+
+function saveCart(){localStorage.setItem('clarix_cart',JSON.stringify(cart));}
+
+// ── COMPLIANCE ────────────────────────────────────────────────────────────────
+function tick(n){
+  ticks[n]=!ticks[n];
+  document.getElementById('cb'+n).classList.toggle('ticked',ticks[n]);
+  document.getElementById('ck'+n).style.display=ticks[n]?'block':'none';
+  document.getElementById('comp-err').classList.remove('show');
+}
+
+// ── ORDER REFERENCE ───────────────────────────────────────────────────────────
+function genRef(){
+  const yr=new Date().getFullYear();
+  const c='ABCDEFGHJKLMNPQRSTUVWXYZ23456789';
+  let s=''; for(let i=0;i<6;i++) s+=c[Math.floor(Math.random()*c.length)];
+  return `CLX-${yr}-${s}`;
+}
+
+// ── STEP MACHINE ─────────────────────────────────────────────────────────────
+function setStep(n){
+  [1,2,3,4].forEach(i=>{
+    document.getElementById('sp'+i).classList.toggle('on',i===n);
+    const dot=document.getElementById('d'+i);
+    const lbl=document.getElementById('l'+i);
+    if(i<n){
+      dot.className='st-dot done';
+      lbl.className='st-lbl done';
+      dot.innerHTML='<svg width="12" height="12" fill="none" stroke="white" stroke-width="3" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>';
+    } else if(i===n){
+      dot.className='st-dot active';
+      lbl.className='st-lbl active';
+      if(i<4) dot.textContent=i;
+      else dot.innerHTML='<svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>';
+    } else {
+      dot.className='st-dot pending';
+      lbl.className='st-lbl pending';
+      if(i<4) dot.textContent=i;
+      else dot.innerHTML='<svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>';
+    }
+    if(i<4) document.getElementById('c'+i).classList.toggle('done',i<n);
+  });
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+
+// ── PAYMENT METHOD ────────────────────────────────────────────────────────────
+let selectedPayMethod = 'ob';
+let currentOrderTotal = 0;
+function selectPayMethod(method) {
+  selectedPayMethod = method;
+  ['ob','manual'].forEach(m => {
+    document.getElementById('pm-'+m).classList.toggle('pm-opt-active', m === method);
+  });
+  document.getElementById('ob-cta').style.display = method === 'ob' ? 'block' : 'none';
+  const isManual = method === 'manual';
+  document.getElementById('manual-transfer-card').style.display = isManual ? 'block' : 'none';
+  document.getElementById('bank-details-card').style.display = isManual ? 'block' : 'none';
+}
+
+async function initiateOpenBanking() {
+  const btn = document.getElementById('ob-pay-btn');
+  const errEl = document.getElementById('ob-error');
+  errEl.style.display = 'none';
+  btn.disabled = true;
+  btn.innerHTML = '<div class="spin" style="width:16px;height:16px;border-width:2px;border-color:rgba(255,255,255,.3);border-top-color:#fff;margin-right:8px"></div> Creating payment…';
+  try {
+    const res = await fetch('/.netlify/functions/create-payment', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ amount: currentOrderTotal, reference: orderRef })
+    });
+    const data = await res.json();
+    if (!res.ok || !data.payment_url) throw new Error(data.error || 'No payment URL');
+    window.location.href = data.payment_url;
+  } catch (err) {
+    console.error('Open banking error:', err);
+    btn.disabled = false;
+    btn.innerHTML = '<svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="margin-right:8px"><path d="M12 2a10 10 0 1 0 0 20A10 10 0 0 0 12 2z"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10A15.3 15.3 0 0 1 12 2z"/></svg>Pay Now via Open Banking';
+    errEl.style.display = 'block';
+  }
+}
+
+function go1(){setStep(1);}
+
+function go2(){
+  const req=[
+    {id:'s1-fn',label:'First Name'},
+    {id:'s1-ln',label:'Last Name'},
+    {id:'s1-em',label:'Email'},
+    {id:'s1-a1',label:'Address'},
+    {id:'s1-ci',label:'City'},
+    {id:'s1-pc',label:'Postcode'},
+  ];
+  let ok=true;
+  req.forEach(f=>{
+    const el=document.getElementById(f.id);
+    const e=!el.value.trim();
+    el.classList.toggle('err',e);
+    if(e) ok=false;
+  });
+  const em=document.getElementById('s1-em');
+  if(em.value&&!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(em.value)){em.classList.add('err');ok=false;}
+  if(!ok){
+    const al=document.getElementById('s1-alert');
+    al.textContent='Please complete all required fields with valid information.';
+    al.classList.add('show');
+    return;
+  }
+  document.getElementById('s1-alert').classList.remove('show');
+  cust={fn:v('s1-fn'),ln:v('s1-ln'),em:v('s1-em'),ph:v('s1-ph'),a1:v('s1-a1'),a2:v('s1-a2'),ci:v('s1-ci'),pc:v('s1-pc').toUpperCase(),co:v('s1-co')};
+  renderReview();
+  setStep(2);
+}
+
+function go3(){
+  if(!cart.length) return;
+  setStep(3);
+}
+
+async function go4(){
+  if(![1,2,3,4].every(n=>ticks[n])){
+    document.getElementById('comp-err').classList.add('show');
+    return;
+  }
+  const btn=document.getElementById('comp-btn');
+  btn.disabled=true; btn.classList.add('loading');
+
+  orderRef=genRef();
+  const total=tot();
+
+  // Populate confirmation screen
+  document.getElementById('bt-ref-hero').textContent = orderRef;
+  document.getElementById('bt-ref-field').textContent = orderRef;
+  document.getElementById('bt-amt').textContent = '£' + total.toFixed(2);
+  document.getElementById('bt-name').textContent = cust.fn;
+
+  // Contact + address in order details
+  document.getElementById('od-contact').innerHTML =
+    `${cust.em}${cust.ph ? '<br>' + cust.ph : ''}`;
+  document.getElementById('od-addr').innerHTML =
+    [cust.fn + ' ' + cust.ln, cust.a1, cust.a2, cust.ci, cust.pc]
+      .filter(Boolean).join('<br>');
+
+  // Save order
+  const order={ref:orderRef,date:new Date().toISOString(),customer:cust,
+    items:cart.map(i=>({id:i.id,name:i.name,strength:i.strength,price:i.price,qty:i.qty,img:i.img||''})),
+    subtotal:sub(),discount:discAmt(),discountCode,shipping:ship(),total:tot(),status:'awaiting_payment'};
+  const all=JSON.parse(localStorage.getItem('clarix_orders')||'[]');
+  all.push(order);
+  localStorage.setItem('clarix_orders',JSON.stringify(all));
+
+  // Notify company email immediately (requires Web3Forms key)
+  await notifyEmail(order).catch(()=>{});
+
+  // 5-minute follow-up: flag pending if transfer not received
+  const _orderSnap = JSON.parse(JSON.stringify(order));
+  setTimeout(() => sendFollowUpEmail(_orderSnap).catch(()=>{}), 5 * 60 * 1000);
+
+  // Store total for open banking payment creation
+  currentOrderTotal = total;
+
+  // Show/hide payment sections based on selected method
+  document.getElementById('ob-cta').style.display = selectedPayMethod === 'ob' ? 'block' : 'none';
+  document.getElementById('manual-transfer-card').style.display = selectedPayMethod === 'manual' ? 'block' : 'none';
+
+  // Clear cart and update sidebar to confirmation view
+  cart=[];
+  localStorage.setItem('clarix_cart','[]');
+  renderConfirmSidebar(order);
+
+  btn.disabled=false; btn.classList.remove('loading');
+  setStep(4);
+}
+
+function renderConfirmSidebar(order) {
+  const sb = document.querySelector('.co-sidebar');
+  const s = order.subtotal, sh = order.shipping, t = order.total;
+  sb.innerHTML = `
+    <div class="card" style="margin-bottom:14px">
+      <div class="card-hdr"><h2>Your Order</h2></div>
+      <div class="card-body" style="padding-top:10px;padding-bottom:16px">
+        ${order.items.map(i => `
+          <div class="sb-item">
+            <div class="sb-img"><img src="${i.img||''}" alt="${i.name}"></div>
+            <div style="flex:1;min-width:0">
+              <div class="sb-name">${i.name}</div>
+              <div class="sb-sub">${i.strength} · Qty ${i.qty}</div>
+            </div>
+            <div class="sb-price">£${(i.price*i.qty).toFixed(2)}</div>
+          </div>`).join('')}
+        <div style="margin-top:14px;padding-top:12px;border-top:1.5px solid var(--gray-100)">
+          <div class="tot-row"><span style="color:var(--muted)">Subtotal</span><span>£${s.toFixed(2)}</span></div>
+          <div class="tot-row ${sh===0?'free':''}"><span style="color:var(--muted)">Shipping</span><span>${sh===0?'FREE':'£'+sh.toFixed(2)}</span></div>
+          <div class="tot-grand"><span>Total</span><span>£${t.toFixed(2)}</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="card" style="margin-bottom:0">
+      <div class="card-hdr"><h2>What Happens Next</h2></div>
+      <div class="wn-sb">
+        <div class="wn-sb-row"><div class="wn-n">1</div><div class="wn-t"><strong>Transfer payment</strong><p>Log into your bank and send the exact amount using your order reference as the payment reference.</p></div></div>
+        <div class="wn-sb-row"><div class="wn-n">2</div><div class="wn-t"><strong>Payment matched</strong><p>We match your transfer to your order automatically using the reference. Usually instant for Faster Payments.</p></div></div>
+        <div class="wn-sb-row"><div class="wn-n">3</div><div class="wn-t"><strong>Confirmation email sent</strong><p>We'll email <strong>${order.customer.em}</strong> to confirm payment received.</p></div></div>
+        <div class="wn-sb-row"><div class="wn-n">4</div><div class="wn-t"><strong>Order dispatched</strong><p>Ships within 1–2 working days of payment confirmation in plain, discreet packaging.</p></div></div>
+      </div>
+    </div>`;
+}
+
+// ── DISCOUNT CODE ─────────────────────────────────────────────────────────────
+function applyDiscount() {
+  const input = document.getElementById('disc-input');
+  const msgEl = document.getElementById('disc-msg');
+  const code = input.value.trim().toUpperCase();
+  if (!code) { msgEl.style.color='var(--red)'; msgEl.textContent='Please enter a discount code.'; return; }
+
+  if (code === 'CLARIX10') {
+    // First-order only: check localStorage orders for any completed orders
+    const prevOrders = JSON.parse(localStorage.getItem('clarix_orders') || '[]');
+    const hasCompleted = prevOrders.some(o => o.status === 'completed');
+    if (hasCompleted) {
+      discountPct = 0; discountCode = '';
+      msgEl.style.color = 'var(--red)';
+      msgEl.textContent = 'CLARIX10 is valid for first orders only.';
+    } else {
+      discountPct = 10; discountCode = code;
+      msgEl.style.color = 'var(--teal)';
+      const saved = discAmt();
+      msgEl.textContent = `10% discount applied — you save £${saved.toFixed(2)}!`;
+      renderReview();
+      renderSidebar();
+    }
+  } else {
+    discountPct = 0; discountCode = '';
+    msgEl.style.color = 'var(--red)';
+    msgEl.textContent = 'Invalid discount code.';
+  }
+}
+
+// ── EMAIL NOTIFICATION ────────────────────────────────────────────────────────
+// Set your Web3Forms key from web3forms.com — register with info@clarixpeptides.com
+const WEB3_KEY = 'aa36f936-af5e-420f-8e65-6f782a43046f';
+
+async function notifyEmail(o){
+  if(!WEB3_KEY) return;
+  const sep = '─'.repeat(40);
+  const lines = o.items.map((i,n) =>
+    `  ${n+1}. ${i.name} ${i.strength}\n     Qty: ${i.qty}  ×  £${i.price.toFixed(2)} = £${(i.price*i.qty).toFixed(2)}`
+  ).join('\n');
+  const addr = [o.customer.a1, o.customer.a2, o.customer.ci, o.customer.pc].filter(Boolean).join(', ');
+  const discLine = o.discount>0 ? `\n  Discount (${o.discountCode}):  −£${o.discount.toFixed(2)}` : '';
+  const msg =
+`╔══════════════════════════════════════════╗
+  NEW ORDER — AWAITING BANK TRANSFER
+╚══════════════════════════════════════════╝
+
+  Reference : ${o.ref}
+  Date      : ${new Date(o.date).toLocaleString('en-GB')}
+  Status    : Awaiting bank transfer
+
+${sep}
+CUSTOMER
+${sep}
+  Name    : ${o.customer.fn} ${o.customer.ln}
+  Email   : ${o.customer.em}
+  Phone   : ${o.customer.ph||'—'}
+
+${sep}
+DELIVERY ADDRESS
+${sep}
+  ${[o.customer.fn+' '+o.customer.ln, o.customer.a1, o.customer.a2, o.customer.ci, o.customer.pc].filter(Boolean).join('\n  ')}
+
+${sep}
+ORDER ITEMS
+${sep}
+${lines}
+
+${sep}
+TOTALS
+${sep}
+  Subtotal  : £${o.subtotal.toFixed(2)}${discLine}
+  Shipping  : ${o.shipping===0?'FREE':'£'+o.shipping.toFixed(2)}
+  ──────────────────────
+  TOTAL     : £${o.total.toFixed(2)}
+
+${sep}
+  ⚡ PAYMENT REFERENCE TO MATCH: ${o.ref}
+${sep}`;
+
+  await fetch('https://api.web3forms.com/submit',{
+    method:'POST',headers:{'Content-Type':'application/json'},
+    body:JSON.stringify({
+      access_key:WEB3_KEY,
+      subject:`🛒 NEW ORDER ${o.ref} — £${o.total.toFixed(2)} awaiting transfer`,
+      from_name:'Clarix Orders',
+      replyto:o.customer.em,
+      message:msg,
+    }),
+  });
+}
+
+async function sendFollowUpEmail(o){
+  if(!WEB3_KEY) return;
+  const lines=o.items.map(i=>`${i.name} ${i.strength} x${i.qty} — £${(i.price*i.qty).toFixed(2)}`).join('\n');
+  await fetch('https://api.web3forms.com/submit',{
+    method:'POST',headers:{'Content-Type':'application/json'},
+    body:JSON.stringify({
+      access_key:WEB3_KEY,
+      subject:`PENDING TRANSFER: ${o.ref} — Payment not yet received (5-min reminder)`,
+      from_name:'Clarix Peptides Orders',
+      replyto:o.customer.em,
+      message:`PENDING ORDER — 5 MINUTE REMINDER\n\nOrder Reference: ${o.ref}\nPlaced: ${new Date(o.date).toLocaleString('en-GB')}\nStatus: Awaiting bank transfer\n\nCUSTOMER\nName: ${o.customer.fn} ${o.customer.ln}\nEmail: ${o.customer.em}\nPhone: ${o.customer.ph||'—'}\n\nITEMS\n${lines}\n\nTotal to receive: £${o.total.toFixed(2)}\n\nThis customer reached the bank transfer payment page 5 minutes ago. Consider following up at ${o.customer.em} if no transfer arrives.`,
+    }),
+  });
+}
+
+// ── COPY ──────────────────────────────────────────────────────────────────────
+function doCopy(text,el){
+  navigator.clipboard.writeText(text).then(()=>{
+    const btn=typeof el==='string'?document.getElementById(el):el;
+    if(!btn) return;
+    const orig=btn.innerHTML;
+    btn.innerHTML=btn.classList.contains('copy-btn')
+      ?'<svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> Copied!'
+      :'<svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>';
+    if(btn.classList.contains('copy-btn')) btn.classList.add('done');
+    setTimeout(()=>{btn.innerHTML=orig;btn.classList.remove('done');},2000);
+  }).catch(()=>{});
+}
+
+function v(id){return document.getElementById(id).value.trim();}
+
+// Handle return from Fena after payment
+(function(){
+  const params = new URLSearchParams(window.location.search);
+  const paymentId = params.get('payment_id') || params.get('id');
+  const status    = (params.get('status') || '').toLowerCase();
+  if (paymentId || status) {
+    // Show a full-screen return message
+    const el = document.createElement('div');
+    const success = status === 'completed' || status === 'success' || status === 'paid';
+    el.style.cssText = 'position:fixed;inset:0;z-index:500;display:flex;align-items:center;justify-content:center;background:#fff;flex-direction:column;gap:20px;font-family:Outfit,sans-serif;padding:32px;text-align:center';
+    el.innerHTML = success
+      ? `<div style="width:72px;height:72px;border-radius:50%;background:rgba(43,181,165,.1);display:flex;align-items:center;justify-content:center"><svg width="34" height="34" fill="none" stroke="#2BB5A5" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div><h2 style="color:#0F2240;font-size:1.6rem;font-weight:800;letter-spacing:-.03em">Payment Confirmed!</h2><p style="color:#6B7A99;font-size:.92rem;max-width:400px;line-height:1.7">Your open banking payment was successful. We've received your order and will dispatch it shortly. Check your email for confirmation.</p><a href="index.html" style="margin-top:8px;padding:13px 32px;background:#2BB5A5;color:#fff;border-radius:10px;text-decoration:none;font-weight:700;font-size:.9rem">Back to Home</a>`
+      : `<div style="width:72px;height:72px;border-radius:50%;background:#fff5f5;display:flex;align-items:center;justify-content:center"><svg width="34" height="34" fill="none" stroke="#e53e3e" stroke-width="2.5" viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></div><h2 style="color:#0F2240;font-size:1.6rem;font-weight:800">Payment Incomplete</h2><p style="color:#6B7A99;font-size:.92rem;max-width:400px;line-height:1.7">Your payment was not completed. Please try again below or choose manual bank transfer.</p><button onclick="this.parentElement.remove()" style="margin-top:8px;padding:13px 32px;background:#0F2240;color:#fff;border:none;border-radius:10px;font-weight:700;font-size:.9rem;cursor:pointer">Try Again</button>`;
+    document.body.appendChild(el);
+    // Clean up URL
+    history.replaceState({}, '', window.location.pathname);
+  }
+})();
+</script>
+<!-- COOKIE CONSENT BANNER -->
+<div id="cookie-bar" style="position:fixed;bottom:0;left:0;right:0;z-index:9999;background:rgba(15,34,64,.97);backdrop-filter:blur(12px);border-top:1px solid rgba(255,255,255,.1);padding:16px 24px;display:flex;align-items:center;flex-wrap:wrap;gap:12px 20px;font-family:'DM Sans',sans-serif;box-shadow:0 -4px 24px rgba(0,0,0,.3);transition:transform .4s ease">
+  <div style="flex:1;min-width:280px">
+    <p style="font-size:.78rem;color:rgba(255,255,255,.7);line-height:1.65;margin:0"><strong style="color:#fff;font-weight:600">We use cookies &amp; local storage</strong> for essential website functions (cart, account, session) and load third-party scripts (Tailwind CSS, Google Fonts) that may process your IP address. <a href="privacy-policy.html" style="color:#2BB5A5;text-decoration:underline">Privacy Policy</a></p>
+  </div>
+  <div style="display:flex;gap:8px;flex-shrink:0">
+    <button onclick="setCookieChoice('declined')" style="padding:8px 16px;font-size:.78rem;font-weight:600;border-radius:7px;border:1px solid rgba(255,255,255,.2);background:none;color:rgba(255,255,255,.6);cursor:pointer;font-family:'DM Sans',sans-serif">Decline</button>
+    <button onclick="setCookieChoice('accepted')" style="padding:8px 18px;font-size:.78rem;font-weight:600;border-radius:7px;border:none;background:#2BB5A5;color:#fff;cursor:pointer;font-family:'DM Sans',sans-serif">Accept All</button>
+  </div>
+</div>
+<script>
+(function(){
+  function setCookieChoice(c){localStorage.setItem('clarix_cookies',c);var b=document.getElementById('cookie-bar');if(b){b.style.transform='translateY(110%)';setTimeout(function(){b.style.display='none'},400)}}
+  window.setCookieChoice=setCookieChoice;
+  if(localStorage.getItem('clarix_cookies')){var b=document.getElementById('cookie-bar');if(b)b.style.display='none'}
+})();
+</script>
+</body>
+</html>

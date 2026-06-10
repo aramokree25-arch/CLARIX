@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="brand_assets/clarix_logomark.png" type="image/png">
+<link rel="apple-touch-icon" href="brand_assets/clarix_logomark.png">
+<title>Contact Clarix Peptides | UK Research Peptide Support</title>
+<meta name="description" content="Contact Clarix Peptides — UK research peptide supplier. Get in touch for order support, wholesale enquiries, or general questions.">
+<meta name="robots" content="index, follow">
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --navy: #0F2240;
+  --navy-mid: #1A3560;
+  --teal: #2BB5A5;
+  --teal-dark: #229E8F;
+  --white: #FFFFFF;
+  --off-white: #F7FAFC;
+  --gray-50: #F0F4FA;
+  --gray-100: #E1E8F5;
+  --muted: #6B7A99;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'DM Sans',sans-serif;background:var(--off-white);color:var(--navy);overflow-x:hidden}
+h1,h2,h3,h4,h5,h6{font-family:'Outfit',sans-serif}
+
+/* ── DISCLAIMER BAR ── */
+#disc-bar{background:var(--navy);color:rgba(255,255,255,.8);font-size:.7rem;letter-spacing:.07em;text-transform:uppercase;padding:9px 48px 9px 20px;text-align:center;position:relative;line-height:1.4}
+#disc-bar button{position:absolute;right:14px;top:50%;transform:translateY(-50%);background:none;border:none;color:rgba(255,255,255,.45);cursor:pointer;font-size:1.1rem;line-height:1;transition:color .2s}
+#disc-bar button:hover{color:#fff}
+
+/* ── NAV ── */
+#main-nav{position:sticky;top:0;z-index:100;background:#fff;border-bottom:1px solid var(--gray-100);transition:box-shadow .3s}
+#main-nav.scrolled{box-shadow:0 4px 24px rgba(15,34,64,.08)}
+.nav-inner{max-width:1400px;margin:0 auto;padding:0 24px;display:flex;align-items:center;gap:24px;height:120px}
+.nav-logo{flex-shrink:0}
+.nav-logo img{height:110px;width:auto}
+.nav-links{display:flex;align-items:center;gap:2px;flex:1;justify-content:center}
+.nav-links a{font-size:.85rem;font-weight:500;color:var(--navy);text-decoration:none;padding:7px 13px;border-radius:7px;transition:color .2s,background .2s;white-space:nowrap}
+.nav-links a:hover,.nav-links a.active{color:var(--teal);background:rgba(43,181,165,.07)}
+.nav-actions{display:flex;align-items:center;gap:2px;flex-shrink:0}
+.nib{width:40px;height:40px;border-radius:8px;border:none;background:none;cursor:pointer;display:flex;align-items:center;justify-content:center;color:var(--navy);position:relative;transition:color .2s,background .2s}
+.nib:hover{color:var(--teal);background:rgba(43,181,165,.07)}
+.nib svg{pointer-events:none}
+.cart-badge{position:absolute;top:4px;right:4px;min-width:17px;height:17px;background:var(--teal);color:#fff;font-size:.6rem;font-weight:700;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Outfit',sans-serif;opacity:0;transform:scale(0);transition:opacity .2s,transform .2s}
+.cart-badge.show{opacity:1;transform:scale(1)}
+#hamburger{display:none}
+@media(max-width:900px){.nav-links{display:none}}
+@media(max-width:640px){#hamburger{display:flex}}
+
+/* ── MOBILE MENU ── */
+#mobile-menu{position:fixed;inset:0;z-index:200;background:#fff;padding:76px 28px 28px;transform:translateX(-100%);transition:transform .3s ease}
+#mobile-menu.open{transform:translateX(0)}
+.mm-close{position:absolute;top:18px;right:18px;width:42px;height:42px;border-radius:10px;border:1px solid var(--gray-100);background:none;cursor:pointer;display:flex;align-items:center;justify-content:center;color:var(--navy)}
+.mm-link{display:block;padding:15px 0;font-size:1.2rem;font-weight:600;color:var(--navy);text-decoration:none;border-bottom:1px solid var(--gray-100);transition:color .15s}
+.mm-link:hover,.mm-link.active{color:var(--teal)}
+
+/* ── SEARCH OVERLAY ── */
+#search-overlay{position:fixed;inset:0;z-index:200;background:rgba(15,34,64,.55);backdrop-filter:blur(8px);opacity:0;pointer-events:none;transition:opacity .25s}
+#search-overlay.open{opacity:1;pointer-events:all}
+.search-panel{background:#fff;padding:28px 32px}
+.search-wrap{max-width:680px;margin:0 auto;position:relative}
+.search-wrap input{width:100%;padding:15px 52px;font-size:1.05rem;font-family:'DM Sans',sans-serif;border:2px solid var(--teal);border-radius:50px;outline:none;color:var(--navy)}
+.search-wrap .si{position:absolute;left:18px;top:50%;transform:translateY(-50%);color:var(--teal);pointer-events:none}
+.search-wrap .sc{position:absolute;right:14px;top:50%;transform:translateY(-50%);background:none;border:none;cursor:pointer;color:var(--muted);padding:6px;border-radius:50%;transition:color .2s}
+.search-wrap .sc:hover{color:var(--navy)}
+#search-results{max-width:680px;margin:10px auto 0;background:#fff;border-radius:12px;border:1px solid var(--gray-100);box-shadow:0 8px 32px rgba(15,34,64,.12);overflow:hidden;max-height:380px;overflow-y:auto;display:none}
+#search-results.show{display:block}
+.sr-item{padding:13px 20px;display:flex;align-items:center;justify-content:space-between;cursor:pointer;border-bottom:1px solid var(--gray-50);transition:background .15s}
+.sr-item:hover{background:var(--gray-50)}
+.sr-item:last-child{border-bottom:none}
+.sr-name{font-weight:600;font-size:.9rem;color:var(--navy)}
+.sr-cat{font-size:.75rem;color:var(--muted);margin-top:2px}
+.sr-price{font-weight:700;font-size:.9rem;color:var(--teal);font-family:'Outfit',sans-serif}
+
+/* ══════════════════════════════════════════
+   CONTACT PAGE
+══════════════════════════════════════════ */
+
+.ct-page{padding:56px 24px 80px}
+.ct-page-inner{max-width:1100px;margin:0 auto}
+
+/* Page title */
+.ct-title{text-align:center;margin-bottom:52px}
+.ct-title h1{font-size:2.2rem;font-weight:700;color:var(--navy);letter-spacing:-.02em}
+
+/* Two-col layout */
+.ct-layout{display:grid;grid-template-columns:320px 1fr;gap:48px;align-items:start}
+@media(max-width:860px){.ct-layout{grid-template-columns:1fr;gap:40px}}
+
+/* ── LEFT INFO COLUMN ── */
+.ct-info-col{display:flex;flex-direction:column;gap:36px}
+.ct-section{display:flex;flex-direction:column;gap:10px}
+.ct-section-hd{display:flex;align-items:center;gap:10px}
+.ct-section-hd svg{color:var(--teal);flex-shrink:0}
+.ct-section-hd h3{font-size:1.05rem;font-weight:700;color:var(--navy)}
+.ct-section-body{font-size:.9rem;color:var(--muted);line-height:1.8;padding-left:28px}
+.ct-section-body address{font-style:normal}
+
+/* ── RIGHT FORM COLUMN ── */
+.ct-form-wrap{background:#fff;border:1px solid var(--gray-100);border-radius:12px;padding:36px 32px}
+@media(max-width:560px){.ct-form-wrap{padding:24px 18px}}
+
+.cf-group{margin-bottom:20px}
+.cf-label{display:block;font-size:.88rem;font-weight:600;color:var(--navy);margin-bottom:7px}
+.cf-req{color:#c0392b;font-weight:700}
+.cf-input,
+.cf-select,
+.cf-textarea{
+  width:100%;
+  padding:10px 13px;
+  border:1px solid #cdd5e0;
+  border-radius:6px;
+  font-size:.9rem;
+  font-family:'DM Sans',sans-serif;
+  color:var(--navy);
+  background:#fff;
+  outline:none;
+  transition:border-color .2s,box-shadow .2s;
+  -webkit-appearance:none;
+  appearance:none;
+}
+.cf-input:focus,.cf-select:focus,.cf-textarea:focus{border-color:var(--teal);box-shadow:0 0 0 3px rgba(43,181,165,.1)}
+.cf-input::placeholder,.cf-textarea::placeholder{color:rgba(107,122,153,.45)}
+.cf-select{background-image:url("data:image/svg+xml,%3Csvg width='10' height='6' viewBox='0 0 10 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L5 5L9 1' stroke='%236B7A99' stroke-width='1.5' stroke-linecap='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 13px center;padding-right:36px;cursor:pointer}
+.cf-textarea{resize:vertical;min-height:130px;line-height:1.6}
+
+.cf-check-row{display:flex;align-items:flex-start;gap:10px;margin-bottom:22px}
+.cf-check-row input[type="checkbox"]{width:17px;height:17px;accent-color:var(--teal);flex-shrink:0;margin-top:2px;cursor:pointer;border:1px solid #cdd5e0;border-radius:3px}
+.cf-check-row label{font-size:.875rem;color:var(--muted);line-height:1.55;cursor:pointer}
+
+.cf-submit{padding:11px 28px;background:var(--navy);color:#fff;font-family:'Outfit',sans-serif;font-size:.9rem;font-weight:700;border:none;border-radius:6px;cursor:pointer;display:inline-flex;align-items:center;gap:8px;transition:background .2s,transform .15s}
+.cf-submit:hover{background:var(--teal);transform:translateY(-1px)}
+.cf-submit:active{transform:translateY(0)}
+.cf-submit:disabled{opacity:.55;cursor:not-allowed;transform:none}
+.cf-spinner{width:15px;height:15px;border:2px solid rgba(255,255,255,.3);border-top-color:#fff;border-radius:50%;animation:spin .7s linear infinite;display:none}
+.cf-submit.loading .cf-spinner{display:block}
+.cf-submit.loading .cf-lbl{display:none}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+.cf-error{display:none;font-size:.82rem;color:#c0392b;margin-top:12px;padding:9px 13px;border-left:3px solid #e74c3c;background:rgba(231,76,60,.05)}
+.cf-error.show{display:block}
+
+/* Success */
+#cf-success{display:none;text-align:center;padding:40px 0}
+#cf-success.show{display:block}
+#cf-success svg{color:var(--teal);margin:0 auto 16px;display:block}
+#cf-success h3{font-size:1.3rem;font-weight:700;color:var(--navy);margin-bottom:8px}
+#cf-success p{font-size:.9rem;color:var(--muted);line-height:1.7;max-width:320px;margin:0 auto 20px}
+.cf-reset{font-size:.85rem;color:var(--teal);font-weight:600;background:none;border:none;cursor:pointer;text-decoration:underline;text-underline-offset:3px}
+
+/* ── FOOTER ── */
+.footer{background:var(--navy);padding:60px 24px 28px;color:rgba(255,255,255,.6)}
+.fi2{max-width:1200px;margin:0 auto}
+.fg2{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:44px;margin-bottom:44px}
+@media(max-width:900px){.fg2{grid-template-columns:1fr 1fr;gap:32px}}
+@media(max-width:640px){.fg2{grid-template-columns:1fr}}
+.fb-brand img{height:56px;margin-bottom:14px}
+.fb-brand p{font-size:.79rem;line-height:1.7;color:rgba(255,255,255,.45);max-width:270px}
+.fc h4{font-size:.8rem;font-weight:700;color:#fff;margin-bottom:14px;text-transform:uppercase;letter-spacing:.09em}
+.fc a{display:block;font-size:.79rem;color:rgba(255,255,255,.45);text-decoration:none;margin-bottom:9px;transition:color .15s}
+.fc a:hover{color:var(--teal)}
+.footer-bot{border-top:1px solid rgba(255,255,255,.08);padding-top:26px;display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:16px}
+.f-legal{font-size:.68rem;color:rgba(255,255,255,.3);line-height:1.7;max-width:600px}
+.f-copy{font-size:.72rem;color:rgba(255,255,255,.3);white-space:nowrap}
+
+/* ── CART DRAWER ── */
+#cart-backdrop{position:fixed;inset:0;z-index:149;background:rgba(15,34,64,.35);backdrop-filter:blur(3px);opacity:0;pointer-events:none;transition:opacity .25s}
+#cart-backdrop.open{opacity:1;pointer-events:all}
+#cart-drawer{position:fixed;right:0;top:0;bottom:0;z-index:150;width:100%;max-width:400px;background:#fff;box-shadow:-8px 0 40px rgba(15,34,64,.14);transform:translateX(100%);transition:transform .35s cubic-bezier(.77,0,.18,1);display:flex;flex-direction:column}
+#cart-drawer.open{transform:translateX(0)}
+.cd-hdr{padding:22px 22px 18px;border-bottom:1px solid var(--gray-100);display:flex;align-items:center;justify-content:space-between;flex-shrink:0}
+.cd-hdr h2{font-size:1.2rem;font-weight:700;color:var(--navy)}
+.xbtn{width:34px;height:34px;border-radius:8px;border:1px solid var(--gray-100);background:none;cursor:pointer;display:flex;align-items:center;justify-content:center;color:var(--muted);transition:color .2s,background .2s}
+.xbtn:hover{background:var(--gray-50);color:var(--navy)}
+.cd-items{flex:1;overflow-y:auto;padding:12px 0}
+.cart-empty{text-align:center;padding:60px 20px;color:var(--muted)}
+.ce-icon{font-size:3rem;opacity:.25;margin-bottom:14px}
+.cd-footer{padding:18px 22px;border-top:1px solid var(--gray-100)}
+.cd-sub,.cd-tot{display:flex;justify-content:space-between;margin-bottom:5px}
+.cd-sub{font-size:.875rem;color:var(--muted)}
+.cd-tot{font-size:1.05rem;font-weight:700;color:var(--navy);margin-bottom:16px;font-family:'Outfit',sans-serif}
+.checkout-btn{width:100%;padding:15px;background:var(--navy);color:#fff;font-family:'Outfit',sans-serif;font-size:1rem;font-weight:700;border:none;border-radius:10px;cursor:pointer;transition:background .2s}
+.checkout-btn:hover{background:var(--teal)}
+
+/* ── ACCOUNT MODAL ── */
+#acct-modal{position:fixed;inset:0;z-index:250;background:rgba(15,34,64,.5);backdrop-filter:blur(6px);display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity .25s;padding:16px}
+#acct-modal.open{opacity:1;pointer-events:all}
+.modal-box{background:#fff;border-radius:20px;padding:36px;width:100%;max-width:430px;max-height:90vh;overflow-y:auto;position:relative;box-shadow:0 24px 80px rgba(15,34,64,.2);transform:scale(.95) translateY(10px);transition:transform .25s cubic-bezier(.34,1.56,.64,1)}
+#acct-modal.open .modal-box{transform:scale(1) translateY(0)}
+.ml{display:flex;justify-content:center;margin-bottom:24px}
+.ml img{height:34px}
+.mtabs{display:flex;border-bottom:1px solid var(--gray-100);margin-bottom:24px}
+.mtab{flex:1;padding:11px;text-align:center;font-size:.875rem;font-weight:600;color:var(--muted);cursor:pointer;border:none;border-bottom:2px solid transparent;margin-bottom:-1px;background:none;font-family:'DM Sans',sans-serif;transition:color .2s,border-color .2s}
+.mtab.active{color:var(--teal);border-bottom-color:var(--teal)}
+.fg{margin-bottom:14px}
+.fl{display:block;font-size:.8rem;font-weight:600;color:var(--navy);margin-bottom:5px}
+.fi{width:100%;padding:12px 15px;border:1.5px solid var(--gray-100);border-radius:10px;font-size:.9375rem;font-family:'DM Sans',sans-serif;color:var(--navy);outline:none;transition:border-color .2s}
+.fi:focus{border-color:var(--teal)}
+.fb2{width:100%;padding:13px;background:var(--navy);color:#fff;font-family:'Outfit',sans-serif;font-size:.975rem;font-weight:700;border:none;border-radius:10px;cursor:pointer;margin-top:6px;transition:background .2s}
+.fb2:hover{background:var(--teal)}
+
+/* ── TOAST ── */
+#toast{position:fixed;bottom:22px;left:50%;transform:translateX(-50%) translateY(70px);background:var(--navy);color:#fff;padding:11px 22px;border-radius:40px;font-size:.85rem;font-weight:500;z-index:500;transition:transform .3s cubic-bezier(.34,1.56,.64,1);white-space:nowrap;box-shadow:0 8px 32px rgba(15,34,64,.25);pointer-events:none}
+#toast.show{transform:translateX(-50%) translateY(0)}
+
+/* ── MOBILE NAV ── */
+@media(max-width:640px){
+  .nav-inner{height:72px;padding:0 16px}
+  .nav-logo img{height:56px}
+  .nib{width:36px;height:36px}
+  #hamburger{display:flex}
+}
+@media(max-width:480px){
+  .ct-inner{padding:40px 16px;grid-template-columns:1fr}
+  .ct-form-wrap{padding:28px 20px}
+  .cart-drawer{width:100vw;right:-100vw}
+  .cart-drawer.open{right:0}
+  .modal-box{padding:28px 20px;border-radius:16px}
+}
+</style>
+</head>
+<body>
+
+<!-- DISCLAIMER BAR -->
+<div id="disc-bar">
+  For research purposes only. Not for human use. All products are sold exclusively for in-vitro laboratory research.
+  <button onclick="this.parentElement.style.display='none'" aria-label="Close">×</button>
+</div>
+
+<!-- NAV -->
+<nav id="main-nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <img src="brand_assets/clarix_logo_primary.png" alt="Clarix Peptides">
+    </a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="shop.html">Shop</a>
+      <a href="wholesale.html">Wholesale</a>
+      <a href="usage-guide.html">Usage Guide</a>
+      <a href="about.html">About Us</a>
+      <a href="contact.html" class="active">Contact Us</a>
+    </div>
+    <div class="nav-actions">
+      <button class="nib" id="search-btn" aria-label="Search">
+        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+      </button>
+      <button class="nib" id="acct-btn" aria-label="Account">
+        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+      </button>
+      <button class="nib" id="cart-btn" aria-label="Cart">
+        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+        <span class="cart-badge" id="cart-count">0</span>
+      </button>
+      <button class="nib" id="hamburger" aria-label="Menu" onclick="document.getElementById('mobile-menu').classList.toggle('open')">
+        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- MOBILE MENU -->
+<div id="mobile-menu">
+  <button class="mm-close" onclick="document.getElementById('mobile-menu').classList.remove('open')">
+    <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+  </button>
+  <a href="index.html" class="mm-link">Home</a>
+  <a href="shop.html" class="mm-link">Shop</a>
+  <a href="wholesale.html" class="mm-link">Wholesale</a>
+  <a href="usage-guide.html" class="mm-link">Usage Guide</a>
+  <a href="about.html" class="mm-link">About Us</a>
+  <a href="contact.html" class="mm-link active">Contact Us</a>
+</div>
+
+<!-- SEARCH OVERLAY -->
+<div id="search-overlay">
+  <div class="search-panel">
+    <div class="search-wrap">
+      <svg class="si" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+      <input id="search-input" type="text" placeholder="Search compounds…" autocomplete="off">
+      <button class="sc" onclick="closeSearch()">
+        <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+    <div id="search-results"></div>
+  </div>
+</div>
+
+<!-- CONTACT PAGE -->
+<div class="ct-page">
+  <div class="ct-page-inner">
+
+    <!-- Page title -->
+    <div class="ct-title">
+      <h1>Contact Us</h1>
+    </div>
+
+    <div class="ct-layout">
+
+      <!-- LEFT: Info sections -->
+      <div class="ct-info-col">
+
+        <div class="ct-section">
+          <div class="ct-section-hd">
+            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <h3>Clarix Research</h3>
+          </div>
+          <div class="ct-section-body">
+            <address>
+              Clarix Research Ltd<br>
+              66 Paul Street<br>
+              London, EC2A 4NA<br>
+              United Kingdom<br>
+              <span style="font-size:.78rem;color:var(--muted)">Company No. 17269311</span>
+            </address>
+          </div>
+        </div>
+
+        <div class="ct-section">
+          <div class="ct-section-hd">
+            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            <h3>Office Hours</h3>
+          </div>
+          <div class="ct-section-body">
+            Mon–Fri: 09:00 – 17:30<br>
+            Weekend: Closed
+          </div>
+        </div>
+
+        <div class="ct-section">
+          <div class="ct-section-hd">
+            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            <h3>Customer Support</h3>
+          </div>
+          <div class="ct-section-body">
+            Due to the nature of our products, sold for research purposes only, we are unable to offer advice or guidance outside of this scope.
+          </div>
+        </div>
+
+      </div>
+
+      <!-- RIGHT: Form -->
+      <div class="ct-form-wrap">
+
+        <div id="cf-success">
+          <svg width="48" height="48" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          <h3>Message Sent</h3>
+          <p>Thank you for getting in touch. We'll respond within one working day.</p>
+          <button class="cf-reset" onclick="resetForm()">Send another message</button>
+        </div>
+
+        <form id="contact-form" onsubmit="submitForm(event)" novalidate>
+
+          <!--
+            Web3Forms setup:
+            1. Go to https://web3forms.com/
+            2. Enter info@clarixpeptides.com
+            3. Replace YOUR_WEB3FORMS_ACCESS_KEY below with your key
+          -->
+          <input type="hidden" name="access_key" value="aa36f936-af5e-420f-8e65-6f782a43046f">
+          <input type="hidden" name="subject" value="New Contact Enquiry — Clarix Peptides">
+          <input type="hidden" name="from_name" value="Clarix Peptides Contact Form">
+          <input type="checkbox" name="botcheck" style="display:none">
+
+          <div class="cf-group">
+            <label class="cf-label">Your Name</label>
+            <input type="text" name="name" class="cf-input" placeholder="">
+          </div>
+
+          <div class="cf-group">
+            <label class="cf-label">Topic <span class="cf-req">*</span></label>
+            <select name="topic" class="cf-select" required>
+              <option value="" disabled selected>Select a topic</option>
+              <option>Sales Question</option>
+              <option>Research Enquiry</option>
+              <option>Payment Query</option>
+              <option>Order Query</option>
+              <option>Delivery Query</option>
+              <option>Wholesale Query</option>
+            </select>
+          </div>
+
+          <div class="cf-group">
+            <label class="cf-label">Email <span class="cf-req">*</span></label>
+            <input type="email" name="email" class="cf-input" placeholder="" required>
+          </div>
+
+          <div class="cf-group">
+            <label class="cf-label">Order ID</label>
+            <input type="text" name="order_id" class="cf-input" placeholder="">
+          </div>
+
+          <div class="cf-group">
+            <label class="cf-label">Your Message <span class="cf-req">*</span></label>
+            <textarea name="message" class="cf-textarea" required></textarea>
+          </div>
+
+          <div class="cf-check-row">
+            <input type="checkbox" name="newsletter" id="newsletter">
+            <label for="newsletter">I would like to receive product updates and news</label>
+          </div>
+
+          <div class="cf-error" id="cf-error-msg">Please complete all required fields.</div>
+
+          <button type="submit" class="cf-submit" id="cf-submit-btn">
+            <span class="cf-lbl">Submit</span>
+            <div class="cf-spinner"></div>
+          </button>
+
+        </form>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="fi2">
+    <div class="fg2">
+      <div class="fb-brand">
+        <img src="brand_assets/clarix_logo_reverse.png" alt="Clarix Peptides">
+        <p>Premium research peptides supplied to licensed researchers across the UK. All products for research purposes only. Not for human or veterinary use.</p>
+      </div>
+      <div class="fc">
+        <h4>Shop</h4>
+        <a href="shop.html">All Products</a>
+      </div>
+      <div class="fc">
+        <h4>Company</h4>
+        <a href="about.html">About Us</a>
+        <a href="wholesale.html">Wholesale</a>
+        <a href="usage-guide.html">Usage Guide</a>
+      </div>
+      <div class="fc">
+        <h4>Support</h4>
+        <a href="contact.html">Contact Us</a>
+        <a href="privacy-policy.html">Privacy Policy</a>
+        <a href="terms.html">Terms &amp; Conditions</a>
+      </div>
+    </div>
+    <div class="footer-bot">
+      <div>
+        <p class="f-legal">All products sold by Clarix Peptides are intended for research purposes only and are not approved by the MHRA, FDA, or any other regulatory body for human or veterinary use. Products must only be handled by qualified, licensed researchers. By purchasing, you confirm you are 18+ and a licensed researcher. Clarix Peptides accepts no liability for misuse.</p>
+        <p style="font-size:.65rem;color:rgba(255,255,255,.22);margin-top:8px;line-height:1.6">Clarix Research Ltd (trading as Clarix Peptides) &nbsp;|&nbsp; Registered in England and Wales &nbsp;|&nbsp; Company No. 17269311 &nbsp;|&nbsp; Registered Office: 66 Paul Street, London EC2A 4NA</p>
+      </div>
+      <div style="display:flex;align-items:center;gap:14px">
+        <img src="brand_assets/bank-transfer.webp" alt="Bank Transfer" style="height:28px;border-radius:5px">
+        <p class="f-copy">© 2026 Clarix Research Ltd</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- CART DRAWER -->
+<div id="cart-backdrop" onclick="closeCart()"></div>
+<div id="cart-drawer">
+  <div class="cd-hdr">
+    <h2>Your Basket</h2>
+    <button class="xbtn" onclick="closeCart()">
+      <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+  </div>
+  <div class="cd-items" id="cart-items-el">
+    <div class="cart-empty"><div class="ce-icon">🛒</div><p>Your basket is empty</p></div>
+  </div>
+  <div class="cd-footer" id="cart-footer-el"></div>
+</div>
+
+<!-- ACCOUNT MODAL -->
+<div id="acct-modal">
+  <div class="modal-box">
+    <button onclick="closeAcct()" style="position:absolute;top:16px;right:16px;background:none;border:none;cursor:pointer;color:var(--muted);padding:4px;border-radius:6px;transition:color .2s" onmouseover="this.style.color='var(--navy)'" onmouseout="this.style.color='var(--muted)'">
+      <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+    <div class="ml"><img src="brand_assets/clarix_logo_primary.png" alt="Clarix Peptides"></div>
+    <div id="acct-modal-body"></div>
+  </div>
+</div>
+
+<div id="toast"></div>
+
+<script>
+const PRODUCTS = [
+  {id:1, name:"Retatrutide",          strength:"10mg",  price:69.99, category:"GLP-1"},
+  {id:2, name:"Retatrutide",          strength:"20mg",  price:94.99, category:"GLP-1"},
+  {id:5, name:"Tesamorelin",          strength:"2mg",   price:35.99, category:"Growth Hormone"},
+  {id:6, name:"Tesamorelin",          strength:"5mg",   price:49.99, category:"Growth Hormone"},
+  {id:7, name:"CJC-1295 (No DAC)",    strength:"2mg",   price:21.99, category:"Growth Hormone"},
+  {id:8, name:"CJC-1295 (No DAC)",    strength:"5mg",   price:34.99, category:"Growth Hormone"},
+  {id:9, name:"GHK-Cu",               strength:"50mg",  price:24.99, category:"Repair"},
+  {id:10,name:"GHK-Cu",               strength:"100mg", price:42.99, category:"Repair"},
+  {id:11,name:"BPC-157",              strength:"5mg",   price:21.99, category:"Repair"},
+  {id:12,name:"BPC-157",              strength:"10mg",  price:29.99, category:"Repair"},
+  {id:13,name:"TB-500",               strength:"5mg",   price:27.99, category:"Repair"},
+  {id:14,name:"TB-500",               strength:"10mg",  price:47.99, category:"Repair"},
+  {id:15,name:"Melanotan II",         strength:"10mg",  price:26.99, category:"Melanocortin"},
+  {id:16,name:"Bacteriostatic Water", strength:"10ml",  price:9.99,  category:"Reconstitution"},
+];
+
+async function submitForm(e) {
+  e.preventDefault();
+  const form = document.getElementById('contact-form');
+  const btn  = document.getElementById('cf-submit-btn');
+  const err  = document.getElementById('cf-error-msg');
+  err.classList.remove('show');
+  const required = form.querySelectorAll('[required]');
+  let valid = true;
+  required.forEach(el => { if (!el.value.trim()) { el.style.borderColor='#e74c3c'; valid=false; } else el.style.borderColor=''; });
+  if (!valid) { err.classList.add('show'); return; }
+  btn.disabled = true; btn.classList.add('loading');
+  try {
+    const res = await fetch('https://api.web3forms.com/submit', { method:'POST', body: new FormData(form) });
+    const data = await res.json();
+    if (data.success) { form.style.display='none'; document.getElementById('cf-success').classList.add('show'); }
+    else { err.textContent = data.message || 'Something went wrong. Email us at info@clarixpeptides.com'; err.classList.add('show'); }
+  } catch { err.textContent='Network error. Email us at info@clarixpeptides.com'; err.classList.add('show'); }
+  finally { btn.disabled=false; btn.classList.remove('loading'); }
+}
+function resetForm() {
+  const form = document.getElementById('contact-form');
+  form.reset(); form.style.display='';
+  document.getElementById('cf-success').classList.remove('show');
+  document.getElementById('cf-error-msg').classList.remove('show');
+}
+
+window.addEventListener('scroll',()=>document.getElementById('main-nav').classList.toggle('scrolled',window.scrollY>20),{passive:true});
+
+function openSearch(){document.getElementById('search-overlay').classList.add('open');setTimeout(()=>document.getElementById('search-input').focus(),100);}
+function closeSearch(){document.getElementById('search-overlay').classList.remove('open');document.getElementById('search-input').value='';document.getElementById('search-results').classList.remove('show');}
+document.getElementById('search-btn').addEventListener('click',openSearch);
+document.getElementById('search-overlay').addEventListener('click',e=>{if(e.target===e.currentTarget)closeSearch();});
+document.getElementById('search-input').addEventListener('input',e=>{
+  const q=e.target.value.toLowerCase().trim(),box=document.getElementById('search-results');
+  if(!q){box.classList.remove('show');box.innerHTML='';return;}
+  const hits=PRODUCTS.filter(p=>p.name.toLowerCase().includes(q)||p.category.toLowerCase().includes(q)).slice(0,8);
+  if(!hits.length){box.classList.remove('show');return;}
+  box.innerHTML=hits.map(p=>`<div class="sr-item" onclick="window.location='shop.html'"><div><div class="sr-name">${p.name} ${p.strength}</div><div class="sr-cat">${p.category}</div></div><div class="sr-price">£${p.price.toFixed(2)}</div></div>`).join('');
+  box.classList.add('show');
+});
+
+let cart=JSON.parse(localStorage.getItem('clarix_cart')||'[]');
+function saveCart(){localStorage.setItem('clarix_cart',JSON.stringify(cart));updateCartUI();}
+function updateCartUI(){
+  const total=cart.reduce((s,i)=>s+i.qty,0),badge=document.getElementById('cart-count');
+  badge.textContent=total;badge.classList.toggle('show',total>0);
+  const el=document.getElementById('cart-items-el'),ft=document.getElementById('cart-footer-el');
+  if(!cart.length){el.innerHTML='<div class="cart-empty"><div class="ce-icon">🛒</div><p>Your basket is empty</p></div>';ft.innerHTML='';return;}
+  el.innerHTML=cart.map((item,i)=>`<div style="display:flex;gap:12px;padding:12px 22px;border-bottom:1px solid var(--gray-50)"><div style="flex:1;min-width:0"><div style="font-weight:600;font-size:.9rem;color:var(--navy)">${item.name} ${item.strength}</div><div style="font-size:.78rem;color:var(--muted)">${item.category}</div><div style="display:flex;align-items:center;gap:6px;margin-top:8px"><button onclick="changeQty(${i},-1)" style="width:26px;height:26px;border-radius:6px;border:1.5px solid var(--gray-100);background:#fff;cursor:pointer">−</button><span style="font-size:.875rem;font-weight:600;min-width:20px;text-align:center">${item.qty}</span><button onclick="changeQty(${i},1)" style="width:26px;height:26px;border-radius:6px;border:1.5px solid var(--gray-100);background:#fff;cursor:pointer">+</button></div></div><div style="display:flex;flex-direction:column;align-items:flex-end;gap:8px"><span style="font-weight:700;font-size:.9rem;color:var(--navy);font-family:'Outfit',sans-serif">£${(item.price*item.qty).toFixed(2)}</span><button onclick="removeItem(${i})" style="background:none;border:none;cursor:pointer;color:var(--muted);font-size:.75rem">Remove</button></div></div>`).join('');
+  const sub=cart.reduce((s,i)=>s+i.price*i.qty,0);
+  ft.innerHTML=`<div class="cd-sub"><span>Subtotal</span><span>£${sub.toFixed(2)}</span></div><div class="cd-tot"><span>Total</span><span>£${sub.toFixed(2)}</span></div><button class="checkout-btn" onclick="showToast('Checkout coming soon!')">Proceed to Checkout</button>`;
+}
+function changeQty(i,d){cart[i].qty+=d;if(cart[i].qty<=0)cart.splice(i,1);saveCart();}
+function removeItem(i){cart.splice(i,1);saveCart();}
+function openCart(){document.getElementById('cart-drawer').classList.add('open');document.getElementById('cart-backdrop').classList.add('open');}
+function closeCart(){document.getElementById('cart-drawer').classList.remove('open');document.getElementById('cart-backdrop').classList.remove('open');}
+document.getElementById('cart-btn').addEventListener('click',openCart);
+updateCartUI();
+
+function openAcct(){document.getElementById('acct-modal').classList.add('open');renderAcct();}
+function closeAcct(){document.getElementById('acct-modal').classList.remove('open');}
+document.getElementById('acct-btn').addEventListener('click',openAcct);
+document.getElementById('acct-modal').addEventListener('click',e=>{if(e.target===e.currentTarget)closeAcct();});
+function renderAcct(){
+  const user=JSON.parse(localStorage.getItem('clarix_user')||'null'),body=document.getElementById('acct-modal-body');
+  if(user){body.innerHTML=`<div style="text-align:center"><h3 style="font-size:1.2rem;font-weight:700;color:var(--navy);margin-bottom:6px">Welcome back</h3><p style="font-size:.875rem;color:var(--muted);margin-bottom:22px">${user.email}</p><button onclick="signOut()" style="padding:11px 28px;background:var(--gray-50);color:var(--navy);border:1px solid var(--gray-100);border-radius:8px;font-family:'DM Sans',sans-serif;font-size:.875rem;font-weight:600;cursor:pointer">Sign Out</button></div>`;return;}
+  body.innerHTML=`<div class="mtabs"><button class="mtab active" onclick="switchTab(this,'login')">Sign In</button><button class="mtab" onclick="switchTab(this,'register')">Register</button></div><div id="tab-login"><div class="fg"><label class="fl">Email</label><input class="fi" type="email" id="li-email" placeholder="you@example.com"></div><div class="fg"><label class="fl">Password</label><input class="fi" type="password" id="li-pw" placeholder="••••••••"></div><button class="fb2" onclick="signIn()">Sign In</button></div><div id="tab-register" style="display:none"><div class="fg"><label class="fl">Email</label><input class="fi" type="email" id="reg-email" placeholder="you@example.com"></div><div class="fg"><label class="fl">Password</label><input class="fi" type="password" id="reg-pw" placeholder="••••••••"></div><button class="fb2" onclick="register()">Create Account</button></div>`;
+}
+function switchTab(btn,tab){document.querySelectorAll('.mtab').forEach(t=>t.classList.remove('active'));btn.classList.add('active');document.getElementById('tab-login').style.display=tab==='login'?'':'none';document.getElementById('tab-register').style.display=tab==='register'?'':'none';}
+function signIn(){const e=document.getElementById('li-email').value,p=document.getElementById('li-pw').value;if(!e||!p){showToast('Please fill in all fields');return;}localStorage.setItem('clarix_user',JSON.stringify({email:e}));closeAcct();showToast('Signed in successfully');}
+function register(){const e=document.getElementById('reg-email').value,p=document.getElementById('reg-pw').value;if(!e||!p){showToast('Please fill in all fields');return;}localStorage.setItem('clarix_user',JSON.stringify({email:e}));closeAcct();showToast('Account created successfully');}
+function signOut(){localStorage.removeItem('clarix_user');closeAcct();showToast('Signed out');}
+function showToast(msg){const t=document.getElementById('toast');t.textContent=msg;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),3000);}
+</script>
+<!-- COOKIE CONSENT BANNER -->
+<div id="cookie-bar" style="position:fixed;bottom:0;left:0;right:0;z-index:9999;background:rgba(15,34,64,.97);backdrop-filter:blur(12px);border-top:1px solid rgba(255,255,255,.1);padding:16px 24px;display:flex;align-items:center;flex-wrap:wrap;gap:12px 20px;font-family:'DM Sans',sans-serif;box-shadow:0 -4px 24px rgba(0,0,0,.3);transition:transform .4s ease">
+  <div style="flex:1;min-width:280px">
+    <p style="font-size:.78rem;color:rgba(255,255,255,.7);line-height:1.65;margin:0"><strong style="color:#fff;font-weight:600">We use cookies &amp; local storage</strong> for essential website functions (cart, account, session) and load third-party scripts (Tailwind CSS, Google Fonts) that may process your IP address. <a href="privacy-policy.html" style="color:#2BB5A5;text-decoration:underline">Privacy Policy</a></p>
+  </div>
+  <div style="display:flex;gap:8px;flex-shrink:0">
+    <button onclick="setCookieChoice('declined')" style="padding:8px 16px;font-size:.78rem;font-weight:600;border-radius:7px;border:1px solid rgba(255,255,255,.2);background:none;color:rgba(255,255,255,.6);cursor:pointer;font-family:'DM Sans',sans-serif">Decline</button>
+    <button onclick="setCookieChoice('accepted')" style="padding:8px 18px;font-size:.78rem;font-weight:600;border-radius:7px;border:none;background:#2BB5A5;color:#fff;cursor:pointer;font-family:'DM Sans',sans-serif">Accept All</button>
+  </div>
+</div>
+<script>
+(function(){
+  function setCookieChoice(c){localStorage.setItem('clarix_cookies',c);var b=document.getElementById('cookie-bar');if(b){b.style.transform='translateY(110%)';setTimeout(function(){b.style.display='none'},400)}}
+  window.setCookieChoice=setCookieChoice;
+  if(localStorage.getItem('clarix_cookies')){var b=document.getElementById('cookie-bar');if(b)b.style.display='none'}
+})();
+</script>
+</body>
+</html>

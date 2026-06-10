@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="brand_assets/clarix_logomark.png" type="image/png">
+<link rel="apple-touch-icon" href="brand_assets/clarix_logomark.png">
+<title>Terms & Conditions | Clarix Peptides Research Compounds</title>
+<meta name="description" content="Terms and conditions for Clarix Peptides. All products are for in vitro research use only. Read our full terms before ordering.">
+<meta name="robots" content="index, follow">
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#0F2240;--navy-mid:#1A3560;--teal:#2BB5A5;--teal-dark:#229E8F;--teal-light:#3DCFBF;--white:#FFFFFF;--off-white:#F7FAFC;--gray-50:#F0F4FA;--gray-100:#E1E8F5;--muted:#6B7A99}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'DM Sans',sans-serif;background:#fff;color:var(--navy);overflow-x:hidden}
+h1,h2,h3,h4,h5,h6{font-family:'Outfit',sans-serif}
+
+#disc-bar{background:var(--navy);color:rgba(255,255,255,.8);font-size:.7rem;letter-spacing:.07em;text-transform:uppercase;padding:9px 48px 9px 20px;text-align:center;position:relative;line-height:1.4}
+#disc-bar button{position:absolute;right:14px;top:50%;transform:translateY(-50%);background:none;border:none;color:rgba(255,255,255,.45);cursor:pointer;font-size:1.1rem;line-height:1;transition:color .2s}
+#disc-bar button:hover{color:#fff}
+
+#main-nav{position:sticky;top:0;z-index:100;background:#fff;border-bottom:1px solid var(--gray-100);transition:box-shadow .3s}
+#main-nav.scrolled{box-shadow:0 4px 24px rgba(15,34,64,.08)}
+.nav-inner{max-width:1400px;margin:0 auto;padding:0 24px;display:flex;align-items:center;gap:24px;height:120px}
+.nav-logo{flex-shrink:0}
+.nav-logo img{height:110px;width:auto}
+.nav-links{display:flex;align-items:center;gap:2px;flex:1;justify-content:center}
+.nav-links a{font-size:.85rem;font-weight:500;color:var(--navy);text-decoration:none;padding:7px 13px;border-radius:7px;transition:color .2s,background .2s;white-space:nowrap}
+.nav-links a:hover,.nav-links a.active{color:var(--teal);background:rgba(43,181,165,.07)}
+.nav-actions{display:flex;align-items:center;gap:2px;flex-shrink:0}
+.nib{width:40px;height:40px;border-radius:8px;border:none;background:none;cursor:pointer;display:flex;align-items:center;justify-content:center;color:var(--navy);position:relative;transition:color .2s,background .2s}
+.nib:hover{color:var(--teal);background:rgba(43,181,165,.07)}
+.nib svg{pointer-events:none}
+.cart-badge{position:absolute;top:4px;right:4px;min-width:17px;height:17px;background:var(--teal);color:#fff;font-size:.6rem;font-weight:700;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Outfit',sans-serif;opacity:0;transform:scale(0);transition:opacity .2s,transform .2s}
+.cart-badge.show{opacity:1;transform:scale(1)}
+#hamburger{display:none}
+@media(max-width:900px){.nav-links{display:none}}
+@media(max-width:640px){#hamburger{display:flex}}
+
+#search-overlay{position:fixed;inset:0;z-index:200;background:rgba(15,34,64,.55);backdrop-filter:blur(8px);opacity:0;pointer-events:none;transition:opacity .25s}
+#search-overlay.open{opacity:1;pointer-events:all}
+.search-panel{background:#fff;padding:28px 32px}
+.search-wrap{max-width:680px;margin:0 auto;position:relative}
+.search-wrap input{width:100%;padding:15px 52px;font-size:1.05rem;font-family:'DM Sans',sans-serif;border:2px solid var(--teal);border-radius:50px;outline:none;color:var(--navy)}
+.search-wrap .si{position:absolute;left:18px;top:50%;transform:translateY(-50%);color:var(--teal);pointer-events:none}
+.search-wrap .sc{position:absolute;right:14px;top:50%;transform:translateY(-50%);background:none;border:none;cursor:pointer;color:var(--muted);padding:6px;border-radius:50%;transition:color .2s}
+.search-wrap .sc:hover{color:var(--navy)}
+#search-results{max-width:680px;margin:10px auto 0;background:#fff;border-radius:12px;border:1px solid var(--gray-100);box-shadow:0 8px 32px rgba(15,34,64,.12);overflow:hidden;max-height:380px;overflow-y:auto;display:none}
+#search-results.show{display:block}
+.sr-item{padding:13px 20px;display:flex;align-items:center;justify-content:space-between;cursor:pointer;border-bottom:1px solid var(--gray-50);transition:background .15s}
+.sr-item:hover{background:var(--gray-50)}
+.sr-item:last-child{border-bottom:none}
+.sr-name{font-weight:600;font-size:.9rem;color:var(--navy)}
+.sr-price{font-weight:700;font-size:.9rem;color:var(--teal);font-family:'Outfit',sans-serif}
+
+#mobile-menu{position:fixed;inset:0;z-index:200;background:#fff;padding:76px 28px 28px;transform:translateX(-100%);transition:transform .3s ease}
+#mobile-menu.open{transform:translateX(0)}
+.mm-close{position:absolute;top:18px;right:18px;width:42px;height:42px;border-radius:10px;border:1px solid var(--gray-100);background:none;cursor:pointer;display:flex;align-items:center;justify-content:center;color:var(--navy)}
+.mm-link{display:block;padding:15px 0;font-size:1.2rem;font-weight:600;color:var(--navy);text-decoration:none;border-bottom:1px solid var(--gray-100);transition:color .15s}
+.mm-link:hover{color:var(--teal)}
+
+/* PAGE HERO */
+.tc-hero{background:var(--navy);padding:64px 24px 56px;position:relative;overflow:hidden}
+.tc-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 80% 50%,rgba(43,181,165,.14) 0%,transparent 60%);pointer-events:none}
+.tc-hero-inner{max-width:900px;margin:0 auto;position:relative;z-index:1}
+.tc-eyebrow{font-size:.72rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--teal);margin-bottom:14px}
+.tc-hero h1{font-size:clamp(2rem,4vw,3rem);font-weight:800;color:#fff;letter-spacing:-.03em;line-height:1.1;margin-bottom:14px}
+.tc-hero p{font-size:.9rem;color:rgba(255,255,255,.5);line-height:1.7;max-width:520px}
+.tc-meta{display:flex;align-items:center;gap:20px;margin-top:24px;flex-wrap:wrap}
+.tc-meta-pill{display:flex;align-items:center;gap:7px;padding:6px 14px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.1);border-radius:20px;font-size:.75rem;font-weight:600;color:rgba(255,255,255,.6);letter-spacing:.02em}
+.tc-meta-pill svg{color:var(--teal)}
+
+/* BREADCRUMB */
+.bc-bar{background:var(--gray-50);border-bottom:1px solid var(--gray-100);padding:11px 24px}
+.bc-inner{max-width:900px;margin:0 auto;display:flex;align-items:center;gap:6px;font-size:.78rem}
+.bc-bar a{color:var(--muted);text-decoration:none;transition:color .15s}
+.bc-bar a:hover{color:var(--teal)}
+.bc-bar span{color:var(--gray-100)}
+.bc-bar strong{color:var(--navy);font-weight:600}
+
+/* CONTENT */
+.tc-body{max-width:900px;margin:0 auto;padding:64px 24px 80px}
+.tc-toc{background:var(--gray-50);border:1.5px solid var(--gray-100);border-radius:16px;padding:28px 32px;margin-bottom:56px}
+.tc-toc h3{font-size:.85rem;font-weight:700;color:var(--navy);text-transform:uppercase;letter-spacing:.1em;margin-bottom:16px}
+.tc-toc ol{list-style:none;counter-reset:toc;display:grid;grid-template-columns:1fr 1fr;gap:6px 32px}
+@media(max-width:600px){.tc-toc ol{grid-template-columns:1fr}}
+.tc-toc li{counter-increment:toc;font-size:.85rem}
+.tc-toc li a{color:var(--muted);text-decoration:none;display:flex;align-items:center;gap:8px;padding:4px 0;transition:color .15s}
+.tc-toc li a::before{content:counter(toc,decimal-leading-zero);font-family:'Outfit',sans-serif;font-size:.72rem;font-weight:700;color:var(--teal);min-width:22px}
+.tc-toc li a:hover{color:var(--teal)}
+
+.tc-section{margin-bottom:52px;padding-top:8px;scroll-margin-top:24px}
+.tc-section:last-child{margin-bottom:0}
+.tc-section-num{font-size:.68rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--teal);margin-bottom:8px}
+.tc-section h2{font-size:1.45rem;font-weight:700;color:var(--navy);letter-spacing:-.02em;margin-bottom:18px;padding-bottom:14px;border-bottom:2px solid var(--gray-100)}
+.tc-section p{font-size:.9rem;color:var(--muted);line-height:1.82;margin-bottom:14px}
+.tc-section p:last-child{margin-bottom:0}
+.tc-section strong{color:var(--navy);font-weight:600}
+.tc-section ul,.tc-section ol{margin:14px 0 14px 20px;font-size:.9rem;color:var(--muted);line-height:1.82}
+.tc-section li{margin-bottom:7px}
+
+.tc-alert{background:rgba(15,34,64,.04);border-left:3px solid var(--navy);border-radius:0 10px 10px 0;padding:16px 20px;margin:20px 0;font-size:.875rem;color:var(--navy);line-height:1.7}
+.tc-alert.teal{background:rgba(43,181,165,.06);border-left-color:var(--teal);color:var(--navy)}
+.tc-divider{border:none;border-top:1px solid var(--gray-100);margin:52px 0}
+
+/* FOOTER */
+.footer{background:var(--navy);padding:60px 24px 28px;color:rgba(255,255,255,.6)}
+.fi2{max-width:1200px;margin:0 auto}
+.fg2{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:44px;margin-bottom:44px}
+@media(max-width:900px){.fg2{grid-template-columns:1fr 1fr;gap:32px}}
+@media(max-width:640px){.fg2{grid-template-columns:1fr}}
+.fb-brand img{height:56px;margin-bottom:14px}
+.fb-brand p{font-size:.79rem;line-height:1.7;color:rgba(255,255,255,.45);max-width:270px}
+.fc h4{font-size:.8rem;font-weight:700;color:#fff;margin-bottom:14px;text-transform:uppercase;letter-spacing:.09em}
+.fc a{display:block;font-size:.79rem;color:rgba(255,255,255,.45);text-decoration:none;margin-bottom:9px;transition:color .15s}
+.fc a:hover{color:var(--teal)}
+.footer-bot{border-top:1px solid rgba(255,255,255,.08);padding-top:26px;display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:16px}
+.f-legal{font-size:.68rem;color:rgba(255,255,255,.3);line-height:1.7;max-width:600px}
+.f-copy{font-size:.72rem;color:rgba(255,255,255,.3);white-space:nowrap}
+
+/* CART DRAWER */
+#cart-backdrop{position:fixed;inset:0;z-index:290;background:rgba(15,34,64,.4);opacity:0;pointer-events:none;transition:opacity .35s}
+#cart-backdrop.open{opacity:1;pointer-events:all}
+#cart-drawer{position:fixed;top:0;right:0;bottom:0;width:400px;max-width:100vw;background:#fff;z-index:300;box-shadow:-8px 0 40px rgba(15,34,64,.15);display:flex;flex-direction:column;transform:translateX(100%);transition:transform .35s cubic-bezier(.4,0,.2,1)}
+#cart-drawer.open{transform:translateX(0)}
+.cd-hdr{padding:22px;border-bottom:1px solid var(--gray-100);display:flex;align-items:center;justify-content:space-between}
+.cd-hdr h2{font-size:1.2rem;font-weight:700;color:var(--navy)}
+.xbtn{width:36px;height:36px;border-radius:8px;border:1px solid var(--gray-100);background:none;cursor:pointer;display:flex;align-items:center;justify-content:center;color:var(--muted);transition:color .2s,border-color .2s}
+.xbtn:hover{color:var(--navy);border-color:var(--navy)}
+.cd-items{flex:1;overflow-y:auto;padding:14px}
+.cart-empty{text-align:center;padding:60px 20px;color:var(--muted)}
+.ce-icon{font-size:3rem;opacity:.25;margin-bottom:14px}
+.cd-footer{padding:18px 22px;border-top:1px solid var(--gray-100)}
+.cd-sub,.cd-tot{display:flex;justify-content:space-between;margin-bottom:5px}
+.cd-sub{font-size:.875rem;color:var(--muted)}
+.cd-tot{font-size:1.05rem;font-weight:700;color:var(--navy);margin-bottom:16px;font-family:'Outfit',sans-serif}
+.checkout-btn{width:100%;padding:15px;background:var(--navy);color:#fff;font-family:'Outfit',sans-serif;font-size:1rem;font-weight:700;border:none;border-radius:10px;cursor:pointer;transition:background .2s}
+.checkout-btn:hover{background:var(--teal)}
+
+#acct-modal{position:fixed;inset:0;z-index:250;background:rgba(15,34,64,.5);backdrop-filter:blur(6px);display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity .25s;padding:16px}
+#acct-modal.open{opacity:1;pointer-events:all}
+.modal-box{background:#fff;border-radius:20px;padding:36px;width:100%;max-width:430px;max-height:90vh;overflow-y:auto;position:relative;box-shadow:0 24px 80px rgba(15,34,64,.2);transform:scale(.95) translateY(10px);transition:transform .25s cubic-bezier(.34,1.56,.64,1)}
+#acct-modal.open .modal-box{transform:scale(1) translateY(0)}
+.ml{display:flex;justify-content:center;margin-bottom:24px}
+.ml img{height:34px}
+.mtabs{display:flex;border-bottom:1px solid var(--gray-100);margin-bottom:24px}
+.mtab{flex:1;padding:11px;text-align:center;font-size:.875rem;font-weight:600;color:var(--muted);cursor:pointer;border:none;border-bottom:2px solid transparent;margin-bottom:-1px;background:none;font-family:'DM Sans',sans-serif;transition:color .2s,border-color .2s}
+.mtab.active{color:var(--teal);border-bottom-color:var(--teal)}
+.fg{margin-bottom:14px}
+.fl{display:block;font-size:.8rem;font-weight:600;color:var(--navy);margin-bottom:5px}
+.fi{width:100%;padding:12px 15px;border:1.5px solid var(--gray-100);border-radius:10px;font-size:.9375rem;font-family:'DM Sans',sans-serif;color:var(--navy);outline:none;transition:border-color .2s}
+.fi:focus{border-color:var(--teal)}
+.fb{width:100%;padding:13px;background:var(--navy);color:#fff;font-family:'Outfit',sans-serif;font-size:.975rem;font-weight:700;border:none;border-radius:10px;cursor:pointer;margin-top:6px;transition:background .2s}
+.fb:hover{background:var(--teal)}
+.merr{color:#e53e3e;font-size:.8rem;margin-top:7px;text-align:center}
+.loggedin{text-align:center}
+.loggedin h3{font-size:1.2rem;font-weight:700;color:var(--navy);margin-bottom:6px}
+.loggedin p{font-size:.875rem;color:var(--muted);margin-bottom:22px}
+.signout-btn{padding:11px 28px;background:var(--gray-50);color:var(--navy);border:1px solid var(--gray-100);border-radius:8px;font-family:'DM Sans',sans-serif;font-size:.875rem;font-weight:600;cursor:pointer;transition:background .2s}
+.signout-btn:hover{background:var(--gray-100)}
+
+#toast{position:fixed;bottom:22px;left:50%;transform:translateX(-50%) translateY(70px);background:var(--navy);color:#fff;padding:11px 22px;border-radius:40px;font-size:.85rem;font-weight:500;z-index:500;transition:transform .3s cubic-bezier(.34,1.56,.64,1);white-space:nowrap;box-shadow:0 8px 32px rgba(15,34,64,.25);pointer-events:none}
+#toast.show{transform:translateX(-50%) translateY(0)}
+.t-teal{color:var(--teal);font-weight:700}
+
+/* ── MOBILE NAV ── */
+@media(max-width:640px){
+  .nav-inner{height:72px;padding:0 16px}
+  .nav-logo img{height:56px}
+  .nib{width:36px;height:36px}
+  #hamburger{display:flex}
+}
+@media(max-width:480px){
+  .cart-drawer{width:100vw;right:-100vw}
+  .cart-drawer.open{right:0}
+  .modal-box{padding:28px 20px;border-radius:16px}
+}
+</style>
+</head>
+<body>
+
+<!-- DISCLAIMER BAR -->
+<div id="disc-bar">
+  PRODUCTS SOLD ON CLARIXPEPTIDES.COM ARE FOR RESEARCH PURPOSES ONLY AND ARE NOT FOR HUMAN OR VETERINARY USE.
+  <button onclick="this.parentElement.style.display='none'" aria-label="Dismiss">×</button>
+</div>
+
+<!-- NAV -->
+<nav id="main-nav">
+  <div class="nav-inner">
+    <a class="nav-logo" href="index.html">
+      <img src="brand_assets/clarix_logo_primary.png" alt="Clarix Peptides">
+    </a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="shop.html">Shop</a>
+      <a href="wholesale.html">Wholesale</a>
+      <a href="usage-guide.html">Usage Guide</a>
+      <a href="about.html">About Us</a>
+      <a href="contact.html">Contact Us</a>
+    </div>
+    <div class="nav-actions">
+      <button class="nib" id="search-btn" aria-label="Search">
+        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+      </button>
+      <button class="nib" id="acct-btn" aria-label="Account">
+        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+      </button>
+      <button class="nib" id="cart-btn" aria-label="Basket">
+        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+        <span class="cart-badge" id="cart-badge">0</span>
+      </button>
+      <button class="nib" id="hamburger" aria-label="Menu">
+        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- MOBILE MENU -->
+<div id="mobile-menu">
+  <button class="mm-close" id="mm-close">
+    <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+  </button>
+  <a class="mm-link" href="index.html">Home</a>
+  <a class="mm-link" href="shop.html">Shop</a>
+  <a class="mm-link" href="wholesale.html">Wholesale</a>
+  <a class="mm-link" href="usage-guide.html">Usage Guide</a>
+  <a class="mm-link" href="about.html">About Us</a>
+  <a class="mm-link" href="contact.html">Contact Us</a>
+</div>
+
+<!-- SEARCH OVERLAY -->
+<div id="search-overlay">
+  <div class="search-panel">
+    <div class="search-wrap">
+      <svg class="si" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+      <input type="text" id="search-input" placeholder="Search peptides, compounds…" autocomplete="off">
+      <button class="sc" id="search-close">
+        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+    <div id="search-results"></div>
+  </div>
+</div>
+
+<!-- BREADCRUMB -->
+<div class="bc-bar">
+  <div class="bc-inner">
+    <a href="index.html">Home</a>
+    <span>›</span>
+    <strong>Terms &amp; Conditions</strong>
+  </div>
+</div>
+
+<!-- HERO -->
+<div class="tc-hero">
+  <div class="tc-hero-inner">
+    <div class="tc-eyebrow">Legal</div>
+    <h1>Terms &amp; Conditions</h1>
+    <p>Please read these terms carefully before purchasing from Clarix Peptides. By placing an order you confirm that you have read, understood, and agree to be bound by these terms in full.</p>
+    <div class="tc-meta">
+      <div class="tc-meta-pill">
+        <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+        Last updated: June 2026
+      </div>
+      <div class="tc-meta-pill">
+        <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+        Governed by English Law
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CONTENT -->
+<div class="tc-body">
+
+  <!-- TABLE OF CONTENTS -->
+  <div class="tc-toc">
+    <h3>Contents</h3>
+    <ol>
+      <li><a href="#s1">Research Use Only — Critical Notice</a></li>
+      <li><a href="#s2">Age Requirement</a></li>
+      <li><a href="#s3">Compliance &amp; Buyer Responsibility</a></li>
+      <li><a href="#s4">Product Information</a></li>
+      <li><a href="#s5">Ordering &amp; Payment</a></li>
+      <li><a href="#s6">Refund &amp; Cancellation Policy</a></li>
+      <li><a href="#s7">Delivery</a></li>
+      <li><a href="#s8">Website &amp; Product Disclaimer</a></li>
+      <li><a href="#s9">No Professional Advice</a></li>
+      <li><a href="#s10">Intellectual Property</a></li>
+      <li><a href="#s11">Changes to These Terms</a></li>
+      <li><a href="#s12">Governing Law</a></li>
+    </ol>
+  </div>
+
+  <!-- SECTION 1 -->
+  <div class="tc-section" id="s1">
+    <div class="tc-section-num">01</div>
+    <h2>Research Use Only — Critical Legal Notice</h2>
+    <div class="tc-alert">
+      <strong>All products sold by Clarix Peptides are strictly for in-vitro laboratory research and scientific study only. They are not medicinal products and must not be used in or on humans or animals under any circumstances.</strong>
+    </div>
+    <p>Clarix Research Ltd supplies research chemicals exclusively to qualified researchers, scientists, and academic professionals for legitimate laboratory use. No product listed on this website has been approved, licensed, or authorised by the Medicines and Healthcare products Regulatory Agency (MHRA), the Food and Drug Administration (FDA), or any other national or international regulatory body for therapeutic, diagnostic, prophylactic, or clinical use in humans or animals.</p>
+    <p>Products are supplied as research tools for in-vitro (outside the body) laboratory studies only. <strong>Purchasing any product from Clarix Peptides constitutes your express confirmation that you understand and accept this restriction without reservation.</strong></p>
+  </div>
+
+  <!-- SECTION 2 -->
+  <div class="tc-section" id="s2">
+    <div class="tc-section-num">02</div>
+    <h2>Age Requirement</h2>
+    <p>You must be at least <strong>18 years of age</strong> to purchase from Clarix Peptides. By placing an order, you confirm that you are aged 18 or over. We reserve the right to cancel any order where we have reasonable grounds to believe this condition has not been met and to report the matter to the appropriate authorities.</p>
+  </div>
+
+  <!-- SECTION 3 -->
+  <div class="tc-section" id="s3">
+    <div class="tc-section-num">03</div>
+    <h2>Compliance &amp; Buyer Responsibility</h2>
+    <p>By purchasing from Clarix Peptides, you represent and warrant that:</p>
+    <ul>
+      <li>You are a licensed or qualified researcher, scientist, or academic professional acting within the scope of lawful scientific activity;</li>
+      <li>You will use all products solely for in-vitro laboratory research and will not administer, supply, prescribe, or recommend them for use in or on any human or animal;</li>
+      <li>You have independently verified that the purchase, possession, and use of the products you are ordering is lawful in your country, region, and jurisdiction;</li>
+      <li>You accept sole and full responsibility for ensuring your use of all products complies with all applicable local, national, and international laws and regulations;</li>
+      <li>You will not resell or redistribute any product purchased from Clarix Peptides for the purpose of human or veterinary consumption, or in a manner that contravenes these Terms.</li>
+    </ul>
+    <p>Clarix Peptides accepts no liability whatsoever for any unlawful, unauthorised, or negligent use of any product by the buyer or any third party to whom the buyer has supplied the product.</p>
+  </div>
+
+  <!-- SECTION 4 -->
+  <div class="tc-section" id="s4">
+    <div class="tc-section-num">04</div>
+    <h2>Product Information</h2>
+    <p>We make every reasonable effort to ensure that all product descriptions, specifications, purity data, and pricing information displayed on our website are accurate and current. However, we do not warrant that all information is free from error, and we reserve the right to correct errors or update information at any time without notice.</p>
+    <p>A Certificate of Analysis (COA) is available for every product and every production batch, confirming identity by mass spectrometry and purity by HPLC from independent UK-accredited third-party laboratories. COA documentation reflects the batch analysed at the time of testing. Clarix Peptides makes no warranty as to compound stability or potency beyond the stated expiry date or outside the stated storage conditions.</p>
+    <p>All products are supplied as <strong>lyophilised (freeze-dried) powder</strong> unless otherwise stated. Bacteriostatic Water is supplied as a sterile aqueous solution. All products require appropriate laboratory handling in accordance with applicable safety standards.</p>
+    <div class="tc-alert teal">
+      Product images are for illustrative purposes only and may not represent the exact appearance of the product received. Lyophilised peptides may appear as a fine powder, a thin film, or may be visually absent within the vial — this is normal and does not indicate a defective or empty product.
+    </div>
+  </div>
+
+  <!-- SECTION 5 -->
+  <div class="tc-section" id="s5">
+    <div class="tc-section-num">05</div>
+    <h2>Ordering &amp; Payment</h2>
+    <p>All orders placed through clarixpeptides.com are subject to acceptance by Clarix Research Ltd (trading as Clarix Peptides). An order confirmation email does not constitute acceptance — a contract is formed only when we dispatch your order and issue a dispatch notification.</p>
+    <p>We reserve the right to refuse or cancel any order at our absolute discretion, including where we suspect misuse, where payment cannot be verified, or where the order cannot be fulfilled for any reason. In such cases, any payment taken will be refunded in full.</p>
+    <p>All prices are displayed in <strong>Pounds Sterling (GBP)</strong>. Prices are correct at the time of display but may be subject to change without notice. The price confirmed at the time of order placement will apply to that order. Clarix Research Ltd is not currently registered for VAT; all prices shown are the total price payable.</p>
+    <p>We accept payment by bank transfer (manual or open banking). Clarix Peptides does not store any card or payment data on its servers.</p>
+  </div>
+
+  <!-- SECTION 6 -->
+  <div class="tc-section" id="s6">
+    <div class="tc-section-num">06</div>
+    <h2>Refund &amp; Cancellation Policy</h2>
+    <p>Due to the nature of the products sold — research chemicals requiring specialist cold-chain storage conditions — <strong>Clarix Peptides operates a strictly limited refund policy.</strong></p>
+    <p>The 14-day statutory right to cancel under the Consumer Contracts (Information, Cancellation and Additional Charges) Regulations 2013 does not apply to these products, as they are goods liable to deteriorate or expire rapidly and require specialist cold-chain storage conditions (Regulation 28(1)(c)).</p>
+    <p><strong>Order cancellations</strong> may be requested before dispatch has begun. To request a cancellation, contact us immediately at <a href="mailto:info@clarixpeptides.com" style="color:var(--teal)">info@clarixpeptides.com</a>. Once an order has been dispatched, it cannot be cancelled.</p>
+    <p><strong>Damaged or incorrect items:</strong> If you receive a product that is visibly damaged in transit, or if we have dispatched an incorrect product, you must notify us within 48 hours of delivery with photographic evidence. In such cases, we will arrange a replacement or issue a full refund. This is your statutory right and is not subject to our discretion.</p>
+    <p><strong>All other sales are final.</strong> We do not accept returns of opened or unsealed research chemical products under any circumstances. This policy exists to protect the integrity of our supply chain and to ensure compliance with applicable regulatory standards for research chemicals.</p>
+    <p>Nothing in this policy affects your statutory rights under the Consumer Rights Act 2015 or other applicable consumer protection legislation.</p>
+  </div>
+
+  <!-- SECTION 7 -->
+  <div class="tc-section" id="s7">
+    <div class="tc-section-num">07</div>
+    <h2>Delivery</h2>
+    <p>We aim to dispatch all orders placed before 3pm Monday to Saturday on the same working day. Delivery timescales are estimates only and are not guaranteed. Clarix Peptides accepts no liability for delays caused by the carrier, adverse weather conditions, customs inspections, or any other circumstances beyond our reasonable control.</p>
+    <p>Delivery is currently available to <strong>UK mainland addresses</strong>. We reserve the right to restrict or suspend delivery to specific regions at any time. Risk in the products passes to you upon delivery.</p>
+    <p>If a delivery is returned to us as undeliverable due to an incorrect address provided at the time of ordering, we will contact you to arrange re-delivery. Any additional delivery charges incurred in this circumstance are the buyer's responsibility.</p>
+  </div>
+
+  <!-- SECTION 8 -->
+  <div class="tc-section" id="s8">
+    <div class="tc-section-num">08</div>
+    <h2>Website &amp; Product Disclaimer</h2>
+    <p>The Clarix Peptides website, including all product descriptions, research summaries, and educational content, is provided for informational purposes only. All content is intended to support the scientific and research community and does not constitute an endorsement of any particular use of any compound.</p>
+    <p>Clarix Peptides makes no representations or warranties — express or implied — as to the fitness of any product for any particular research purpose, the accuracy of any third-party study or publication referenced on this website, or the outcome of any research activity conducted using our products.</p>
+    <p>To the fullest extent permitted by applicable law, Clarix Peptides excludes all liability for any direct, indirect, special, incidental, or consequential loss or damage arising from the use of, or inability to use, any product or information provided on this website.</p>
+  </div>
+
+  <!-- SECTION 9 -->
+  <div class="tc-section" id="s9">
+    <div class="tc-section-num">09</div>
+    <h2>No Professional Advice</h2>
+    <p>Nothing contained on this website or in any communication from Clarix Peptides constitutes medical, legal, pharmaceutical, or scientific advice. All content is provided solely for general informational and educational purposes.</p>
+    <p>You should not interpret any product description, research summary, usage guide, or calculator output as a recommendation for any specific application, dosing protocol, or research use. For guidance specific to your research requirements, consult a qualified professional in the relevant field.</p>
+  </div>
+
+  <!-- SECTION 10 -->
+  <div class="tc-section" id="s10">
+    <div class="tc-section-num">10</div>
+    <h2>Intellectual Property</h2>
+    <p>All content on the Clarix Peptides website — including but not limited to text, graphics, product photography, logos, trademarks, and software — is the property of Clarix Research Ltd or its licensors and is protected by applicable intellectual property law.</p>
+    <p>You may not reproduce, distribute, modify, transmit, republish, or use any content from this website for commercial purposes without the prior written consent of Clarix Research Ltd. Unauthorised use may give rise to a claim for damages or constitute a criminal offence.</p>
+  </div>
+
+  <!-- SECTION 11 -->
+  <div class="tc-section" id="s11">
+    <div class="tc-section-num">11</div>
+    <h2>Changes to These Terms</h2>
+    <p>Clarix Research Ltd reserves the right to amend, update, or replace these Terms &amp; Conditions at any time and without prior notice. Any changes will take effect immediately upon publication on this page. The date of the most recent revision is displayed at the top of this document.</p>
+    <p>Your continued use of this website or placement of any order following a revision constitutes your acceptance of the updated terms. We encourage you to review this page periodically to remain informed of any changes.</p>
+  </div>
+
+  <!-- SECTION 12 -->
+  <div class="tc-section" id="s12">
+    <div class="tc-section-num">12</div>
+    <h2>Governing Law</h2>
+    <p>These Terms &amp; Conditions, and any dispute or claim arising out of or in connection with them or their subject matter or formation (including non-contractual disputes or claims), shall be governed by and construed in accordance with the <strong>law of England and Wales</strong>.</p>
+    <p>You and Clarix Research Ltd both agree to submit to the exclusive jurisdiction of the courts of England and Wales to settle any dispute or claim arising in connection with these Terms.</p>
+    <p style="margin-top:28px;padding-top:24px;border-top:1px solid var(--gray-100);font-size:.82rem">For any queries relating to these Terms &amp; Conditions, please contact us at <a href="mailto:info@clarixpeptides.com" style="color:var(--teal)">info@clarixpeptides.com</a>.</p>
+    <div style="margin-top:20px;padding:16px 18px;background:var(--gray-50);border-radius:10px;font-size:.8rem;color:var(--muted);line-height:1.75">
+      <strong style="color:var(--navy)">Clarix Research Ltd</strong> (trading as Clarix Peptides)<br>
+      Registered in England and Wales &nbsp;|&nbsp; Company No. 17269311<br>
+      Registered Office: 66 Paul Street, London EC2A 4NA<br>
+      Email: <a href="mailto:info@clarixpeptides.com" style="color:var(--teal)">info@clarixpeptides.com</a>
+    </div>
+  </div>
+
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="fi2">
+    <div class="fg2">
+      <div class="fb-brand">
+        <img src="brand_assets/clarix_logo_reverse.png" alt="Clarix Peptides">
+        <p>Premium research peptides supplied to licensed researchers across the UK. All products for research purposes only. Not for human or veterinary use.</p>
+      </div>
+      <div class="fc">
+        <h4>Shop</h4>
+        <a href="shop.html">All Products</a>
+      </div>
+      <div class="fc">
+        <h4>Company</h4>
+        <a href="about.html">About Us</a>
+        <a href="wholesale.html">Wholesale</a>
+        <a href="usage-guide.html">Usage Guide</a>
+      </div>
+      <div class="fc">
+        <h4>Support</h4>
+        <a href="contact.html">Contact Us</a>
+        <a href="privacy-policy.html">Privacy Policy</a>
+        <a href="terms.html">Terms &amp; Conditions</a>
+      </div>
+    </div>
+    <div class="footer-bot">
+      <div>
+        <p class="f-legal">All products sold by Clarix Peptides are intended for research purposes only and are not approved by the MHRA, FDA, or any other regulatory body for human or veterinary use. Products must only be handled by qualified, licensed researchers. By purchasing, you confirm you are 18+ and a licensed researcher. Clarix Peptides accepts no liability for misuse.</p>
+        <p style="font-size:.65rem;color:rgba(255,255,255,.22);margin-top:8px;line-height:1.6">Clarix Research Ltd (trading as Clarix Peptides) &nbsp;|&nbsp; Registered in England and Wales &nbsp;|&nbsp; Company No. 17269311 &nbsp;|&nbsp; Registered Office: 66 Paul Street, London EC2A 4NA</p>
+      </div>
+      <div style="display:flex;align-items:center;gap:14px">
+        <img src="brand_assets/bank-transfer.webp" alt="Bank Transfer" style="height:28px;border-radius:5px">
+        <p class="f-copy">© 2026 Clarix Research Ltd</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- CART -->
+<div id="cart-backdrop" onclick="closeCart()"></div>
+<div id="cart-drawer">
+  <div class="cd-hdr">
+    <h2>Your Basket</h2>
+    <button class="xbtn" onclick="closeCart()">
+      <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+  </div>
+  <div class="cd-items" id="cart-items-el">
+    <div class="cart-empty"><div class="ce-icon">🧪</div><p style="font-weight:600;margin-bottom:4px">Your basket is empty</p><p style="font-size:.8rem">Browse our research compounds to get started</p></div>
+  </div>
+  <div class="cd-footer" id="cart-footer-el"></div>
+</div>
+
+<!-- ACCOUNT MODAL -->
+<div id="acct-modal">
+  <div class="modal-box">
+    <button onclick="closeAcct()" style="position:absolute;top:16px;right:16px;background:none;border:none;cursor:pointer;color:var(--muted);padding:4px;border-radius:6px;transition:color .2s">
+      <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+    <div class="ml"><img src="brand_assets/clarix_logo_primary.png" alt="Clarix Peptides"></div>
+    <div id="acct-modal-body"></div>
+  </div>
+</div>
+
+<div id="toast"></div>
+
+<script>
+let cart=JSON.parse(localStorage.getItem('clarix_cart')||'[]');
+function saveCart(){localStorage.setItem('clarix_cart',JSON.stringify(cart));}
+function updateCartBadge(){const t=cart.reduce((s,i)=>s+i.qty,0);const b=document.getElementById('cart-badge');b.textContent=t;b.classList.toggle('show',t>0);}
+function openCart(){document.getElementById('cart-drawer').classList.add('open');document.getElementById('cart-backdrop').classList.add('open');}
+function closeCart(){document.getElementById('cart-drawer').classList.remove('open');document.getElementById('cart-backdrop').classList.remove('open');}
+function openAcct(){document.getElementById('acct-modal').classList.add('open');renderAcctModal();}
+function closeAcct(){document.getElementById('acct-modal').classList.remove('open');}
+function getAccounts(){return JSON.parse(localStorage.getItem('clarix_accounts')||'[]');}
+function getSession(){return JSON.parse(sessionStorage.getItem('clarix_session')||'null');}
+function renderAcctModal(tab){
+  const session=getSession(),body=document.getElementById('acct-modal-body');
+  if(session){body.innerHTML=`<div class="loggedin"><h3>Welcome back!</h3><p>${session.name}</p><div style="display:flex;gap:10px;justify-content:center"><button class="signout-btn" onclick="signOut()">Sign Out</button><button class="fb" style="flex:1;max-width:160px" onclick="closeAcct()">Continue</button></div></div>`;return;}
+  const at=tab||'signin';
+  body.innerHTML=`<div class="mtabs"><button class="mtab ${at==='signin'?'active':''}" onclick="renderAcctModal('signin')">Sign In</button><button class="mtab ${at==='register'?'active':''}" onclick="renderAcctModal('register')">Create Account</button></div>${at==='signin'?`<form onsubmit="doSignIn(event)"><div class="fg"><label class="fl">Email</label><input class="fi" type="email" id="si-email" placeholder="you@example.com" required></div><div class="fg"><label class="fl">Password</label><input class="fi" type="password" id="si-pass" placeholder="••••••••" required></div><div id="si-msg"></div><button type="submit" class="fb">Sign In</button></form>`:`<form onsubmit="doRegister(event)"><div style="display:grid;grid-template-columns:1fr 1fr;gap:12px"><div class="fg"><label class="fl">First Name</label><input class="fi" type="text" id="reg-first" required></div><div class="fg"><label class="fl">Last Name</label><input class="fi" type="text" id="reg-last" required></div></div><div class="fg"><label class="fl">Email</label><input class="fi" type="email" id="reg-email" required></div><div class="fg"><label class="fl">Password</label><input class="fi" type="password" id="reg-pass" minlength="8" required></div><div class="fg"><label class="fl">Date of Birth</label><input class="fi" type="date" id="reg-dob" required max="${new Date(new Date().setFullYear(new Date().getFullYear()-18)).toISOString().split('T')[0]}"></div><label style="display:flex;align-items:flex-start;gap:9px;cursor:pointer;font-size:.8rem;color:var(--muted);line-height:1.5;margin-bottom:14px"><input type="checkbox" required style="width:15px;height:15px;accent-color:var(--teal);flex-shrink:0;margin-top:2px">I confirm I am a licensed researcher and agree to the Terms &amp; Conditions and Privacy Policy.</label><div id="reg-msg"></div><button type="submit" class="fb">Create Account</button></form>`}`;
+}
+async function hashPwd(p){const b=await crypto.subtle.digest('SHA-256',new TextEncoder().encode(p));return Array.from(new Uint8Array(b)).map(x=>x.toString(16).padStart(2,'0')).join('');}
+async function doSignIn(e){e.preventDefault();const email=document.getElementById('si-email').value.trim().toLowerCase(),pass=document.getElementById('si-pass').value,hashed=await hashPwd(pass),user=getAccounts().find(a=>a.email===email&&a.password===hashed),msg=document.getElementById('si-msg');if(!user){msg.innerHTML='<p class="merr">Invalid email or password.</p>';return;}sessionStorage.setItem('clarix_session',JSON.stringify({email:user.email,name:user.name}));renderAcctModal();}
+async function doRegister(e){e.preventDefault();const first=document.getElementById('reg-first').value.trim(),last=document.getElementById('reg-last').value.trim(),email=document.getElementById('reg-email').value.trim().toLowerCase(),pass=document.getElementById('reg-pass').value,dob=document.getElementById('reg-dob').value,msg=document.getElementById('reg-msg');if(dob){const dobDate=new Date(dob);const today=new Date();let age=today.getFullYear()-dobDate.getFullYear();const m=today.getMonth()-dobDate.getMonth();if(m<0||(m===0&&today.getDate()<dobDate.getDate()))age--;if(age<18){msg.innerHTML='<p class="merr">You must be 18 or older to create an account.</p>';return;}}const accounts=getAccounts();if(accounts.find(a=>a.email===email)){msg.innerHTML='<p class="merr">Email already registered.</p>';return;}const nm=`${first} ${last}`;const hashed=await hashPwd(pass);accounts.push({email,password:hashed,name:nm,dob});localStorage.setItem('clarix_accounts',JSON.stringify(accounts));sessionStorage.setItem('clarix_session',JSON.stringify({email,name:nm}));renderAcctModal();notifySignup(email,nm);}
+function notifySignup(em,nm){const K='aa36f936-af5e-420f-8e65-6f782a43046f';fetch('https://api.web3forms.com/submit',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({access_key:K,subject:'New Account Registration: '+em,from_name:'Clarix Peptides Website',message:'NEW ACCOUNT SIGNUP\n\nName: '+nm+'\nEmail: '+em+'\nDate: '+new Date().toLocaleString('en-GB')})}).catch(()=>{});}
+function signOut(){sessionStorage.removeItem('clarix_session');renderAcctModal('signin');}
+function openSearch(){document.getElementById('search-overlay').classList.add('open');setTimeout(()=>document.getElementById('search-input').focus(),100);}
+function closeSearch(){document.getElementById('search-overlay').classList.remove('open');document.getElementById('search-results').classList.remove('show');document.getElementById('search-input').value='';}
+function showToast(msg){const t=document.getElementById('toast');t.innerHTML=msg;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),3200);}
+window.addEventListener('scroll',()=>document.getElementById('main-nav').classList.toggle('scrolled',window.scrollY>10));
+document.getElementById('hamburger').addEventListener('click',()=>document.getElementById('mobile-menu').classList.add('open'));
+document.getElementById('mm-close').addEventListener('click',()=>document.getElementById('mobile-menu').classList.remove('open'));
+document.addEventListener('keydown',e=>{if(e.key==='Escape'){closeSearch();closeAcct();}});
+document.getElementById('acct-modal').addEventListener('click',e=>{if(e.target===e.currentTarget)closeAcct();});
+document.getElementById('search-overlay').addEventListener('click',e=>{if(e.target===e.currentTarget)closeSearch();});
+document.getElementById('search-btn').addEventListener('click',openSearch);
+document.getElementById('search-close').addEventListener('click',closeSearch);
+document.getElementById('acct-btn').addEventListener('click',openAcct);
+document.getElementById('cart-btn').addEventListener('click',openCart);
+updateCartBadge();
+</script>
+<!-- COOKIE CONSENT BANNER -->
+<div id="cookie-bar" style="position:fixed;bottom:0;left:0;right:0;z-index:9999;background:rgba(15,34,64,.97);backdrop-filter:blur(12px);border-top:1px solid rgba(255,255,255,.1);padding:16px 24px;display:flex;align-items:center;flex-wrap:wrap;gap:12px 20px;font-family:'DM Sans',sans-serif;box-shadow:0 -4px 24px rgba(0,0,0,.3);transition:transform .4s ease">
+  <div style="flex:1;min-width:280px">
+    <p style="font-size:.78rem;color:rgba(255,255,255,.7);line-height:1.65;margin:0"><strong style="color:#fff;font-weight:600">We use cookies &amp; local storage</strong> for essential website functions (cart, account, session) and load third-party scripts (Tailwind CSS, Google Fonts) that may process your IP address. <a href="privacy-policy.html" style="color:#2BB5A5;text-decoration:underline">Privacy Policy</a></p>
+  </div>
+  <div style="display:flex;gap:8px;flex-shrink:0">
+    <button onclick="setCookieChoice('declined')" style="padding:8px 16px;font-size:.78rem;font-weight:600;border-radius:7px;border:1px solid rgba(255,255,255,.2);background:none;color:rgba(255,255,255,.6);cursor:pointer;font-family:'DM Sans',sans-serif">Decline</button>
+    <button onclick="setCookieChoice('accepted')" style="padding:8px 18px;font-size:.78rem;font-weight:600;border-radius:7px;border:none;background:#2BB5A5;color:#fff;cursor:pointer;font-family:'DM Sans',sans-serif">Accept All</button>
+  </div>
+</div>
+<script>
+(function(){
+  function setCookieChoice(c){localStorage.setItem('clarix_cookies',c);var b=document.getElementById('cookie-bar');if(b){b.style.transform='translateY(110%)';setTimeout(function(){b.style.display='none'},400)}}
+  window.setCookieChoice=setCookieChoice;
+  if(localStorage.getItem('clarix_cookies')){var b=document.getElementById('cookie-bar');if(b)b.style.display='none'}
+})();
+</script>
+</body>
+</html>

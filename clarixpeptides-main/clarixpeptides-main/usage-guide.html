@@ -1,0 +1,1354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="brand_assets/clarix_logomark.png" type="image/png">
+<link rel="apple-touch-icon" href="brand_assets/clarix_logomark.png">
+<title>Peptide Research Usage Guide | Reconstitution &amp; Storage | Clarix Peptides</title>
+<meta name="description" content="Complete guide to reconstituting and storing research peptides. Bacteriostatic water, dosage calculator, storage conditions, and best practices for UK researchers.">
+<meta name="keywords" content="how to reconstitute peptides, peptide storage guide, bacteriostatic water peptides, peptide calculator UK, research peptide guide">
+<meta property="og:title" content="Peptide Research Usage Guide | Clarix Peptides">
+<meta property="og:description" content="Step-by-step guide: reconstituting peptides, storage conditions, dosage calculator. Essential reading for UK researchers.">
+<meta name="robots" content="index, follow">
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#0F2240;--navy-mid:#1A3560;--navy-deep:#08172E;
+  --teal:#2BB5A5;--teal-dark:#229E8F;--teal-light:#3DCFBF;
+  --white:#FFFFFF;--off-white:#F7FAFC;--gray-50:#F0F4FA;
+  --gray-100:#E1E8F5;--muted:#6B7A99;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'DM Sans',sans-serif;background:#fff;color:var(--navy);overflow-x:hidden}
+h1,h2,h3,h4,h5,h6{font-family:'Outfit',sans-serif}
+
+/* NAV */
+#disc-bar{background:var(--navy);color:rgba(255,255,255,.8);font-size:.7rem;letter-spacing:.07em;text-transform:uppercase;padding:9px 48px 9px 20px;text-align:center;position:relative;line-height:1.4}
+#disc-bar button{position:absolute;right:14px;top:50%;transform:translateY(-50%);background:none;border:none;color:rgba(255,255,255,.45);cursor:pointer;font-size:1.1rem;transition:color .2s}
+#disc-bar button:hover{color:#fff}
+#main-nav{position:sticky;top:0;z-index:100;background:#fff;border-bottom:1px solid var(--gray-100);transition:box-shadow .3s}
+#main-nav.scrolled{box-shadow:0 4px 24px rgba(15,34,64,.08)}
+.nav-inner{max-width:1400px;margin:0 auto;padding:0 24px;display:flex;align-items:center;gap:24px;height:120px}
+.nav-logo{flex-shrink:0}
+.nav-logo img{height:110px;width:auto}
+.nav-links{display:flex;align-items:center;gap:2px;flex:1;justify-content:center}
+.nav-links a{font-size:.85rem;font-weight:500;color:var(--navy);text-decoration:none;padding:7px 13px;border-radius:7px;transition:color .2s,background .2s;white-space:nowrap}
+.nav-links a:hover,.nav-links a.active{color:var(--teal);background:rgba(43,181,165,.07)}
+.nav-actions{display:flex;align-items:center;gap:2px;flex-shrink:0}
+.nib{width:40px;height:40px;border-radius:8px;border:none;background:none;cursor:pointer;display:flex;align-items:center;justify-content:center;color:var(--navy);position:relative;transition:color .2s,background .2s}
+.nib:hover{color:var(--teal);background:rgba(43,181,165,.07)}
+.cart-badge{position:absolute;top:4px;right:4px;min-width:17px;height:17px;background:var(--teal);color:#fff;font-size:.6rem;font-weight:700;border-radius:50%;display:flex;align-items:center;justify-content:center;opacity:0;transform:scale(0);transition:opacity .2s,transform .2s}
+.cart-badge.show{opacity:1;transform:scale(1)}
+#hamburger{display:none}
+@media(max-width:900px){.nav-links{display:none}}
+@media(max-width:640px){#hamburger{display:flex}}
+
+/* SEARCH */
+#search-overlay{position:fixed;inset:0;z-index:200;background:rgba(15,34,64,.55);backdrop-filter:blur(8px);opacity:0;pointer-events:none;transition:opacity .25s}
+#search-overlay.open{opacity:1;pointer-events:all}
+.search-panel{background:#fff;padding:28px 32px}
+.search-wrap{max-width:680px;margin:0 auto;position:relative}
+.search-wrap input{width:100%;padding:15px 52px;font-size:1.05rem;font-family:'DM Sans',sans-serif;border:2px solid var(--teal);border-radius:50px;outline:none;color:var(--navy)}
+.search-wrap .si{position:absolute;left:18px;top:50%;transform:translateY(-50%);color:var(--teal);pointer-events:none}
+.search-wrap .sc-btn{position:absolute;right:14px;top:50%;transform:translateY(-50%);background:none;border:none;cursor:pointer;color:var(--muted);padding:6px;border-radius:50%;transition:color .2s}
+#search-results{max-width:680px;margin:10px auto 0;background:#fff;border-radius:12px;border:1px solid var(--gray-100);box-shadow:0 8px 32px rgba(15,34,64,.12);overflow:hidden;max-height:380px;overflow-y:auto;display:none}
+#search-results.show{display:block}
+.sr-item{padding:13px 20px;display:flex;align-items:center;justify-content:space-between;cursor:pointer;border-bottom:1px solid var(--gray-50);transition:background .15s}
+.sr-item:hover{background:var(--gray-50)}
+.sr-name{font-weight:600;font-size:.9rem;color:var(--navy)}
+.sr-cat{font-size:.75rem;color:var(--muted);margin-top:2px}
+.sr-price{font-weight:700;font-size:.9rem;color:var(--teal);font-family:'Outfit',sans-serif}
+
+/* MOBILE MENU */
+#mobile-menu{position:fixed;inset:0;z-index:200;background:#fff;padding:76px 28px 28px;transform:translateX(-100%);transition:transform .3s ease}
+#mobile-menu.open{transform:translateX(0)}
+.mm-close{position:absolute;top:18px;right:18px;width:42px;height:42px;border-radius:10px;border:1px solid var(--gray-100);background:none;cursor:pointer;display:flex;align-items:center;justify-content:center;color:var(--navy)}
+.mm-link{display:block;padding:15px 0;font-size:1.2rem;font-weight:600;color:var(--navy);text-decoration:none;border-bottom:1px solid var(--gray-100);transition:color .15s}
+.mm-link:hover{color:var(--teal)}
+
+/* HERO */
+.ug-hero{background:var(--navy);padding:72px 24px 0;position:relative;overflow:hidden}
+.ug-hero-bg{position:absolute;inset:0;background:
+  radial-gradient(ellipse 55% 70% at 90% 40%,rgba(43,181,165,.14) 0%,transparent 60%),
+  radial-gradient(ellipse 40% 50% at 5% 80%,rgba(43,181,165,.07) 0%,transparent 55%);pointer-events:none}
+.ug-hero-grid-pat{position:absolute;inset:0;opacity:.03;background-image:
+  repeating-linear-gradient(0deg,#fff 0,#fff 1px,transparent 1px,transparent 72px),
+  repeating-linear-gradient(90deg,#fff 0,#fff 1px,transparent 1px,transparent 72px);pointer-events:none}
+.ug-hero-inner{max-width:1100px;margin:0 auto;position:relative;z-index:1}
+.ug-hero-tag{display:inline-flex;align-items:center;gap:8px;background:rgba(43,181,165,.15);border:1px solid rgba(43,181,165,.3);border-radius:20px;padding:7px 16px;font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--teal);margin-bottom:22px}
+.ug-hero h1{font-size:clamp(2.2rem,4.5vw,3.6rem);font-weight:800;color:#fff;letter-spacing:-.03em;line-height:1.05;margin-bottom:18px}
+.ug-hero h1 em{font-style:normal;color:var(--teal)}
+.ug-hero p{font-size:.975rem;color:rgba(255,255,255,.5);line-height:1.78;max-width:560px;margin-bottom:40px}
+.ug-hero-cards{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-top:1px solid rgba(255,255,255,.08);margin-top:0}
+@media(max-width:860px){.ug-hero-cards{grid-template-columns:1fr 1fr}}
+.ug-hero-card{padding:24px 22px;border-right:1px solid rgba(255,255,255,.07);cursor:pointer;transition:background .2s;text-decoration:none;display:block}
+.ug-hero-card:last-child{border-right:none}
+.ug-hero-card:hover{background:rgba(255,255,255,.03)}
+.uhc-num{font-family:'JetBrains Mono',monospace;font-size:.68rem;font-weight:600;color:var(--teal);letter-spacing:.1em;margin-bottom:10px}
+.uhc-icon{width:38px;height:38px;border-radius:9px;background:rgba(43,181,165,.12);display:flex;align-items:center;justify-content:center;color:var(--teal);margin-bottom:12px}
+.ug-hero-card h3{font-size:.9rem;font-weight:700;color:#fff;margin-bottom:4px}
+.ug-hero-card p{font-size:.76rem;color:rgba(255,255,255,.35);line-height:1.5}
+
+/* STICKY TABS */
+.section-tabs{position:sticky;top:120px;z-index:90;background:#fff;border-bottom:2px solid var(--gray-100)}
+.st-inner{max-width:1100px;margin:0 auto;padding:0 24px;display:flex;gap:0;overflow-x:auto;scrollbar-width:none}
+.st-inner::-webkit-scrollbar{display:none}
+.st-tab{display:flex;align-items:center;gap:7px;padding:15px 20px;font-size:.82rem;font-weight:600;color:var(--muted);border-bottom:2px solid transparent;margin-bottom:-2px;white-space:nowrap;transition:color .2s,border-color .2s;cursor:pointer;background:none;border-top:none;border-left:none;border-right:none;font-family:'DM Sans',sans-serif}
+.st-tab:hover{color:var(--navy)}
+.st-tab.active{color:var(--teal);border-bottom-color:var(--teal)}
+
+/* SHARED SECTION */
+.guide-section{padding:80px 24px;scroll-margin-top:186px}
+.gs-inner{max-width:1100px;margin:0 auto}
+.gs-eyebrow{font-size:.7rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--teal);margin-bottom:10px}
+.gs-title{font-size:clamp(1.7rem,2.8vw,2.3rem);font-weight:800;letter-spacing:-.03em;color:var(--navy);margin-bottom:12px;line-height:1.1}
+.gs-sub{font-size:.95rem;color:var(--muted);line-height:1.78;max-width:600px;margin-bottom:52px}
+
+/* ── RECEIVING ── */
+#receiving{background:#fff}
+.recv-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+@media(max-width:860px){.recv-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.recv-grid{grid-template-columns:1fr}}
+.recv-card{background:var(--gray-50);border-radius:20px;padding:32px 28px;border:1.5px solid var(--gray-100);position:relative;overflow:hidden;transition:box-shadow .25s,transform .22s,border-color .22s}
+.recv-card:hover{box-shadow:0 16px 48px rgba(15,34,64,.1);transform:translateY(-3px);border-color:rgba(43,181,165,.3)}
+.recv-bg-num{position:absolute;top:10px;right:16px;font-family:'Outfit',sans-serif;font-size:5rem;font-weight:900;color:var(--gray-100);line-height:1;user-select:none;pointer-events:none}
+.recv-icon{width:52px;height:52px;border-radius:14px;background:rgba(43,181,165,.1);display:flex;align-items:center;justify-content:center;color:var(--teal);margin-bottom:20px;position:relative;z-index:1;transition:background .2s}
+.recv-card:hover .recv-icon{background:var(--teal);color:#fff}
+.recv-card h3{font-size:1.1rem;font-weight:700;color:var(--navy);margin-bottom:10px;position:relative;z-index:1}
+.recv-card p{font-size:.875rem;color:var(--muted);line-height:1.76;position:relative;z-index:1}
+
+/* ── RECONSTITUTION ── */
+#reconstitution{background:var(--off-white)}
+.recon-grid{display:grid;grid-template-columns:1fr;gap:0}
+.recon-step{display:grid;grid-template-columns:72px 1fr;gap:32px;padding:40px 0;border-bottom:1px solid rgba(15,34,64,.07)}
+.recon-step:last-child{border-bottom:none}
+@media(max-width:640px){.recon-step{grid-template-columns:1fr;gap:18px}}
+.rs-badge{width:56px;height:56px;border-radius:50%;background:var(--navy);display:flex;align-items:center;justify-content:center;font-family:'Outfit',sans-serif;font-size:1.4rem;font-weight:800;color:#fff;flex-shrink:0;box-shadow:0 0 0 6px rgba(15,34,64,.07)}
+.rs-content h3{font-size:1.15rem;font-weight:700;color:var(--navy);margin-bottom:10px}
+.rs-content p{font-size:.9rem;color:var(--muted);line-height:1.8;margin-bottom:12px}
+.rs-content p:last-of-type{margin-bottom:0}
+.rs-pills{display:flex;flex-wrap:wrap;gap:7px;margin:16px 0 4px}
+.rs-pill{padding:6px 14px;border-radius:20px;font-size:.78rem;font-weight:600;background:#fff;border:1.5px solid var(--gray-100);color:var(--navy)}
+.rs-pill.hi{background:rgba(43,181,165,.09);border-color:rgba(43,181,165,.3);color:var(--teal-dark)}
+.rs-tip{display:flex;gap:11px;background:rgba(43,181,165,.07);border-left:3px solid var(--teal);border-radius:0 10px 10px 0;padding:14px 18px;margin-top:16px;font-size:.85rem;color:var(--muted);line-height:1.7}
+.rs-tip svg{flex-shrink:0;color:var(--teal);margin-top:3px}
+
+/* ── STORAGE ── */
+#storage{background:#fff}
+.storage-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+@media(max-width:760px){.storage-grid{grid-template-columns:1fr}}
+.stor-card{border-radius:20px;overflow:hidden;border:1.5px solid var(--gray-100);box-shadow:0 6px 28px rgba(15,34,64,.06)}
+.stor-head{padding:24px 26px;display:flex;align-items:center;gap:14px}
+.stor-head.lyoph{background:linear-gradient(135deg,var(--navy) 0%,#18305e 100%)}
+.stor-head.recon{background:linear-gradient(135deg,#0c2436 0%,#1a3a52 100%)}
+.stor-icon{width:46px;height:46px;border-radius:11px;background:rgba(255,255,255,.1);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.85);flex-shrink:0}
+.stor-head strong{display:block;font-family:'Outfit',sans-serif;font-size:1.05rem;font-weight:700;color:#fff;margin-bottom:2px}
+.stor-head span{font-size:.76rem;color:rgba(255,255,255,.44)}
+.stor-row{display:grid;grid-template-columns:100px 1fr;border-bottom:1px solid var(--gray-50)}
+.stor-row:last-child{border-bottom:none}
+.stor-temp{padding:20px 16px;border-right:1px solid var(--gray-50);background:var(--gray-50);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px}
+.temp-val{font-family:'JetBrains Mono',monospace;font-size:1.05rem;font-weight:600;color:var(--navy);line-height:1;text-align:center}
+.temp-val.blue{color:#2563eb}
+.temp-val.purple{color:#7c3aed}
+.temp-val.red{color:#dc2626;font-size:1.3rem}
+.temp-lbl{font-size:.68rem;color:var(--muted);line-height:1.35;text-align:center}
+.stor-detail{padding:20px 22px}
+.stor-detail strong{display:block;font-size:.9rem;font-weight:700;color:var(--navy);margin-bottom:4px}
+.stor-detail span{font-size:.82rem;color:var(--muted);line-height:1.65}
+
+/* ── TIPS ── */
+#tips{background:var(--off-white)}
+.tips-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+@media(max-width:860px){.tips-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.tips-grid{grid-template-columns:1fr}}
+.tip-card{background:#fff;border-radius:16px;padding:24px;border:1.5px solid var(--gray-100);display:flex;gap:16px;align-items:flex-start;transition:box-shadow .2s,transform .2s}
+.tip-card:hover{box-shadow:0 8px 32px rgba(15,34,64,.09);transform:translateY(-2px)}
+.tip-icon{width:42px;height:42px;border-radius:11px;background:rgba(43,181,165,.1);display:flex;align-items:center;justify-content:center;color:var(--teal);flex-shrink:0;transition:background .2s}
+.tip-card:hover .tip-icon{background:var(--teal);color:#fff}
+.tip-card h4{font-size:.9rem;font-weight:700;color:var(--navy);margin-bottom:5px}
+.tip-card p{font-size:.82rem;color:var(--muted);line-height:1.68}
+
+/* ─────────────────────────────────────────────────
+   PEPTIDE CALCULATOR — Complete redesign
+───────────────────────────────────────────────── */
+#calculator{background:var(--off-white);padding:80px 24px 96px;scroll-margin-top:186px;border-top:1px solid var(--gray-100)}
+.calc-inner{max-width:1100px;margin:0 auto}
+.calc-header{text-align:center;margin-bottom:56px}
+.calc-eyebrow{font-size:.72rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--teal);margin-bottom:12px}
+.calc-title{font-size:clamp(1.9rem,3.5vw,2.8rem);font-weight:800;color:var(--navy);letter-spacing:-.03em;margin-bottom:12px}
+.calc-sub{font-size:.95rem;color:var(--muted);line-height:1.7;max-width:520px;margin:0 auto}
+
+/* 3-column layout */
+.calc-layout{display:grid;grid-template-columns:1fr auto 1fr;gap:24px;align-items:start}
+@media(max-width:900px){.calc-layout{grid-template-columns:1fr;justify-items:center}}
+
+/* ── LEFT PANEL: INPUTS ── */
+.calc-panel{background:#fff;border:1.5px solid var(--gray-100);border-radius:22px;overflow:hidden;width:100%;box-shadow:0 4px 20px rgba(15,34,64,.06)}
+.cp-head{padding:18px 24px;border-bottom:1px solid var(--gray-100);display:flex;align-items:center;gap:10px;background:var(--gray-50)}
+.cp-step{width:26px;height:26px;border-radius:50%;background:rgba(43,181,165,.15);color:var(--teal);font-size:.7rem;font-weight:800;display:flex;align-items:center;justify-content:center;font-family:'JetBrains Mono',monospace;flex-shrink:0}
+.cp-head span{font-family:'Outfit',sans-serif;font-size:.9rem;font-weight:700;color:var(--navy)}
+.cp-body{padding:22px 24px}
+
+/* input group */
+.cig{margin-bottom:22px}
+.cig:last-child{margin-bottom:0}
+.cig-label{font-size:.7rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:10px;display:block}
+.cig-presets{display:flex;flex-wrap:wrap;gap:5px;margin-bottom:9px}
+.cig-preset{padding:5px 12px;border-radius:7px;border:1.5px solid var(--gray-100);background:var(--gray-50);color:var(--navy);font-size:.76rem;font-weight:600;cursor:pointer;transition:border-color .15s,color .15s,background .15s;font-family:'DM Sans',sans-serif}
+.cig-preset:hover{border-color:var(--teal);color:var(--teal-dark);background:rgba(43,181,165,.07)}
+.cig-preset.sel{border-color:var(--teal);color:var(--teal-dark);background:rgba(43,181,165,.1)}
+.cig-row{display:flex;border-radius:10px;overflow:hidden;border:1.5px solid var(--gray-100);background:#fff;transition:border-color .2s,box-shadow .2s}
+.cig-row:focus-within{border-color:var(--teal);box-shadow:0 0 0 3px rgba(43,181,165,.1)}
+.cig-row input{flex:1;padding:12px 14px;background:none;border:none;outline:none;font-size:.98rem;font-family:'JetBrains Mono',monospace;color:var(--navy);font-weight:500;min-width:0}
+.cig-row input::placeholder{color:var(--muted);opacity:.55}
+.cig-row input::-webkit-inner-spin-button,.cig-row input::-webkit-outer-spin-button{-webkit-appearance:none}
+.cig-unit{padding:12px 14px;font-size:.8rem;font-weight:600;color:var(--muted);background:var(--gray-50);border-left:1px solid var(--gray-100);display:flex;align-items:center;white-space:nowrap;flex-shrink:0}
+.cig-slider{-webkit-appearance:none;appearance:none;width:100%;height:4px;border-radius:4px;background:var(--gray-100);outline:none;cursor:pointer;margin-top:9px}
+.cig-slider::-webkit-slider-thumb{-webkit-appearance:none;width:16px;height:16px;border-radius:50%;background:var(--teal);cursor:pointer;box-shadow:0 0 0 3px rgba(43,181,165,.2);transition:box-shadow .15s}
+.cig-slider::-webkit-slider-thumb:hover{box-shadow:0 0 0 6px rgba(43,181,165,.25)}
+
+/* peptide quick-pick pills */
+.pp-pills{display:flex;flex-wrap:wrap;gap:5px;margin-bottom:2px}
+.pp-pill{padding:4px 10px;border-radius:6px;border:1.5px solid var(--gray-100);background:var(--gray-50);color:var(--navy);font-size:.72rem;font-weight:600;cursor:pointer;transition:border-color .15s,color .15s,background .15s}
+.pp-pill:hover{border-color:var(--teal);color:var(--teal-dark);background:rgba(43,181,165,.07)}
+.pp-pill.sel{border-color:var(--teal);color:var(--teal-dark);background:rgba(43,181,165,.1)}
+
+/* formula note */
+.calc-formula{background:var(--gray-50);border:1px solid var(--gray-100);border-radius:10px;padding:12px 14px;margin-top:16px}
+.calc-formula p{font-size:.72rem;color:var(--muted);line-height:1.85}
+.calc-formula strong{color:var(--navy);display:block;margin-bottom:4px}
+
+/* ── CENTER: SYRINGE ── */
+.calc-syringe-wrap{display:flex;flex-direction:column;align-items:center;gap:0;width:140px;flex-shrink:0}
+@media(max-width:900px){.calc-syringe-wrap{order:-1;margin-bottom:8px}}
+.syringe{display:flex;flex-direction:column;align-items:center;width:140px}
+
+/* thumb ring */
+.syr-ring{width:54px;height:14px;border:3px solid #475569;border-radius:50px;background:none;flex-shrink:0}
+
+/* plunger shaft */
+.syr-shaft{width:10px;background:#64748B;border-radius:2px;transition:height .6s cubic-bezier(.34,1.2,.64,1);flex-shrink:0}
+
+/* plunger gasket */
+.syr-gasket{width:50px;height:12px;background:linear-gradient(to bottom,#334155,#475569);border-radius:3px;flex-shrink:0;margin:0 auto;position:relative}
+.syr-gasket::after{content:'';position:absolute;bottom:3px;left:8px;right:8px;height:2px;background:rgba(255,255,255,.2);border-radius:1px}
+
+/* barrel + scale side by side */
+.syr-barrel-wrap{display:flex;align-items:flex-start;flex-shrink:0}
+.syr-barrel{width:64px;height:300px;border:2px solid #475569;border-radius:4px;background:#F1F5F9;position:relative;overflow:hidden;flex-shrink:0;box-shadow:inset 2px 0 8px rgba(0,0,0,.06),inset -2px 0 8px rgba(0,0,0,.06)}
+
+/* liquid fill */
+.syr-fill{position:absolute;bottom:0;left:0;right:0;height:0%;
+  background:linear-gradient(to top,rgba(43,181,165,.75) 0%,rgba(43,181,165,.45) 100%);
+  transition:height .65s cubic-bezier(.34,1.2,.64,1)}
+.syr-fill::after{content:'';position:absolute;top:0;left:0;right:0;height:2.5px;background:var(--teal)}
+
+/* graduation scale (right of barrel) */
+.syr-scale{width:40px;height:300px;position:relative;flex-shrink:0}
+.syr-tick{position:absolute;left:0;width:100%;pointer-events:none}
+.syr-tick-line{position:absolute;left:0;top:0;height:1.5px;background:#64748B;border-radius:1px}
+.syr-tick-line.major{height:2px;background:#1E293B}
+.syr-tick-line.mid{height:1.5px;background:#475569}
+.syr-tick-num{position:absolute;left:18px;top:-5px;font-family:'JetBrains Mono',monospace;font-size:9.5px;font-weight:700;color:#1E293B;line-height:1;white-space:nowrap}
+
+/* flanges */
+.syr-flanges{display:flex;align-items:center;width:88px;height:18px;flex-shrink:0}
+.syr-flange{width:22px;height:18px;background:#94A3B8;border-radius:4px 4px 2px 2px;flex-shrink:0}
+.syr-flange-neck{flex:1;height:14px;background:#64748B}
+
+/* hub */
+.syr-hub{width:32px;height:20px;background:#64748B;border-radius:2px 2px 6px 6px;flex-shrink:0}
+
+/* needle */
+.syr-needle-cap{width:14px;height:6px;background:#94A3B8;border-radius:2px;flex-shrink:0}
+.syr-needle{width:4px;height:54px;background:linear-gradient(to bottom,#94A3B8,#CBD5E1);border-radius:0 0 3px 3px;flex-shrink:0}
+
+/* IU callout below syringe */
+.syr-callout{margin-top:16px;text-align:center}
+.syr-callout-val{font-family:'JetBrains Mono',monospace;font-size:1.8rem;font-weight:700;color:var(--teal);line-height:1;margin-bottom:4px}
+.syr-callout-lbl{font-size:.68rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+
+/* ── RIGHT PANEL: RESULTS ── */
+.calc-results{display:flex;flex-direction:column;gap:12px;width:100%}
+.cr-metric{background:#fff;border:1.5px solid var(--gray-100);border-radius:14px;padding:16px 18px;transition:opacity .3s;box-shadow:0 2px 12px rgba(15,34,64,.05)}
+.cr-metric.primary{background:rgba(43,181,165,.07);border-color:rgba(43,181,165,.3)}
+.cr-metric-label{font-size:.65rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:7px}
+.cr-metric-val{font-family:'JetBrains Mono',monospace;font-size:1.55rem;font-weight:600;color:var(--teal);line-height:1;margin-bottom:3px}
+.cr-metric:not(.primary) .cr-metric-val{color:var(--navy)}
+.cr-metric-unit{font-size:.68rem;color:var(--muted)}
+.cr-metrics-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+
+/* reference table */
+.cr-table-wrap{background:#fff;border:1.5px solid var(--gray-100);border-radius:14px;overflow:hidden;box-shadow:0 2px 12px rgba(15,34,64,.05)}
+.cr-table-head{padding:12px 16px;border-bottom:1px solid var(--gray-100);display:flex;align-items:center;gap:8px;background:var(--gray-50)}
+.cr-table-head span{font-size:.8rem;font-weight:700;color:var(--navy);font-family:'Outfit',sans-serif}
+.dose-tbl{width:100%;border-collapse:collapse}
+.dose-tbl th{font-size:.62rem;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--muted);padding:9px 14px;text-align:left;border-bottom:1px solid var(--gray-100)}
+.dose-tbl td{padding:8px 14px;font-size:.8rem;border-bottom:1px solid var(--gray-50)}
+.dose-tbl td:first-child{color:var(--muted);font-family:'DM Sans',sans-serif}
+.dose-tbl td:not(:first-child){font-family:'JetBrains Mono',monospace;color:var(--teal-dark)}
+.dose-tbl tr.hl td{background:rgba(43,181,165,.08)}
+.dose-tbl tr.hl td:first-child{color:var(--navy);font-weight:600}
+.dose-tbl tr:last-child td{border-bottom:none}
+.dose-empty{color:var(--muted);font-size:.82rem;padding:24px 14px;text-align:center;font-family:'DM Sans',sans-serif}
+
+/* calc disclaimer */
+.calc-disclaimer{margin-top:20px;display:flex;gap:12px;align-items:flex-start;background:rgba(15,34,64,.04);border:1px solid var(--gray-100);border-radius:12px;padding:14px 18px}
+.calc-disclaimer p{font-size:.72rem;color:var(--muted);line-height:1.75}
+
+/* LEGAL */
+.legal-section{background:var(--gray-50);padding:44px 24px;border-top:1px solid var(--gray-100)}
+.legal-inner{max-width:960px;margin:0 auto;display:flex;gap:18px;align-items:flex-start}
+.legal-icon{width:46px;height:46px;border-radius:11px;background:rgba(15,34,64,.07);display:flex;align-items:center;justify-content:center;color:var(--navy);flex-shrink:0;margin-top:2px}
+.legal-text h4{font-size:.9rem;font-weight:700;color:var(--navy);margin-bottom:8px}
+.legal-text p{font-size:.8rem;color:var(--muted);line-height:1.82}
+
+/* FOOTER */
+.footer{background:var(--navy);padding:60px 24px 28px;color:rgba(255,255,255,.6)}
+.fi2{max-width:1200px;margin:0 auto}
+.fg2{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:44px;margin-bottom:44px}
+@media(max-width:900px){.fg2{grid-template-columns:1fr 1fr;gap:32px}}
+@media(max-width:640px){.fg2{grid-template-columns:1fr}}
+.fb-brand img{height:56px;margin-bottom:14px}
+.fb-brand p{font-size:.79rem;line-height:1.7;color:rgba(255,255,255,.45);max-width:270px}
+.fc h4{font-size:.8rem;font-weight:700;color:#fff;margin-bottom:14px;text-transform:uppercase;letter-spacing:.09em}
+.fc a{display:block;font-size:.79rem;color:rgba(255,255,255,.45);text-decoration:none;margin-bottom:9px;transition:color .15s}
+.fc a:hover{color:var(--teal)}
+.footer-bot{border-top:1px solid rgba(255,255,255,.08);padding-top:26px;display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:16px}
+.f-legal{font-size:.68rem;color:rgba(255,255,255,.3);line-height:1.7;max-width:600px}
+.f-copy{font-size:.72rem;color:rgba(255,255,255,.3);white-space:nowrap}
+
+/* CART */
+#cart-backdrop{position:fixed;inset:0;z-index:290;background:rgba(15,34,64,.4);opacity:0;pointer-events:none;transition:opacity .35s}
+#cart-backdrop.open{opacity:1;pointer-events:all}
+#cart-drawer{position:fixed;top:0;right:0;bottom:0;width:400px;max-width:100vw;background:#fff;z-index:300;box-shadow:-8px 0 40px rgba(15,34,64,.15);display:flex;flex-direction:column;transform:translateX(100%);transition:transform .35s cubic-bezier(.4,0,.2,1)}
+#cart-drawer.open{transform:translateX(0)}
+.cd-hdr{padding:22px;border-bottom:1px solid var(--gray-100);display:flex;align-items:center;justify-content:space-between}
+.cd-hdr h2{font-size:1.2rem;font-weight:700;color:var(--navy)}
+.xbtn{width:36px;height:36px;border-radius:8px;border:1px solid var(--gray-100);background:none;cursor:pointer;display:flex;align-items:center;justify-content:center;color:var(--muted);transition:color .2s,border-color .2s}
+.xbtn:hover{color:var(--navy);border-color:var(--navy)}
+.cd-items{flex:1;overflow-y:auto;padding:14px}
+.cart-item{display:flex;gap:12px;padding:14px;border-radius:12px;background:var(--gray-50);margin-bottom:10px}
+.ci-img{width:60px;height:60px;border-radius:8px;background:var(--gray-100);flex-shrink:0}
+.ci-info{flex:1;min-width:0}
+.ci-name{font-weight:600;font-size:.875rem;color:var(--navy);margin-bottom:2px}
+.ci-str{font-size:.75rem;color:var(--teal);font-weight:500;margin-bottom:7px}
+.ci-ctrl{display:flex;align-items:center;gap:8px}
+.qty-btn{width:27px;height:27px;border-radius:6px;border:1px solid var(--gray-100);background:#fff;cursor:pointer;font-size:.9rem;display:flex;align-items:center;justify-content:center;color:var(--navy);transition:border-color .15s}
+.qty-btn:hover{border-color:var(--teal)}
+.qty-n{font-weight:600;font-size:.85rem;color:var(--navy);min-width:22px;text-align:center}
+.ci-price{font-weight:700;font-size:.9rem;color:var(--navy);font-family:'Outfit',sans-serif;white-space:nowrap;align-self:flex-start;margin-top:2px}
+.ci-rm{background:none;border:none;cursor:pointer;color:var(--muted);padding:3px;border-radius:4px;transition:color .15s;align-self:flex-start}
+.ci-rm:hover{color:#e53e3e}
+.cart-empty{text-align:center;padding:60px 20px;color:var(--muted)}
+.ce-icon{font-size:3rem;opacity:.25;margin-bottom:14px}
+.cd-footer{padding:18px 22px;border-top:1px solid var(--gray-100)}
+.cd-sub,.cd-tot{display:flex;justify-content:space-between;margin-bottom:5px}
+.cd-sub{font-size:.875rem;color:var(--muted)}
+.cd-tot{font-size:1.05rem;font-weight:700;color:var(--navy);margin-bottom:16px;font-family:'Outfit',sans-serif}
+.checkout-btn{width:100%;padding:15px;background:var(--navy);color:#fff;font-family:'Outfit',sans-serif;font-size:1rem;font-weight:700;border:none;border-radius:10px;cursor:pointer;transition:background .2s;display:block;text-align:center;text-decoration:none}
+.checkout-btn:hover{background:var(--teal)}
+
+/* ACCOUNT MODAL */
+#acct-modal{position:fixed;inset:0;z-index:250;background:rgba(15,34,64,.5);backdrop-filter:blur(6px);display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity .25s;padding:16px}
+#acct-modal.open{opacity:1;pointer-events:all}
+.modal-box{background:#fff;border-radius:20px;padding:36px;width:100%;max-width:430px;max-height:90vh;overflow-y:auto;position:relative;box-shadow:0 24px 80px rgba(15,34,64,.2);transform:scale(.95) translateY(10px);transition:transform .25s cubic-bezier(.34,1.56,.64,1)}
+#acct-modal.open .modal-box{transform:scale(1) translateY(0)}
+.ml{display:flex;justify-content:center;margin-bottom:24px}
+.ml img{height:34px}
+.mtabs{display:flex;border-bottom:1px solid var(--gray-100);margin-bottom:24px}
+.mtab{flex:1;padding:11px;text-align:center;font-size:.875rem;font-weight:600;color:var(--muted);cursor:pointer;border:none;border-bottom:2px solid transparent;margin-bottom:-1px;background:none;font-family:'DM Sans',sans-serif;transition:color .2s,border-color .2s}
+.mtab.active{color:var(--teal);border-bottom-color:var(--teal)}
+.fg{margin-bottom:14px}
+.fl{display:block;font-size:.8rem;font-weight:600;color:var(--navy);margin-bottom:5px}
+.fi{width:100%;padding:12px 15px;border:1.5px solid var(--gray-100);border-radius:10px;font-size:.9375rem;font-family:'DM Sans',sans-serif;color:var(--navy);outline:none;transition:border-color .2s}
+.fi:focus{border-color:var(--teal)}
+.fb{width:100%;padding:13px;background:var(--navy);color:#fff;font-family:'Outfit',sans-serif;font-size:.975rem;font-weight:700;border:none;border-radius:10px;cursor:pointer;margin-top:6px;transition:background .2s}
+.fb:hover{background:var(--teal)}
+.merr{color:#e53e3e;font-size:.8rem;margin-top:7px;text-align:center}
+.loggedin{text-align:center}
+.loggedin h3{font-size:1.2rem;font-weight:700;color:var(--navy);margin-bottom:6px}
+.loggedin p{font-size:.875rem;color:var(--muted);margin-bottom:22px}
+.signout-btn{padding:11px 28px;background:var(--gray-50);color:var(--navy);border:1px solid var(--gray-100);border-radius:8px;font-family:'DM Sans',sans-serif;font-size:.875rem;font-weight:600;cursor:pointer;transition:background .2s}
+.signout-btn:hover{background:var(--gray-100)}
+
+/* TOAST */
+#toast{position:fixed;bottom:22px;left:50%;transform:translateX(-50%) translateY(70px);background:var(--navy);color:#fff;padding:11px 22px;border-radius:40px;font-size:.85rem;font-weight:500;z-index:500;transition:transform .3s cubic-bezier(.34,1.56,.64,1);white-space:nowrap;box-shadow:0 8px 32px rgba(15,34,64,.25);pointer-events:none}
+#toast.show{transform:translateX(-50%) translateY(0)}
+.t-teal{color:var(--teal);font-weight:700}
+
+@keyframes fadeInUp{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
+.fiu{opacity:0;animation:fadeInUp .55s ease forwards}
+.d1{animation-delay:.08s}.d2{animation-delay:.18s}.d3{animation-delay:.3s}
+
+/* ── MOBILE NAV ── */
+@media(max-width:640px){
+  .nav-inner{height:72px;padding:0 16px}
+  .nav-logo img{height:56px}
+  .nib{width:36px;height:36px}
+  #hamburger{display:flex}
+}
+@media(max-width:480px){
+  .gs-inner{padding:40px 16px}
+  .recon-grid,.storage-grid,.tips-grid{grid-template-columns:1fr}
+  .stor-row{flex-direction:column;gap:10px}
+  .stor-temp{min-width:unset;width:100%;flex-direction:row;gap:12px;align-items:center;border-right:none;border-bottom:1px solid var(--gray-100);padding-bottom:10px}
+  .calc-inner{padding:32px 16px}
+  .cart-drawer{width:100vw;right:-100vw}
+  .cart-drawer.open{right:0}
+  .modal-box{padding:28px 20px;border-radius:16px}
+}
+</style>
+</head>
+<body>
+
+<!-- DISCLAIMER -->
+<div id="disc-bar">
+  PRODUCTS SOLD ON CLARIXPEPTIDES.COM ARE FOR RESEARCH PURPOSES ONLY AND ARE NOT FOR HUMAN OR VETERINARY USE.
+  <button onclick="this.parentElement.style.display='none'" aria-label="Dismiss">&#215;</button>
+</div>
+
+<!-- NAV -->
+<nav id="main-nav">
+  <div class="nav-inner">
+    <a class="nav-logo" href="index.html"><img src="brand_assets/clarix_logo_primary.png" alt="Clarix Peptides"></a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="shop.html">Shop</a>
+      <a href="wholesale.html">Wholesale</a>
+      <a href="usage-guide.html" class="active">Usage Guide</a>
+      <a href="about.html">About Us</a>
+      <a href="contact.html">Contact Us</a>
+    </div>
+    <div class="nav-actions">
+      <button class="nib" id="search-btn" aria-label="Search">
+        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+      </button>
+      <button class="nib" id="acct-btn" aria-label="Account">
+        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+      </button>
+      <button class="nib" id="cart-btn" aria-label="Basket">
+        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+        <span class="cart-badge" id="cart-badge">0</span>
+      </button>
+      <button class="nib" id="hamburger" aria-label="Menu">
+        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- MOBILE MENU -->
+<div id="mobile-menu">
+  <button class="mm-close" id="mm-close">
+    <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+  </button>
+  <a class="mm-link" href="index.html">Home</a>
+  <a class="mm-link" href="shop.html">Shop</a>
+  <a class="mm-link" href="wholesale.html">Wholesale</a>
+  <a class="mm-link" href="usage-guide.html">Usage Guide</a>
+  <a class="mm-link" href="about.html">About Us</a>
+  <a class="mm-link" href="contact.html">Contact Us</a>
+</div>
+
+<!-- SEARCH -->
+<div id="search-overlay">
+  <div class="search-panel">
+    <div class="search-wrap">
+      <svg class="si" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+      <input type="text" id="search-input" placeholder="Search peptides, compounds&#8230;" autocomplete="off">
+      <button class="sc-btn" id="search-close">
+        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+    <div id="search-results"></div>
+  </div>
+</div>
+
+
+<!-- STICKY TABS -->
+<div class="section-tabs" id="section-tabs">
+  <div class="st-inner">
+    <button class="st-tab active" onclick="scrollTo('receiving')">
+      <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+      Receiving &amp; Handling
+    </button>
+    <button class="st-tab" onclick="scrollTo('reconstitution')">
+      <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M10 2v7.527a2 2 0 0 1-.211.896L4.72 20.55a1 1 0 0 0 .9 1.45h12.76a1 1 0 0 0 .9-1.45l-5.069-10.127A2 2 0 0 1 14 9.527V2"/><path d="M8.5 2h7"/></svg>
+      Reconstitution
+    </button>
+    <button class="st-tab" onclick="scrollTo('storage')">
+      <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M14 14.76V3.5a2.5 2.5 0 0 0-5 0v11.26a4.5 4.5 0 1 0 5 0z"/></svg>
+      Storage
+    </button>
+    <button class="st-tab" onclick="scrollTo('tips')">
+      <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4m0-4h.01"/></svg>
+      General Tips
+    </button>
+    <button class="st-tab" onclick="scrollTo('calculator')">
+      <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="4" y="2" width="16" height="20" rx="2"/><line x1="8" y1="6" x2="16" y2="6"/><line x1="8" y1="10" x2="16" y2="10"/><line x1="8" y1="14" x2="11" y2="14"/></svg>
+      Peptide Calculator
+    </button>
+  </div>
+</div>
+
+
+<!-- RESEARCH DISCLAIMER BANNER -->
+<div style="background:#fff3cd;border:1.5px solid #f0c040;border-left:5px solid #f0a500;padding:16px 24px;max-width:960px;margin:32px auto 0;border-radius:10px;font-size:.85rem;color:#5a4000;line-height:1.7">
+  <strong style="display:block;margin-bottom:4px;font-size:.9rem">⚠ For In-Vitro Laboratory Research Use Only</strong>
+  This guide is intended exclusively for qualified researchers conducting controlled laboratory (in-vitro) experiments. All protocols described herein are designed for use in professional laboratory environments only. This document does not constitute guidance for human self-administration, and must not be interpreted or used as such under any circumstances. Clarix Peptides accepts no liability for any use of these materials outside a lawful laboratory research context.
+</div>
+
+<!-- ══════════════════════════════════════════ -->
+<!-- SECTION 1: RECEIVING & HANDLING          -->
+<!-- ══════════════════════════════════════════ -->
+<section class="guide-section" id="receiving">
+  <div class="gs-inner">
+    <div class="gs-eyebrow">Step 01</div>
+    <h2 class="gs-title">Receiving &amp; Handling</h2>
+    <p class="gs-sub">Follow these protocols immediately upon receipt of your lyophilised peptide compounds to ensure compound integrity is maintained before any research activity begins.</p>
+
+    <div class="recv-grid">
+      <div class="recv-card">
+        <span class="recv-bg-num">01</span>
+        <div class="recv-icon">
+          <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+        </div>
+        <h3>Visual Inspection</h3>
+        <p>Upon receipt, inspect the vial carefully. Lyophilised peptides may appear as a fine white powder, a translucent film, or may be effectively invisible inside the vial. The absence of visible material does not indicate a defective or empty product — this is entirely normal for high-purity lyophilised compounds.</p>
+      </div>
+
+      <div class="recv-card">
+        <span class="recv-bg-num">02</span>
+        <div class="recv-icon">
+          <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M14 14.76V3.5a2.5 2.5 0 0 0-5 0v11.26a4.5 4.5 0 1 0 5 0z"/></svg>
+        </div>
+        <h3>Temperature Equilibration</h3>
+        <p>Allow cold-shipped vials to reach full ambient room temperature before opening. Opening a cold vial in a warm environment causes condensation inside the vial, accelerating peptide degradation and moisture-induced aggregation. Allow a minimum of 30 minutes at room temperature before proceeding.</p>
+      </div>
+
+      <div class="recv-card">
+        <span class="recv-bg-num">03</span>
+        <div class="recv-icon">
+          <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <h3>Minimise Exposure</h3>
+        <p>Open vials only in a clean, dry environment. Reseal immediately after each handling session to limit exposure to atmospheric humidity and oxygen — both accelerate peptide chain degradation. Where possible, work under a laminar flow hood using sterile technique throughout the entire session.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════ -->
+<!-- SECTION 2: RECONSTITUTION                -->
+<!-- ══════════════════════════════════════════ -->
+<section class="guide-section" id="reconstitution">
+  <div class="gs-inner">
+    <div class="gs-eyebrow">Step 02</div>
+    <h2 class="gs-title">Reconstituting Your Peptide</h2>
+    <p class="gs-sub">Reconstitution converts a lyophilised (freeze-dried) peptide back into a liquid solution for research use. Follow these steps in order to preserve compound purity and bioactivity.</p>
+
+    <div class="recon-grid">
+      <div class="recon-step">
+        <div class="rs-badge">1</div>
+        <div class="rs-content">
+          <h3>Solvent Selection</h3>
+          <p>Choosing the correct solvent is the most critical step in reconstitution. Always start with the mildest effective option. <strong>Bacteriostatic Water (BW)</strong> is the standard choice — its 0.9% benzyl alcohol content inhibits microbial growth and substantially extends usable shelf life of the reconstituted solution.</p>
+          <div class="rs-pills">
+            <span class="rs-pill hi">Bacteriostatic Water — first choice</span>
+            <span class="rs-pill hi">Sterile distilled water — short-term only</span>
+            <span class="rs-pill">0.1% Acetic acid — for difficult peptides</span>
+            <span class="rs-pill">Ammonium bicarbonate — if acetic acid insufficient</span>
+            <span class="rs-pill">DMSO / Ethanol — hydrophobic peptides only</span>
+          </div>
+          <div class="rs-tip">
+            <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4m0-4h.01"/></svg>
+            <span>Bacteriostatic water extends reconstituted shelf life significantly compared to plain sterile water. For any peptide used across multiple sessions, bacteriostatic water is strongly preferred.</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="recon-step">
+        <div class="rs-badge">2</div>
+        <div class="rs-content">
+          <h3>Gentle Mixing Technique</h3>
+          <p>Using a sterile insulin syringe, introduce the solvent slowly by directing it along the inside glass wall of the vial — never inject it directly onto the lyophilised peptide. Slow side-wall addition prevents foaming and avoids mechanically disrupting the peptide structure.</p>
+          <p>Once the solvent is added, gently swirl the vial using a slow rolling motion between the palms. <strong>Do not vortex or shake vigorously.</strong> Mechanical agitation can denature sensitive peptide structures and significantly reduce bioactivity.</p>
+          <div class="rs-tip">
+            <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4m0-4h.01"/></svg>
+            <span>A 1 mL sterile insulin syringe is ideal for adding reconstitution solvent — it provides precise volume control and allows slow side-wall addition. Use a fresh sterile syringe for every reconstitution session.</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="recon-step">
+        <div class="rs-badge">3</div>
+        <div class="rs-content">
+          <h3>Dissolution &amp; Clarity</h3>
+          <p>After adding the solvent and gently swirling, allow the vial to stand at room temperature for 15–30 minutes, swirling gently every few minutes. Most peptides will dissolve fully to produce a clear, colourless or very slightly tinted solution within this window.</p>
+          <p>If particles remain after 30 minutes, apply brief gentle sonication in a laboratory water bath sonicator (30–60 seconds). Persistent turbidity after this may indicate a solvent incompatibility — return to Step 1 and trial 0.1% acetic acid.</p>
+          <div class="rs-tip">
+            <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4m0-4h.01"/></svg>
+            <span>Slight cloudiness immediately after solvent addition is normal and typically resolves within minutes of gentle swirling. A solution that remains turbid after 30 minutes warrants investigation of solvent choice.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════ -->
+<!-- SECTION 3: STORAGE                       -->
+<!-- ══════════════════════════════════════════ -->
+<section class="guide-section" id="storage">
+  <div class="gs-inner">
+    <div class="gs-eyebrow">Step 03</div>
+    <h2 class="gs-title">Storage Conditions</h2>
+    <p class="gs-sub">Correct storage is essential for preserving peptide potency and purity. Use these guidelines to maximise the working lifespan of your research compounds.</p>
+
+    <div class="storage-grid">
+      <div class="stor-card">
+        <div class="stor-head lyoph">
+          <div class="stor-icon">
+            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M12 6v12m-4-6h8"/></svg>
+          </div>
+          <div>
+            <strong>Lyophilised Peptides</strong>
+            <span>Unreconstituted powder / film</span>
+          </div>
+        </div>
+        <div class="stor-row">
+          <div class="stor-temp">
+            <div class="temp-val blue">+4°C</div>
+            <div class="temp-lbl">Refrigerator<br>Short-term</div>
+          </div>
+          <div class="stor-detail">
+            <strong>Short-term</strong>
+            <span>Store in a sealed, desiccated container with silica gel packets to control humidity. Protect from light. Suitable for peptides in active use where regular access is needed.</span>
+          </div>
+        </div>
+        <div class="stor-row">
+          <div class="stor-temp">
+            <div class="temp-val purple">−20°C</div>
+            <div class="temp-lbl">Freezer<br>Long-term</div>
+          </div>
+          <div class="stor-detail">
+            <strong>Long-term</strong>
+            <span>Standard household or laboratory freezer. Store in airtight containers. Always allow full equilibration to room temperature before opening to prevent condensation ingress.</span>
+          </div>
+        </div>
+        <div class="stor-row">
+          <div class="stor-temp">
+            <div class="temp-val purple">−80°C</div>
+            <div class="temp-lbl">Ultra-low<br>Extended</div>
+          </div>
+          <div class="stor-detail">
+            <strong>Extended storage</strong>
+            <span>Ultra-low temperature storage for maximum longevity. Recommended for high-value compounds or long-term research programmes. Use cryogenic containers.</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="stor-card">
+        <div class="stor-head recon">
+          <div class="stor-icon">
+            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M10 2v7.527a2 2 0 0 1-.211.896L4.72 20.55a1 1 0 0 0 .9 1.45h12.76a1 1 0 0 0 .9-1.45l-5.069-10.127A2 2 0 0 1 14 9.527V2"/><path d="M8.5 2h7"/></svg>
+          </div>
+          <div>
+            <strong>Reconstituted Peptides</strong>
+            <span>After adding BAC water or solvent</span>
+          </div>
+        </div>
+        <div class="stor-row">
+          <div class="stor-temp">
+            <div class="temp-val blue">+4°C</div>
+            <div class="temp-lbl">Refrigerator<br>In use</div>
+          </div>
+          <div class="stor-detail">
+            <strong>Refrigerated — in use</strong>
+            <span>Refrigerate in sealed vials. Bacteriostatic water extends shelf life significantly compared to plain sterile water. Never leave reconstituted peptides at room temperature.</span>
+          </div>
+        </div>
+        <div class="stor-row">
+          <div class="stor-temp">
+            <div class="temp-val purple">−20°C</div>
+            <div class="temp-lbl">Frozen<br>Aliquots</div>
+          </div>
+          <div class="stor-detail">
+            <strong>Frozen aliquots</strong>
+            <span>Pre-divide into single-use volumes before freezing. Label every aliquot: compound name, concentration, preparation date, solvent. Thaw fully before use and do not refreeze.</span>
+          </div>
+        </div>
+        <div class="stor-row">
+          <div class="stor-temp" style="background:#fff5f5">
+            <div class="temp-val red">&#9888;</div>
+            <div class="temp-lbl" style="color:#dc2626">Avoid</div>
+          </div>
+          <div class="stor-detail">
+            <strong>No repeated freeze-thaw cycles</strong>
+            <span>Each freeze-thaw cycle causes peptide aggregation, oxidation, and permanent potency loss. Pre-aliquot before freezing so each vial is used only once. Once thawed, keep at 4°C and use promptly.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════ -->
+<!-- SECTION 4: GENERAL TIPS                  -->
+<!-- ══════════════════════════════════════════ -->
+<section class="guide-section" id="tips">
+  <div class="gs-inner">
+    <div class="gs-eyebrow">Best Practice</div>
+    <h2 class="gs-title">General Research Tips</h2>
+    <p class="gs-sub">Additional guidance to protect the integrity of your peptide compounds at every stage of the research lifecycle.</p>
+
+    <div class="tips-grid">
+      <div class="tip-card">
+        <div class="tip-icon">
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9z"/></svg>
+        </div>
+        <div>
+          <h4>Protect from Light</h4>
+          <p>Many peptides are photosensitive. Store in amber vials or wrap clear vials in foil. Minimise direct light exposure during handling — UV and fluorescent light can cleave peptide bonds and accelerate oxidative degradation.</p>
+        </div>
+      </div>
+      <div class="tip-card">
+        <div class="tip-icon">
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
+        </div>
+        <div>
+          <h4>Label Everything Precisely</h4>
+          <p>Label all vials with: compound name, concentration (mcg/mL), preparation date, reconstitution solvent, and storage conditions. Missing labels are a leading cause of protocol errors and wasted compounds.</p>
+        </div>
+      </div>
+      <div class="tip-card">
+        <div class="tip-icon">
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="23 4 23 10 17 10"/><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/></svg>
+        </div>
+        <div>
+          <h4>Avoid Freeze-Thaw Cycling</h4>
+          <p>Repeated freezing and thawing is a primary cause of peptide degradation. Pre-aliquot all reconstituted peptides into single-use volumes before placing in the freezer. Once thawed, use within the refrigerated window.</p>
+        </div>
+      </div>
+      <div class="tip-card">
+        <div class="tip-icon">
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <div>
+          <h4>Sterile Technique Throughout</h4>
+          <p>Always use sterile, single-use syringes and needles. Wipe vial septa with 70% isopropyl alcohol before each insertion. Work in a clean environment and wear nitrile gloves to prevent cross-contamination.</p>
+        </div>
+      </div>
+      <div class="tip-card">
+        <div class="tip-icon">
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+        </div>
+        <div>
+          <h4>Verify Purity with Your COA</h4>
+          <p>All Clarix products ship with a Certificate of Analysis confirming &gt;99% purity by HPLC and MS. Retain your COA records — required for compliant laboratory documentation and audit trails.</p>
+        </div>
+      </div>
+      <div class="tip-card">
+        <div class="tip-icon">
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="4" y="2" width="16" height="20" rx="2"/><line x1="8" y1="6" x2="16" y2="6"/><line x1="8" y1="10" x2="16" y2="10"/><line x1="8" y1="14" x2="11" y2="14"/></svg>
+        </div>
+        <div>
+          <h4>Use the Peptide Calculator</h4>
+          <p>Use the calculator below to accurately determine reconstitution concentrations and exact IU draw volumes for your research protocols. The visual syringe shows exactly where to draw to on your syringe.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════ -->
+<!-- SECTION 5: PEPTIDE CALCULATOR            -->
+<!-- ══════════════════════════════════════════ -->
+<section id="calculator">
+  <div class="calc-inner">
+
+    <div class="calc-header">
+      <div class="calc-eyebrow">Research Tool</div>
+      <h2 class="calc-title">Peptide Dosing Calculator</h2>
+      <p class="calc-sub">Enter your vial strength, reconstitution volume, and target dose — the syringe fills to show exactly how much to draw.</p>
+    </div>
+
+    <div class="calc-layout">
+
+      <!-- LEFT: INPUTS -->
+      <div>
+        <div class="calc-panel" style="margin-bottom:14px">
+          <div class="cp-head">
+            <span class="cp-step">01</span>
+            <span>Configure Your Vial</span>
+          </div>
+          <div class="cp-body">
+
+            <div class="cig">
+              <label class="cig-label">Quick-select peptide</label>
+              <div class="pp-pills" id="pp-pills"></div>
+            </div>
+
+            <div class="cig">
+              <label class="cig-label">Peptide Amount in Vial</label>
+              <div class="cig-presets" id="mg-presets">
+                <button class="cig-preset" onclick="setPreset('mg',2,this)">2mg</button>
+                <button class="cig-preset" onclick="setPreset('mg',5,this)">5mg</button>
+                <button class="cig-preset sel" onclick="setPreset('mg',10,this)">10mg</button>
+                <button class="cig-preset" onclick="setPreset('mg',20,this)">20mg</button>
+                <button class="cig-preset" onclick="setPreset('mg',50,this)">50mg</button>
+                <button class="cig-preset" onclick="setPreset('mg',100,this)">100mg</button>
+              </div>
+              <div class="cig-row">
+                <input type="number" id="inp-mg" value="10" min="0.1" step="0.1" oninput="syncInput('mg',this.value)">
+                <span class="cig-unit">mg</span>
+              </div>
+              <input type="range" id="sl-mg" class="cig-slider" min="0.5" max="100" step="0.5" value="10" oninput="syncSlider('mg',this.value)">
+            </div>
+
+            <div class="cig">
+              <label class="cig-label">Bacteriostatic Water Added</label>
+              <div class="cig-presets" id="ml-presets">
+                <button class="cig-preset sel" onclick="setPreset('ml',1,this)">1 mL</button>
+                <button class="cig-preset" onclick="setPreset('ml',2,this)">2 mL</button>
+                <button class="cig-preset" onclick="setPreset('ml',3,this)">3 mL</button>
+                <button class="cig-preset" onclick="setPreset('ml',5,this)">5 mL</button>
+              </div>
+              <div class="cig-row">
+                <input type="number" id="inp-ml" value="1" min="0.1" step="0.1" oninput="syncInput('ml',this.value)">
+                <span class="cig-unit">mL</span>
+              </div>
+              <input type="range" id="sl-ml" class="cig-slider" min="0.5" max="5" step="0.1" value="1" oninput="syncSlider('ml',this.value)">
+            </div>
+
+          </div>
+        </div>
+
+        <div class="calc-panel">
+          <div class="cp-head">
+            <span class="cp-step">02</span>
+            <span>Enter Target Dose</span>
+          </div>
+          <div class="cp-body">
+            <div class="cig" style="margin-bottom:0">
+              <label class="cig-label">Target Dose</label>
+              <div class="cig-presets" id="dose-presets">
+                <button class="cig-preset" onclick="setDosePreset(100,this)">100 mcg</button>
+                <button class="cig-preset" onclick="setDosePreset(250,this)">250 mcg</button>
+                <button class="cig-preset" onclick="setDosePreset(500,this)">500 mcg</button>
+                <button class="cig-preset" onclick="setDosePreset(1000,this)">1 mg</button>
+              </div>
+              <div class="cig-row">
+                <input type="number" id="inp-dose" min="1" step="1" placeholder="Enter dose" oninput="calcDosing()">
+                <span class="cig-unit">mcg</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CENTER: SYRINGE -->
+      <div class="calc-syringe-wrap">
+        <div class="syringe" id="syringeEl">
+          <div class="syr-ring"></div>
+          <div class="syr-shaft" id="syrShaft" style="height:80px"></div>
+          <div class="syr-gasket"></div>
+          <div class="syr-barrel-wrap">
+            <div class="syr-barrel">
+              <div class="syr-fill" id="syrFill"></div>
+            </div>
+            <div class="syr-scale" id="syrScale"></div>
+          </div>
+          <div class="syr-flanges">
+            <div class="syr-flange"></div>
+            <div class="syr-flange-neck"></div>
+            <div class="syr-flange"></div>
+          </div>
+          <div class="syr-hub"></div>
+          <div class="syr-needle-cap"></div>
+          <div class="syr-needle"></div>
+        </div>
+
+        <div class="syr-callout">
+          <div class="syr-callout-val" id="syrCalloutVal">&#8212;</div>
+          <div class="syr-callout-lbl">IU to draw</div>
+        </div>
+      </div>
+
+      <!-- RIGHT: RESULTS -->
+      <div class="calc-results">
+
+        <div class="cr-metrics-grid">
+          <div class="cr-metric primary">
+            <div class="cr-metric-label">Concentration</div>
+            <div class="cr-metric-val" id="out-conc">&#8212;</div>
+            <div class="cr-metric-unit">mcg / mL</div>
+          </div>
+          <div class="cr-metric">
+            <div class="cr-metric-label">Per Syringe Unit</div>
+            <div class="cr-metric-val" id="out-per-iu">&#8212;</div>
+            <div class="cr-metric-unit">mcg / IU</div>
+          </div>
+          <div class="cr-metric" id="card-vol" style="opacity:.3">
+            <div class="cr-metric-label">Draw Volume</div>
+            <div class="cr-metric-val" id="out-vol">&#8212;</div>
+            <div class="cr-metric-unit">mL</div>
+          </div>
+          <div class="cr-metric" id="card-iu" style="opacity:.3">
+            <div class="cr-metric-label">Syringe Units</div>
+            <div class="cr-metric-val" id="out-iu">&#8212;</div>
+            <div class="cr-metric-unit">IU (100u syringe)</div>
+          </div>
+        </div>
+
+        <div class="cr-metric" id="card-dpv" style="opacity:.3">
+          <div class="cr-metric-label">Doses Per Vial</div>
+          <div class="cr-metric-val" id="out-dpv">&#8212;</div>
+          <div class="cr-metric-unit" id="out-dpv-sub">Enter a dose above</div>
+        </div>
+
+        <div class="cr-table-wrap">
+          <div class="cr-table-head">
+            <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="4" y="2" width="16" height="20" rx="2"/><line x1="8" y1="6" x2="16" y2="6"/><line x1="8" y1="10" x2="16" y2="10"/><line x1="8" y1="14" x2="11" y2="14"/></svg>
+            <span>Reference Table</span>
+          </div>
+          <table class="dose-tbl">
+            <thead>
+              <tr>
+                <th>Dose</th>
+                <th>Vol (mL)</th>
+                <th>IU</th>
+              </tr>
+            </thead>
+            <tbody id="dose-tbl-body">
+              <tr><td class="dose-empty" colspan="3">Configure vial to generate table</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="calc-formula">
+          <p><strong>Formula</strong>
+          Conc (mcg/mL) = Peptide (mg) &times; 1,000 &divide; Solvent (mL)<br>
+          Volume (mL) = Dose &divide; Conc &nbsp;&middot;&nbsp; IU = Volume &times; 100</p>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="calc-disclaimer">
+      <svg width="14" height="14" fill="none" stroke="rgba(255,255,255,.3)" stroke-width="2" viewBox="0 0 24 24" style="flex-shrink:0;margin-top:2px"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4m0-4h.01"/></svg>
+      <p>This calculator is provided for research planning purposes only. All Clarix Peptides products are strictly for in vitro laboratory research by qualified, licensed researchers. Not for human or veterinary use. Always verify calculations independently before use in formal research protocols.</p>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- LEGAL -->
+<div class="legal-section">
+  <div class="legal-inner">
+    <div class="legal-icon">
+      <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+    </div>
+    <div class="legal-text">
+      <h4>Research Use Only — Important Notice</h4>
+      <p>All products supplied by Clarix Peptides are intended exclusively for <strong>in vitro laboratory research</strong> by qualified, licensed researchers. They are not approved by the MHRA, FDA, or any other regulatory body for human or veterinary use. This usage guide is provided solely for reference in laboratory research contexts. Clarix Peptides accepts no liability for any misuse of products or information contained herein. By purchasing our products, you confirm that you are aged 18 or over and a licensed researcher operating within the applicable laws of your jurisdiction.</p>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="fi2">
+    <div class="fg2">
+      <div class="fb-brand">
+        <img src="brand_assets/clarix_logo_reverse.png" alt="Clarix Peptides">
+        <p>Premium research peptides supplied to licensed researchers across the UK and Europe. All products for research purposes only.</p>
+      </div>
+      <div class="fc">
+        <h4>Shop</h4>
+        <a href="shop.html">All Compounds</a>
+        <a href="shop.html">GLP-1 Agonists</a>
+        <a href="shop.html">Growth Hormone</a>
+        <a href="shop.html">Repair Peptides</a>
+        <a href="shop.html">Longevity</a>
+      </div>
+      <div class="fc">
+        <h4>Company</h4>
+        <a href="about.html">About Us</a>
+        <a href="wholesale.html">Wholesale</a>
+        <a href="usage-guide.html">Usage Guide</a>
+      </div>
+      <div class="fc">
+        <h4>Support</h4>
+        <a href="contact.html">Contact Us</a>
+        <a href="privacy-policy.html">Privacy Policy</a>
+        <a href="terms.html">Terms &amp; Conditions</a>
+      </div>
+    </div>
+    <div class="footer-bot">
+      <div>
+        <p class="f-legal">All products sold by Clarix Peptides are intended for research purposes only and are not approved by the MHRA, FDA, or any other regulatory body for human or veterinary use. Products must only be handled by qualified, licensed researchers. By purchasing, you confirm you are 18+ and a licensed researcher. Clarix Peptides accepts no liability for misuse.</p>
+        <p style="font-size:.65rem;color:rgba(255,255,255,.22);margin-top:8px;line-height:1.6">Clarix Research Ltd (trading as Clarix Peptides) &nbsp;|&nbsp; Registered in England and Wales &nbsp;|&nbsp; Company No. 17269311 &nbsp;|&nbsp; Registered Office: 66 Paul Street, London EC2A 4NA</p>
+      </div>
+      <div style="display:flex;align-items:center;gap:14px">
+        <img src="brand_assets/bank-transfer.webp" alt="Bank Transfer" style="height:28px;border-radius:5px">
+        <p class="f-copy">© 2026 Clarix Research Ltd</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- CART -->
+<div id="cart-backdrop" onclick="closeCart()"></div>
+<div id="cart-drawer">
+  <div class="cd-hdr">
+    <h2>Your Basket</h2>
+    <button class="xbtn" onclick="closeCart()">
+      <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+  </div>
+  <div class="cd-items" id="cart-items-el"></div>
+  <div class="cd-footer" id="cart-footer-el"></div>
+</div>
+
+<!-- ACCOUNT MODAL -->
+<div id="acct-modal">
+  <div class="modal-box">
+    <button onclick="closeAcct()" style="position:absolute;top:16px;right:16px;background:none;border:none;cursor:pointer;color:var(--muted);padding:4px;border-radius:6px;transition:color .2s">
+      <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+    <div class="ml"><img src="brand_assets/clarix_logo_primary.png" alt="Clarix Peptides"></div>
+    <div id="acct-modal-body"></div>
+  </div>
+</div>
+
+<div id="toast"></div>
+
+<script>
+const PRODUCTS=[
+  {id:1, name:"Retatrutide",         strength:"10mg",  price:69.99, category:"GLP-1 Agonist"},
+  {id:2, name:"Retatrutide",         strength:"20mg",  price:94.99, category:"GLP-1 Agonist"},
+  {id:5, name:"Tesamorelin",         strength:"2mg",   price:35.99, category:"Growth Hormone"},
+  {id:6, name:"Tesamorelin",         strength:"5mg",   price:49.99, category:"Growth Hormone"},
+  {id:7, name:"CJC-1295 (No DAC)",   strength:"2mg",   price:21.99, category:"Growth Hormone"},
+  {id:8, name:"CJC-1295 (No DAC)",   strength:"5mg",   price:34.99, category:"Growth Hormone"},
+  {id:9, name:"GHK-Cu",              strength:"50mg",  price:24.99, category:"Repair"},
+  {id:10,name:"GHK-Cu",              strength:"100mg", price:42.99, category:"Repair"},
+  {id:11,name:"BPC-157",             strength:"5mg",   price:21.99, category:"Repair"},
+  {id:12,name:"BPC-157",             strength:"10mg",  price:29.99, category:"Repair"},
+  {id:13,name:"TB-500",              strength:"5mg",   price:27.99, category:"Repair"},
+  {id:14,name:"TB-500",              strength:"10mg",  price:47.99, category:"Repair"},
+  {id:15,name:"Melanotan II",        strength:"10mg",  price:26.99, category:"Melanocortin"},
+  {id:16,name:"Bacteriostatic Water",strength:"10ml",  price:9.99,  category:"Reconstitution"},
+];
+
+// CART
+let cart=JSON.parse(localStorage.getItem('clarix_cart')||'[]');
+function saveCart(){localStorage.setItem('clarix_cart',JSON.stringify(cart));}
+function updateCartBadge(){const t=cart.reduce((s,i)=>s+i.qty,0);const b=document.getElementById('cart-badge');b.textContent=t;b.classList.toggle('show',t>0);}
+function renderCartDrawer(){
+  const el=document.getElementById('cart-items-el'),foot=document.getElementById('cart-footer-el');
+  if(!cart.length){el.innerHTML='<div class="cart-empty"><div class="ce-icon">&#128722;</div><p style="font-weight:600;margin-bottom:4px">Your basket is empty</p><p style="font-size:.8rem">Browse our research compounds to get started</p></div>';foot.innerHTML='';return;}
+  el.innerHTML=cart.map(item=>`<div class="cart-item"><div class="ci-img"></div><div class="ci-info"><div class="ci-name">${item.name}</div><div class="ci-str">${item.strength}</div><div class="ci-ctrl"><button class="qty-btn" onclick="changeQty(${item.id},-1)">-</button><span class="qty-n">${item.qty}</span><button class="qty-btn" onclick="changeQty(${item.id},1)">+</button></div></div><div style="display:flex;flex-direction:column;align-items:flex-end;gap:6px"><div class="ci-price">&#163;${(item.price*item.qty).toFixed(2)}</div><button class="ci-rm" onclick="removeFromCart(${item.id})"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="3 6 5 6 21 6"/><path d="M19 6l-1 14H6L5 6"/><path d="M10 11v6"/><path d="M14 11v6"/><path d="M9 6V4h6v2"/></svg></button></div></div>`).join('');
+  const sub=cart.reduce((s,i)=>s+i.price*i.qty,0),ship=sub>=50?0:3.99;
+  foot.innerHTML=`<div class="cd-sub"><span>Subtotal</span><span>&#163;${sub.toFixed(2)}</span></div><div class="cd-sub"><span>Shipping</span><span>${ship===0?'<span style="color:var(--teal);font-weight:600">FREE</span>':'&#163;'+ship.toFixed(2)}</span></div><div class="cd-tot"><span>Total</span><span>&#163;${(sub+ship).toFixed(2)}</span></div><a class="checkout-btn" href="checkout.html">Proceed to Checkout</a>`;
+}
+function openCart(){document.getElementById('cart-drawer').classList.add('open');document.getElementById('cart-backdrop').classList.add('open');renderCartDrawer();}
+function closeCart(){document.getElementById('cart-drawer').classList.remove('open');document.getElementById('cart-backdrop').classList.remove('open');}
+function removeFromCart(id){cart=cart.filter(x=>x.id!==id);saveCart();updateCartBadge();renderCartDrawer();}
+function changeQty(id,delta){const i=cart.find(x=>x.id===id);if(!i)return;i.qty=Math.max(1,i.qty+delta);saveCart();updateCartBadge();renderCartDrawer();}
+
+// ACCOUNT
+function getAccounts(){return JSON.parse(localStorage.getItem('clarix_accounts')||'[]');}
+function saveAccounts(a){localStorage.setItem('clarix_accounts',JSON.stringify(a));}
+function getSession(){return JSON.parse(sessionStorage.getItem('clarix_session')||'null');}
+function openAcct(){document.getElementById('acct-modal').classList.add('open');renderAcctModal();}
+function closeAcct(){document.getElementById('acct-modal').classList.remove('open');}
+function renderAcctModal(tab){
+  const session=getSession(),body=document.getElementById('acct-modal-body');
+  if(session){body.innerHTML=`<div class="loggedin"><h3>Welcome back!</h3><p>${session.name}<br><span style="color:var(--muted);font-size:.8rem">${session.email}</span></p><div style="display:flex;gap:10px;justify-content:center"><button class="signout-btn" onclick="signOut()">Sign Out</button><button class="fb" style="flex:1;max-width:160px" onclick="closeAcct()">Continue</button></div></div>`;return;}
+  const at=tab||'signin';
+  body.innerHTML=`<div class="mtabs"><button class="mtab ${at==='signin'?'active':''}" onclick="renderAcctModal('signin')">Sign In</button><button class="mtab ${at==='register'?'active':''}" onclick="renderAcctModal('register')">Create Account</button></div>${at==='signin'?`<form onsubmit="doSignIn(event)"><div class="fg"><label class="fl">Email</label><input class="fi" type="email" id="si-email" placeholder="you@example.com" required></div><div class="fg"><label class="fl">Password</label><input class="fi" type="password" id="si-pass" placeholder="••••••••" required></div><div id="si-msg"></div><button type="submit" class="fb">Sign In</button></form>`:`<form onsubmit="doRegister(event)"><div style="display:grid;grid-template-columns:1fr 1fr;gap:12px"><div class="fg"><label class="fl">First Name</label><input class="fi" type="text" id="reg-first" placeholder="Jane" required></div><div class="fg"><label class="fl">Last Name</label><input class="fi" type="text" id="reg-last" placeholder="Smith" required></div></div><div class="fg"><label class="fl">Email</label><input class="fi" type="email" id="reg-email" placeholder="you@example.com" required></div><div class="fg"><label class="fl">Password</label><input class="fi" type="password" id="reg-pass" placeholder="Min. 8 characters" required minlength="8"></div><div class="fg"><label class="fl">Confirm Password</label><input class="fi" type="password" id="reg-pass2" placeholder="Repeat password" required></div><div class="fg"><label class="fl">Date of Birth</label><input class="fi" type="date" id="reg-dob" required max="${new Date(new Date().setFullYear(new Date().getFullYear()-18)).toISOString().split('T')[0]}"></div><label style="display:flex;align-items:flex-start;gap:9px;cursor:pointer;font-size:.8rem;color:var(--muted);line-height:1.5;margin-bottom:14px"><input type="checkbox" required style="width:15px;height:15px;accent-color:var(--teal);flex-shrink:0;margin-top:2px">I confirm I am a licensed researcher. I agree to the <a href="terms.html" style="color:var(--teal)" target="_blank">Terms &amp; Conditions</a> and <a href="privacy-policy.html" style="color:var(--teal)" target="_blank">Privacy Policy</a>.</label><div id="reg-msg"></div><button type="submit" class="fb">Create Account</button></form>`}`;
+}
+async function hashPwd(p){const b=await crypto.subtle.digest('SHA-256',new TextEncoder().encode(p));return Array.from(new Uint8Array(b)).map(x=>x.toString(16).padStart(2,'0')).join('');}
+async function doSignIn(e){e.preventDefault();const email=document.getElementById('si-email').value.trim().toLowerCase(),pass=document.getElementById('si-pass').value,hashed=await hashPwd(pass),user=getAccounts().find(a=>a.email===email&&a.password===hashed),msg=document.getElementById('si-msg');if(!user){msg.innerHTML='<p class="merr">Invalid email or password.</p>';return;}sessionStorage.setItem('clarix_session',JSON.stringify({email:user.email,name:user.name}));renderAcctModal();showToast(`Welcome back, <span class="t-teal">${user.name.split(' ')[0]}</span>!`);}
+async function doRegister(e){e.preventDefault();const first=document.getElementById('reg-first').value.trim(),last=document.getElementById('reg-last').value.trim(),email=document.getElementById('reg-email').value.trim().toLowerCase(),pass=document.getElementById('reg-pass').value,pass2=document.getElementById('reg-pass2').value,dob=document.getElementById('reg-dob').value,msg=document.getElementById('reg-msg');if(pass!==pass2){msg.innerHTML='<p class="merr">Passwords do not match.</p>';return;}if(dob){const dobDate=new Date(dob);const today=new Date();let age=today.getFullYear()-dobDate.getFullYear();const m=today.getMonth()-dobDate.getMonth();if(m<0||(m===0&&today.getDate()<dobDate.getDate()))age--;if(age<18){msg.innerHTML='<p class="merr">You must be 18 or older to create an account.</p>';return;}}const accounts=getAccounts();if(accounts.find(a=>a.email===email)){msg.innerHTML='<p class="merr">An account with this email already exists.</p>';return;}const name=`${first} ${last}`;const hashed=await hashPwd(pass);accounts.push({email,password:hashed,name,dob});saveAccounts(accounts);sessionStorage.setItem('clarix_session',JSON.stringify({email,name}));renderAcctModal();showToast(`Account created! Welcome, <span class="t-teal">${first}</span>!`);notifySignup(email,name);}
+function notifySignup(em,nm){const K='aa36f936-af5e-420f-8e65-6f782a43046f';fetch('https://api.web3forms.com/submit',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({access_key:K,subject:'New Account Registration: '+em,from_name:'Clarix Peptides Website',message:'NEW ACCOUNT SIGNUP\n\nName: '+nm+'\nEmail: '+em+'\nDate: '+new Date().toLocaleString('en-GB')})}).catch(()=>{});}
+function signOut(){sessionStorage.removeItem('clarix_session');renderAcctModal('signin');showToast('You have been signed out');}
+
+// SEARCH
+function openSearch(){document.getElementById('search-overlay').classList.add('open');setTimeout(()=>document.getElementById('search-input').focus(),100);}
+function closeSearch(){document.getElementById('search-overlay').classList.remove('open');document.getElementById('search-results').classList.remove('show');document.getElementById('search-input').value='';}
+document.getElementById('search-input').addEventListener('input',function(){
+  const q=this.value.toLowerCase().trim(),res=document.getElementById('search-results');
+  if(!q){res.classList.remove('show');return;}
+  const m=PRODUCTS.filter(p=>p.name.toLowerCase().includes(q)||p.category.toLowerCase().includes(q)||p.strength.toLowerCase().includes(q));
+  if(!m.length){res.innerHTML='<div class="sr-item"><div><div class="sr-name">No results found</div></div></div>';res.classList.add('show');return;}
+  res.innerHTML=m.slice(0,8).map(p=>`<div class="sr-item" onclick="window.location='product.html?id=${p.id}'"><div><div class="sr-name">${p.name} ${p.strength}</div><div class="sr-cat">${p.category}</div></div><div class="sr-price">&#163;${p.price.toFixed(2)}</div></div>`).join('');
+  res.classList.add('show');
+});
+
+// TOAST
+let toastT;
+function showToast(msg){const t=document.getElementById('toast');t.innerHTML=msg;t.classList.add('show');clearTimeout(toastT);toastT=setTimeout(()=>t.classList.remove('show'),3200);}
+
+// NAV + MOBILE
+window.addEventListener('scroll',()=>{document.getElementById('main-nav').classList.toggle('scrolled',window.scrollY>10);updateSectionTabs();});
+document.getElementById('hamburger').addEventListener('click',()=>document.getElementById('mobile-menu').classList.add('open'));
+document.getElementById('mm-close').addEventListener('click',()=>document.getElementById('mobile-menu').classList.remove('open'));
+document.addEventListener('keydown',e=>{if(e.key==='Escape'){closeSearch();closeAcct();}});
+document.getElementById('acct-modal').addEventListener('click',e=>{if(e.target===e.currentTarget)closeAcct();});
+document.getElementById('search-overlay').addEventListener('click',e=>{if(e.target===e.currentTarget)closeSearch();});
+document.getElementById('search-btn').addEventListener('click',openSearch);
+document.getElementById('search-close').addEventListener('click',closeSearch);
+document.getElementById('acct-btn').addEventListener('click',openAcct);
+document.getElementById('cart-btn').addEventListener('click',openCart);
+
+// SECTION SCROLLING + TAB HIGHLIGHT
+function scrollTo(id){document.getElementById(id).scrollIntoView({behavior:'smooth'});}
+const SEC_IDS=['receiving','reconstitution','storage','tips','calculator'];
+function updateSectionTabs(){
+  const tabs=document.querySelectorAll('.st-tab');
+  let active=0;
+  SEC_IDS.forEach((id,i)=>{const el=document.getElementById(id);if(el&&el.getBoundingClientRect().top<=200)active=i;});
+  tabs.forEach((t,i)=>t.classList.toggle('active',i===active));
+}
+
+// ─────────────────────────────────────────────
+// PEPTIDE CALCULATOR
+// ─────────────────────────────────────────────
+const PEPTIDE_PRESETS=[
+  {label:'Retatrutide 10mg', mg:10}, {label:'Retatrutide 20mg', mg:20},
+  {label:'Tesamorelin 2mg',  mg:2},  {label:'Tesamorelin 5mg',  mg:5},
+  {label:'CJC-1295 2mg',    mg:2},  {label:'CJC-1295 5mg',    mg:5},
+  {label:'GHK-Cu 50mg',     mg:50}, {label:'GHK-Cu 100mg',    mg:100},
+  {label:'BPC-157 5mg',     mg:5},  {label:'BPC-157 10mg',    mg:10},
+  {label:'TB-500 5mg',      mg:5},  {label:'TB-500 10mg',     mg:10},
+  {label:'Melanotan II 10mg',mg:10},
+];
+
+function initPeptidePills(){
+  const c=document.getElementById('pp-pills');
+  if(!c)return;
+  c.innerHTML=PEPTIDE_PRESETS.map(p=>`<button class="pp-pill" onclick="selectPeptide(${p.mg},this)">${p.label}</button>`).join('');
+}
+
+function selectPeptide(mg,btn){
+  document.querySelectorAll('.pp-pill').forEach(b=>b.classList.remove('sel'));
+  btn.classList.add('sel');
+  document.getElementById('inp-mg').value=mg;
+  document.getElementById('sl-mg').value=Math.min(100,mg);
+  document.querySelectorAll('#mg-presets .cig-preset').forEach(b=>b.classList.remove('sel'));
+  calcReconstitution();
+}
+
+function syncSlider(type,val){
+  const v=parseFloat(val);
+  if(type==='mg'){
+    document.getElementById('inp-mg').value=v%1===0?v:v.toFixed(1);
+    document.querySelectorAll('#mg-presets .cig-preset').forEach(b=>b.classList.remove('sel'));
+    document.querySelectorAll('.pp-pill').forEach(b=>b.classList.remove('sel'));
+  } else {
+    document.getElementById('inp-ml').value=v%1===0?v:v.toFixed(1);
+    document.querySelectorAll('#ml-presets .cig-preset').forEach(b=>b.classList.remove('sel'));
+  }
+  calcReconstitution();
+}
+
+function syncInput(type,val){
+  if(type==='mg'){
+    const v=Math.min(100,Math.max(0.1,parseFloat(val)||0));
+    document.getElementById('sl-mg').value=v;
+    document.querySelectorAll('#mg-presets .cig-preset').forEach(b=>b.classList.remove('sel'));
+    document.querySelectorAll('.pp-pill').forEach(b=>b.classList.remove('sel'));
+  } else {
+    const v=Math.min(5,Math.max(0.1,parseFloat(val)||0));
+    document.getElementById('sl-ml').value=v;
+    document.querySelectorAll('#ml-presets .cig-preset').forEach(b=>b.classList.remove('sel'));
+  }
+  calcReconstitution();
+}
+
+const _numAnimState={};
+function animNum(elId,newVal,formatter){
+  const el=document.getElementById(elId);
+  if(!el)return;
+  if(newVal===null||isNaN(newVal)||!isFinite(newVal)){el.textContent='—';return;}
+  const prev=_numAnimState[elId]||0;
+  _numAnimState[elId]=newVal;
+  const start=Date.now(),dur=320,from=prev;
+  function tick(){
+    const p=Math.min((Date.now()-start)/dur,1);
+    const ease=1-Math.pow(1-p,3);
+    el.textContent=formatter(from+(newVal-from)*ease);
+    if(p<1)requestAnimationFrame(tick);
+    else el.textContent=formatter(newVal);
+  }
+  requestAnimationFrame(tick);
+}
+
+function fmt(n){
+  if(n===null||isNaN(n)||!isFinite(n))return '—';
+  if(n>=10000)return n.toLocaleString('en-GB',{maximumFractionDigits:0});
+  if(n>=100) return n.toLocaleString('en-GB',{maximumFractionDigits:1});
+  if(n>=1)   return n.toFixed(2).replace(/\.?0+$/,'');
+  return n.toFixed(4).replace(/\.?0+$/,'');
+}
+
+// Syringe: barrel is 300px tall = 100 IU
+// Gasket shaft height: when fill is X%, shaft = (1-X/100)*BARREL_MAX
+const BARREL_H=300; // must match CSS .syr-barrel height
+
+function updateSyringe(iu){
+  const fill=document.getElementById('syrFill');
+  const shaft=document.getElementById('syrShaft');
+  const callout=document.getElementById('syrCalloutVal');
+  if(!fill)return;
+  if(!iu||isNaN(iu)||iu<=0){
+    fill.style.height='0%';
+    if(shaft)shaft.style.height='80px';
+    if(callout)callout.textContent='—';
+    return;
+  }
+  const pct=Math.min(iu/100*100,100);
+  fill.style.height=pct+'%';
+  // plunger shaft shrinks as syringe fills (more liquid = plunger pulled back = longer shaft)
+  const shaftH=Math.round((pct/100)*80+20);
+  if(shaft)shaft.style.height=shaftH+'px';
+  if(callout){
+    const rounded=Math.round(iu*100)/100;
+    callout.textContent=fmt(rounded);
+  }
+}
+
+function calcReconstitution(){
+  const mg=parseFloat(document.getElementById('inp-mg').value);
+  const ml=parseFloat(document.getElementById('inp-ml').value);
+  if(!mg||!ml||mg<=0||ml<=0){
+    document.getElementById('out-conc').textContent='—';
+    document.getElementById('out-per-iu').textContent='—';
+    renderDoseTable(0,0);
+    return;
+  }
+  const conc=(mg*1000)/ml;
+  const perIU=conc/100;
+  animNum('out-conc',conc,fmt);
+  animNum('out-per-iu',perIU,fmt);
+  calcDosing();
+}
+
+function calcDosing(){
+  const mg=parseFloat(document.getElementById('inp-mg').value);
+  const ml=parseFloat(document.getElementById('inp-ml').value);
+  const conc=(mg>0&&ml>0)?(mg*1000)/ml:0;
+  const dose=parseFloat(document.getElementById('inp-dose').value);
+  const cVol=document.getElementById('card-vol');
+  const cIu=document.getElementById('card-iu');
+  const cDpv=document.getElementById('card-dpv');
+  if(conc>0&&dose>0){
+    const vol=dose/conc;
+    const iu=vol*100;
+    const dpv=Math.floor((mg*1000)/dose);
+    animNum('out-vol',vol,v=>v.toFixed(4).replace(/\.?0+$/,''));
+    animNum('out-iu',iu,v=>v.toFixed(2).replace(/\.?0+$/,''));
+    animNum('out-dpv',dpv,v=>Math.round(v).toLocaleString('en-GB'));
+    if(cVol)cVol.style.opacity='1';
+    if(cIu)cIu.style.opacity='1';
+    if(cDpv)cDpv.style.opacity='1';
+    const dpvSub=document.getElementById('out-dpv-sub');
+    if(dpvSub)dpvSub.textContent='at '+(dose>=1000?(dose/1000)+'mg':dose+'mcg')+' per dose';
+    updateSyringe(iu);
+  } else {
+    ['out-vol','out-iu','out-dpv'].forEach(id=>{const el=document.getElementById(id);if(el)el.textContent='—';});
+    if(cVol)cVol.style.opacity='0.3';
+    if(cIu)cIu.style.opacity='0.3';
+    if(cDpv){cDpv.style.opacity='0.3';const s=document.getElementById('out-dpv-sub');if(s)s.textContent=conc>0?'Enter a dose above':'Configure vial first';}
+    updateSyringe(0);
+  }
+  renderDoseTable(conc,dose);
+}
+
+function renderDoseTable(conc,hlDose){
+  const tbody=document.getElementById('dose-tbl-body');
+  if(!tbody)return;
+  if(!conc||conc<=0){tbody.innerHTML='<tr><td class="dose-empty" colspan="3">Configure vial above to generate table</td></tr>';return;}
+  const doses=[50,100,150,200,250,300,400,500,600,750,1000,1500,2000];
+  tbody.innerHTML=doses.map(d=>{
+    const vol=d/conc,iu=vol*100;
+    const hl=hlDose&&Math.abs(d-hlDose)<0.5;
+    const lbl=d>=1000?(d/1000)+'mg':d+'mcg';
+    return `<tr class="${hl?'hl':''}"><td>${lbl}</td><td>${vol.toFixed(4).replace(/\.?0+$/,'')}</td><td>${iu.toFixed(2).replace(/\.?0+$/,'')}</td></tr>`;
+  }).join('');
+}
+
+function setPreset(type,val,btn){
+  if(type==='mg'){
+    document.getElementById('inp-mg').value=val;
+    document.getElementById('sl-mg').value=Math.min(50,val);
+    document.querySelectorAll('#mg-presets .cig-preset').forEach(b=>b.classList.remove('sel'));
+    document.querySelectorAll('.pp-pill').forEach(b=>b.classList.remove('sel'));
+    btn.classList.add('sel');calcReconstitution();
+  } else {
+    document.getElementById('inp-ml').value=val;
+    document.getElementById('sl-ml').value=Math.min(5,val);
+    document.querySelectorAll('#ml-presets .cig-preset').forEach(b=>b.classList.remove('sel'));
+    btn.classList.add('sel');calcReconstitution();
+  }
+}
+function setDosePreset(val,btn){
+  document.getElementById('inp-dose').value=val;
+  document.querySelectorAll('#dose-presets .cig-preset').forEach(b=>b.classList.remove('sel'));
+  btn.classList.add('sel');calcDosing();
+}
+
+function buildSyringeScale(){
+  const scale=document.getElementById('syrScale');
+  if(!scale)return;
+  let html='';
+  for(let iu=0;iu<=100;iu++){
+    const isMajor=iu%10===0;
+    const isMid=iu%5===0;
+    const tickW=isMajor?14:isMid?9:5;
+    const showNum=isMajor&&iu>0;
+    html+=`<div class="syr-tick" style="bottom:${iu}%">
+      <div class="syr-tick-line${isMajor?' major':isMid?' mid':''}" style="width:${tickW}px"></div>
+      ${showNum?`<span class="syr-tick-num">${iu}</span>`:''}
+    </div>`;
+  }
+  scale.innerHTML=html;
+}
+
+// INIT
+updateCartBadge();
+initPeptidePills();
+buildSyringeScale();
+calcReconstitution();
+</script>
+<!-- COOKIE CONSENT BANNER -->
+<div id="cookie-bar" style="position:fixed;bottom:0;left:0;right:0;z-index:9999;background:rgba(15,34,64,.97);backdrop-filter:blur(12px);border-top:1px solid rgba(255,255,255,.1);padding:16px 24px;display:flex;align-items:center;flex-wrap:wrap;gap:12px 20px;font-family:'DM Sans',sans-serif;box-shadow:0 -4px 24px rgba(0,0,0,.3);transition:transform .4s ease">
+  <div style="flex:1;min-width:280px">
+    <p style="font-size:.78rem;color:rgba(255,255,255,.7);line-height:1.65;margin:0"><strong style="color:#fff;font-weight:600">We use cookies &amp; local storage</strong> for essential website functions (cart, account, session) and load third-party scripts (Tailwind CSS, Google Fonts) that may process your IP address. <a href="privacy-policy.html" style="color:#2BB5A5;text-decoration:underline">Privacy Policy</a></p>
+  </div>
+  <div style="display:flex;gap:8px;flex-shrink:0">
+    <button onclick="setCookieChoice('declined')" style="padding:8px 16px;font-size:.78rem;font-weight:600;border-radius:7px;border:1px solid rgba(255,255,255,.2);background:none;color:rgba(255,255,255,.6);cursor:pointer;font-family:'DM Sans',sans-serif">Decline</button>
+    <button onclick="setCookieChoice('accepted')" style="padding:8px 18px;font-size:.78rem;font-weight:600;border-radius:7px;border:none;background:#2BB5A5;color:#fff;cursor:pointer;font-family:'DM Sans',sans-serif">Accept All</button>
+  </div>
+</div>
+<script>
+(function(){
+  function setCookieChoice(c){localStorage.setItem('clarix_cookies',c);var b=document.getElementById('cookie-bar');if(b){b.style.transform='translateY(110%)';setTimeout(function(){b.style.display='none'},400)}}
+  window.setCookieChoice=setCookieChoice;
+  if(localStorage.getItem('clarix_cookies')){var b=document.getElementById('cookie-bar');if(b)b.style.display='none'}
+})();
+</script>
+</body>
+</html>
