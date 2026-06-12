@@ -11,25 +11,37 @@ exports.handler = async (event) => {
       return { statusCode: 400, body: JSON.stringify({ error: 'Missing amount or reference' }) };
     }
 
-    const terminalId     = process.env.FENA_TERMINAL_ID;
-    const terminalSecret = process.env.FENA_TERMINAL_SECRET;
-    if (!terminalId || !terminalSecret) {
+    const integrationId     = process.env.FENA_TERMINAL_ID;
+    const integrationSecret = process.env.FENA_TERMINAL_SECRET;
+    if (!integrationId || !integrationSecret) {
       return { statusCode: 500, body: JSON.stringify({ error: 'Payment provider not configured' }) };
     }
 
-    const amountPence = Math.round(parseFloat(amount) * 100);
-    const payload = JSON.stringify({ amount: amountPence, currency: 'GBP', reference });
+    // Amount must be a string with 2 decimal places (pounds, not pence)
+    const amountStr = parseFloat(amount).toFixed(2);
+
+    // Fena reference max 12 chars — use last 8 chars of order ref (e.g. "SRJGE5" from "CLX-2026-SRJGE5")
+    const fenaRef = reference.replace(/-/g, '').slice(-8);
+
+    const payload = JSON.stringify({
+      reference:     fenaRef,
+      amount:        amountStr,
+      bankAccount:   '',          // empty = use default bank account
+      customerEmail: '',
+      customerName:  '',
+      items:         []
+    });
 
     const { status, data } = await new Promise((resolve, reject) => {
       const options = {
         hostname: 'epos.api.prod-gcp.fena.co',
-        path: '/v2/payments',
-        method: 'POST',
+        path:     '/open/payments/single/create-and-process',
+        method:   'POST',
         headers: {
-          'Content-Type': 'application/json',
+          'Content-Type':   'application/json',
           'Content-Length': Buffer.byteLength(payload),
-          'terminal-id': terminalId,
-          'terminal-secret': terminalSecret
+          'integration-id': integrationId,
+          'secret-key':     integrationSecret
         }
       };
       const req = https.request(options, (res) => {
@@ -45,21 +57,16 @@ exports.handler = async (event) => {
       req.end();
     });
 
-    console.log('Fena API status:', status, 'body:', JSON.stringify(data));
+    console.log('Fena status:', status, 'body:', JSON.stringify(data));
 
-    if (status !== 200 && status !== 201) {
+    if (!data.created || !data.result?.link) {
       return { statusCode: 502, body: JSON.stringify({ error: 'Payment creation failed', detail: data }) };
-    }
-
-    const paymentUrl = data.payment_url || data.checkout_url || data.url || data.paymentUrl;
-    if (!paymentUrl) {
-      return { statusCode: 502, body: JSON.stringify({ error: 'No payment URL returned', detail: data }) };
     }
 
     return {
       statusCode: 200,
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ payment_url: paymentUrl })
+      body: JSON.stringify({ payment_url: data.result.link })
     };
 
   } catch (err) {
