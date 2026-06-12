@@ -174,7 +174,7 @@ h1,h2,h3,h4,h5,h6{font-family:'Outfit',sans-serif}
 .feat-badge{position:absolute;top:16px;left:16px;z-index:2;background:var(--teal);color:#fff;font-size:.67rem;font-weight:700;letter-spacing:.09em;text-transform:uppercase;padding:4px 11px;border-radius:20px;font-family:'Outfit',sans-serif}
 .feat-img-wrap{background:#fff;padding:24px 20px;display:flex;align-items:center;justify-content:center;height:300px;position:relative;overflow:hidden}
 .feat-img-wrap::after{content:'';position:absolute;inset:0;background:radial-gradient(circle at 50% 60%,rgba(43,181,165,.06) 0%,transparent 70%);pointer-events:none}
-.feat-img-wrap img{height:240px;width:auto;max-width:100%;object-fit:contain;transition:transform .35s cubic-bezier(.34,1.56,.64,1);position:relative;z-index:1;mix-blend-mode:multiply}
+.feat-img-wrap img{max-height:calc(100% - 16px);max-width:calc(100% - 16px);width:auto;height:auto;object-fit:contain;transition:transform .35s cubic-bezier(.34,1.56,.64,1);position:relative;z-index:1;mix-blend-mode:multiply}
 .feat-card:hover .feat-img-wrap img{transform:scale(1.06) translateY(-4px)}
 .feat-body{padding:20px 20px 22px}
 .feat-name{font-size:1.15rem;font-weight:700;color:var(--navy);letter-spacing:-.01em;margin-bottom:4px}
