@@ -12,11 +12,11 @@ exports.handler = async (event) => {
       return { statusCode: 400, body: JSON.stringify({ error: 'Missing amount or reference' }) };
     }
 
-    // Store these as Netlify environment variables:
-    //   FENA_TERMINAL_ID     = 6a296a06a503d7d39c441fdc
-    //   FENA_TERMINAL_SECRET = 66afc037-6117-4735-9f69-1eeed4c0f460
-    const terminalId     = process.env.FENA_TERMINAL_ID     || '6a296a06a503d7d39c441fdc';
-    const terminalSecret = process.env.FENA_TERMINAL_SECRET || '66afc037-6117-4735-9f69-1eeed4c0f460';
+    const terminalId     = process.env.FENA_TERMINAL_ID;
+    const terminalSecret = process.env.FENA_TERMINAL_SECRET;
+    if (!terminalId || !terminalSecret) {
+      return { statusCode: 500, body: JSON.stringify({ error: 'Payment provider not configured' }) };
+    }
 
     const amountPence = Math.round(parseFloat(amount) * 100);
 
