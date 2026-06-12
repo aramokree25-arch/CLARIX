@@ -6,8 +6,14 @@
 <link rel="icon" href="brand_assets/clarix_logomark.png" type="image/png">
 <link rel="apple-touch-icon" href="brand_assets/clarix_logomark.png">
 <title>Product | Clarix Peptides</title>
-<meta name="description" content="High-purity research peptide from Clarix Peptides. HPLC verified, 99%+ purity. Certificate of Analysis included. Fast UK dispatch.">
+<meta name="description" id="meta-desc" content="High-purity research peptide from Clarix Peptides. HPLC verified, 99%+ purity. Certificate of Analysis included. Fast UK dispatch.">
 <meta name="robots" content="index, follow">
+<link rel="canonical" id="meta-canonical" href="https://www.clarixpeptides.com/product">
+<meta property="og:url" id="meta-og-url" content="https://www.clarixpeptides.com/product">
+<meta property="og:title" id="meta-og-title" content="Product | Clarix Peptides">
+<meta property="og:description" id="meta-og-desc" content="High-purity research peptide from Clarix Peptides.">
+<meta property="og:image" id="meta-og-image" content="https://www.clarixpeptides.com/brand_assets/clarix_logo_primary.png">
+<script id="product-schema" type="application/ld+json">{}</script>
 <script src="https://cdn.tailwindcss.com"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
@@ -729,9 +735,39 @@ if (!activeProduct) {
   initPage(activeProduct);
 }
 
+function updateSEO(p) {
+  const url = `https://www.clarixpeptides.com/product?id=${p.id}`;
+  const title = `${p.name} ${p.strength} | Clarix Peptides`;
+  const desc = `Buy ${p.name} ${p.strength} online. ${p.desc || 'HPLC verified, 99%+ purity, Certificate of Analysis included. Fast UK dispatch.'} Research use only.`;
+  document.getElementById('meta-canonical').href = url;
+  document.getElementById('meta-og-url').content = url;
+  document.getElementById('meta-og-title').content = title;
+  document.getElementById('meta-og-desc').content = desc;
+  document.getElementById('meta-desc').content = desc;
+  if (p.img) document.getElementById('meta-og-image').content = `https://www.clarixpeptides.com${p.img.startsWith('/') ? '' : '/'}${p.img}`;
+  document.getElementById('product-schema').textContent = JSON.stringify({
+    "@context": "https://schema.org/",
+    "@type": "Product",
+    "name": `${p.name} ${p.strength}`,
+    "image": [`https://www.clarixpeptides.com${p.img.startsWith('/') ? '' : '/'}${p.img}`],
+    "description": desc,
+    "sku": `CX-${p.id}`,
+    "brand": {"@type": "Brand", "name": "Clarix Peptides"},
+    "offers": {
+      "@type": "Offer",
+      "url": url,
+      "priceCurrency": "GBP",
+      "price": p.price.toFixed(2),
+      "availability": "https://schema.org/InStock",
+      "seller": {"@type": "Organization", "name": "Clarix Peptides"}
+    }
+  });
+}
+
 function initPage(p) {
   // Title & breadcrumb
   document.title = `${p.name} ${p.strength} | Clarix Peptides`;
+  updateSEO(p);
   document.getElementById('pp-breadcrumb').textContent = `${p.name} ${p.strength}`;
   document.getElementById('pp-title').textContent = `${p.name} ${p.strength}`;
 

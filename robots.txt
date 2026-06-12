@@ -1,6 +1,6 @@
 User-agent: *
 Allow: /
 
-Disallow: /checkout.html
+Disallow: /checkout
 
 Sitemap: https://www.clarixpeptides.com/sitemap.xml
