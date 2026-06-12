@@ -22,7 +22,7 @@ exports.handler = async (event) => {
 
     const { status, data } = await new Promise((resolve, reject) => {
       const options = {
-        hostname: 'api.fena.co',
+        hostname: 'epos.api.prod-gcp.fena.co',
         path: '/v2/payments',
         method: 'POST',
         headers: {
