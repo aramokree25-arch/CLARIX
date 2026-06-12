@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -249,11 +249,24 @@ h1,h2,h3,h4{font-family:'Outfit',sans-serif}
   #hamburger{display:flex}
 }
 @media(max-width:480px){
-  .co-wrap{padding:0 16px 60px}
+  .co-wrap{padding:0 12px 60px}
   .step-badge{width:28px;height:28px;font-size:.7rem}
   .step-label{font-size:.7rem}
   .form-card{padding:20px 16px}
   .btn-primary{font-size:.9rem;padding:14px 20px}
+  .card-body{padding:16px}
+  .card-hdr{padding:14px 16px}
+  .btn-p{padding:14px;font-size:.9rem;min-height:50px}
+  .pm-opt{padding:12px 14px;gap:10px}
+  .comp-box{padding:12px 14px;gap:10px}
+  .co-nav-i{height:60px}
+  .co-logo img{height:44px}
+  .co-back{font-size:.75rem}
+}
+@media(max-width:390px){
+  .co-wrap{padding:0 10px 60px}
+  .fi,.fs{padding:11px 12px;font-size:.85rem}
+  .btn-p{min-height:52px}
 }
 </style>
 </head>
@@ -264,12 +277,12 @@ h1,h2,h3,h4{font-family:'Outfit',sans-serif}
 <!-- NAV -->
 <nav class="co-nav">
   <div class="co-nav-i">
-    <a href="index.html" class="co-logo"><img src="brand_assets/clarix_logo_primary.png" alt="Clarix Peptides"></a>
+    <a href="/" class="co-logo"><img src="brand_assets/clarix_logo_primary.png" alt="Clarix Peptides"></a>
     <div class="co-secure">
       <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
       Secure Checkout
     </div>
-    <a href="shop.html" class="co-back">
+    <a href="/shop" class="co-back">
       <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
       Back to shop
     </a>
@@ -308,7 +321,7 @@ h1,h2,h3,h4{font-family:'Outfit',sans-serif}
   <div style="font-size:3.5rem;margin-bottom:18px">🧪</div>
   <h2 style="font-size:1.7rem;font-weight:700;color:var(--navy);margin-bottom:10px">Your basket is empty</h2>
   <p style="color:var(--muted);margin-bottom:26px">Add research compounds to your basket before proceeding to checkout.</p>
-  <a href="shop.html" style="display:inline-block;padding:13px 30px;background:var(--navy);color:#fff;text-decoration:none;border-radius:11px;font-family:'Outfit',sans-serif;font-weight:700">Browse Products</a>
+  <a href="/shop" style="display:inline-block;padding:13px 30px;background:var(--navy);color:#fff;text-decoration:none;border-radius:11px;font-family:'Outfit',sans-serif;font-weight:700">Browse Products</a>
 </div>
 
 <!-- MAIN -->
@@ -460,7 +473,7 @@ h1,h2,h3,h4{font-family:'Outfit',sans-serif}
             <div class="comp-icon-wrap">📋</div>
             <div class="comp-text">
               <strong>I agree to the Terms &amp; Conditions</strong>
-              <p>I have read and agree to Clarix Peptides' <a href="terms.html" target="_blank" style="color:var(--teal);font-weight:600;text-decoration:none" onclick="event.stopPropagation()">Terms &amp; Conditions</a>. I understand that my personal data will be used solely to process this order and will not be sold or shared with third parties.</p>
+              <p>I have read and agree to Clarix Peptides' <a href="/terms" target="_blank" style="color:var(--teal);font-weight:600;text-decoration:none" onclick="event.stopPropagation()">Terms &amp; Conditions</a>. I understand that my personal data will be used solely to process this order and will not be sold or shared with third parties.</p>
             </div>
             <div class="comp-cb" id="cbx4">
               <svg id="ck4" width="12" height="12" fill="none" stroke="white" stroke-width="3" viewBox="0 0 24 24" style="display:none"><polyline points="20 6 9 17 4 12"/></svg>
@@ -638,14 +651,14 @@ h1,h2,h3,h4{font-family:'Outfit',sans-serif}
 
       <!-- ⑤ Actions -->
       <div class="bt-acts" style="margin-top:4px">
-        <a href="shop.html" class="bt-act-s">Continue Shopping</a>
+        <a href="/shop" class="bt-act-s">Continue Shopping</a>
         <button onclick="window.print()" class="bt-act-p">
           <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
           Save / Print
         </button>
       </div>
       <p style="text-align:center;margin-top:16px;font-size:.79rem;color:var(--muted)">
-        Need help? <a href="contact.html" style="color:var(--teal);font-weight:600">Contact us</a> or email <a href="mailto:info@clarixpeptides.com" style="color:var(--teal);font-weight:600">info@clarixpeptides.com</a>
+        Need help? <a href="/contact" style="color:var(--teal);font-weight:600">Contact us</a> or email <a href="mailto:info@clarixpeptides.com" style="color:var(--teal);font-weight:600">info@clarixpeptides.com</a>
       </p>
 
     </div>
@@ -1116,7 +1129,7 @@ function v(id){return document.getElementById(id).value.trim();}
     const success = status === 'completed' || status === 'success' || status === 'paid';
     el.style.cssText = 'position:fixed;inset:0;z-index:500;display:flex;align-items:center;justify-content:center;background:#fff;flex-direction:column;gap:20px;font-family:Outfit,sans-serif;padding:32px;text-align:center';
     el.innerHTML = success
-      ? `<div style="width:72px;height:72px;border-radius:50%;background:rgba(43,181,165,.1);display:flex;align-items:center;justify-content:center"><svg width="34" height="34" fill="none" stroke="#2BB5A5" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div><h2 style="color:#0F2240;font-size:1.6rem;font-weight:800;letter-spacing:-.03em">Payment Confirmed!</h2><p style="color:#6B7A99;font-size:.92rem;max-width:400px;line-height:1.7">Your open banking payment was successful. We've received your order and will dispatch it shortly. Check your email for confirmation.</p><a href="index.html" style="margin-top:8px;padding:13px 32px;background:#2BB5A5;color:#fff;border-radius:10px;text-decoration:none;font-weight:700;font-size:.9rem">Back to Home</a>`
+      ? `<div style="width:72px;height:72px;border-radius:50%;background:rgba(43,181,165,.1);display:flex;align-items:center;justify-content:center"><svg width="34" height="34" fill="none" stroke="#2BB5A5" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div><h2 style="color:#0F2240;font-size:1.6rem;font-weight:800;letter-spacing:-.03em">Payment Confirmed!</h2><p style="color:#6B7A99;font-size:.92rem;max-width:400px;line-height:1.7">Your open banking payment was successful. We've received your order and will dispatch it shortly. Check your email for confirmation.</p><a href="/" style="margin-top:8px;padding:13px 32px;background:#2BB5A5;color:#fff;border-radius:10px;text-decoration:none;font-weight:700;font-size:.9rem">Back to Home</a>`
       : `<div style="width:72px;height:72px;border-radius:50%;background:#fff5f5;display:flex;align-items:center;justify-content:center"><svg width="34" height="34" fill="none" stroke="#e53e3e" stroke-width="2.5" viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></div><h2 style="color:#0F2240;font-size:1.6rem;font-weight:800">Payment Incomplete</h2><p style="color:#6B7A99;font-size:.92rem;max-width:400px;line-height:1.7">Your payment was not completed. Please try again below or choose manual bank transfer.</p><button onclick="this.parentElement.remove()" style="margin-top:8px;padding:13px 32px;background:#0F2240;color:#fff;border:none;border-radius:10px;font-weight:700;font-size:.9rem;cursor:pointer">Try Again</button>`;
     document.body.appendChild(el);
     // Clean up URL
@@ -1127,7 +1140,7 @@ function v(id){return document.getElementById(id).value.trim();}
 <!-- COOKIE CONSENT BANNER -->
 <div id="cookie-bar" style="position:fixed;bottom:0;left:0;right:0;z-index:9999;background:rgba(15,34,64,.97);backdrop-filter:blur(12px);border-top:1px solid rgba(255,255,255,.1);padding:16px 24px;display:flex;align-items:center;flex-wrap:wrap;gap:12px 20px;font-family:'DM Sans',sans-serif;box-shadow:0 -4px 24px rgba(0,0,0,.3);transition:transform .4s ease">
   <div style="flex:1;min-width:280px">
-    <p style="font-size:.78rem;color:rgba(255,255,255,.7);line-height:1.65;margin:0"><strong style="color:#fff;font-weight:600">We use cookies &amp; local storage</strong> for essential website functions (cart, account, session) and load third-party scripts (Tailwind CSS, Google Fonts) that may process your IP address. <a href="privacy-policy.html" style="color:#2BB5A5;text-decoration:underline">Privacy Policy</a></p>
+    <p style="font-size:.78rem;color:rgba(255,255,255,.7);line-height:1.65;margin:0"><strong style="color:#fff;font-weight:600">We use cookies &amp; local storage</strong> for essential website functions (cart, account, session) and load third-party scripts (Tailwind CSS, Google Fonts) that may process your IP address. <a href="/privacy-policy" style="color:#2BB5A5;text-decoration:underline">Privacy Policy</a></p>
   </div>
   <div style="display:flex;gap:8px;flex-shrink:0">
     <button onclick="setCookieChoice('declined')" style="padding:8px 16px;font-size:.78rem;font-weight:600;border-radius:7px;border:1px solid rgba(255,255,255,.2);background:none;color:rgba(255,255,255,.6);cursor:pointer;font-family:'DM Sans',sans-serif">Decline</button>
