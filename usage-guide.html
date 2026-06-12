@@ -97,8 +97,15 @@ h1,h2,h3,h4,h5,h6{font-family:'Outfit',sans-serif}
 .ug-hero-card h3{font-size:.9rem;font-weight:700;color:#fff;margin-bottom:4px}
 .ug-hero-card p{font-size:.76rem;color:rgba(255,255,255,.35);line-height:1.5}
 
+/* HERO LAYOUT */
+.ug-hero-layout{display:grid;grid-template-columns:1fr 340px;gap:40px;align-items:flex-end;padding-bottom:48px}
+.ug-hero-vial{text-align:center;padding-bottom:0}
+.ug-hero-vial img{height:280px;object-fit:contain;filter:drop-shadow(0 24px 60px rgba(0,0,0,.55));transform:rotate(6deg)}
+@media(max-width:860px){.ug-hero-layout{grid-template-columns:1fr}.ug-hero-vial{display:none}}
+
 /* STICKY TABS */
 .section-tabs{position:sticky;top:120px;z-index:90;background:#fff;border-bottom:2px solid var(--gray-100)}
+@media(max-width:640px){.section-tabs{top:60px}}
 .st-inner{max-width:1100px;margin:0 auto;padding:0 24px;display:flex;gap:0;overflow-x:auto;scrollbar-width:none}
 .st-inner::-webkit-scrollbar{display:none}
 .st-tab{display:flex;align-items:center;gap:7px;padding:15px 20px;font-size:.82rem;font-weight:600;color:var(--muted);border-bottom:2px solid transparent;margin-bottom:-2px;white-space:nowrap;transition:color .2s,border-color .2s;cursor:pointer;background:none;border-top:none;border-left:none;border-right:none;font-family:'DM Sans',sans-serif}
@@ -107,6 +114,7 @@ h1,h2,h3,h4,h5,h6{font-family:'Outfit',sans-serif}
 
 /* SHARED SECTION */
 .guide-section{padding:80px 24px;scroll-margin-top:186px}
+@media(max-width:640px){.guide-section{scroll-margin-top:120px}}
 .gs-inner{max-width:1100px;margin:0 auto}
 .gs-eyebrow{font-size:.7rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--teal);margin-bottom:10px}
 .gs-title{font-size:clamp(1.7rem,2.8vw,2.3rem);font-weight:800;letter-spacing:-.03em;color:var(--navy);margin-bottom:12px;line-height:1.1}
@@ -420,6 +428,7 @@ h1,h2,h3,h4,h5,h6{font-family:'Outfit',sans-serif}
       <a href="/shop">Shop</a>
       <a href="/wholesale">Wholesale</a>
       <a href="/usage-guide" class="active">Usage Guide</a>
+      <a href="/blog">Blog</a>
       <a href="/about">About Us</a>
       <a href="/contact">Contact Us</a>
     </div>
@@ -450,6 +459,7 @@ h1,h2,h3,h4,h5,h6{font-family:'Outfit',sans-serif}
   <a class="mm-link" href="/shop">Shop</a>
   <a class="mm-link" href="/wholesale">Wholesale</a>
   <a class="mm-link" href="/usage-guide">Usage Guide</a>
+  <a class="mm-link" href="/blog">Blog</a>
   <a class="mm-link" href="/about">About Us</a>
   <a class="mm-link" href="/contact">Contact Us</a>
 </div>
@@ -468,6 +478,53 @@ h1,h2,h3,h4,h5,h6{font-family:'Outfit',sans-serif}
   </div>
 </div>
 
+
+<!-- HERO -->
+<section class="ug-hero">
+  <div class="ug-hero-bg"></div>
+  <div class="ug-hero-grid-pat"></div>
+  <div class="ug-hero-inner">
+    <div class="ug-hero-layout">
+      <div class="ug-hero-text">
+        <div class="ug-hero-tag">
+          <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          Complete Research Protocol
+        </div>
+        <h1>The Researcher's <em>Complete Guide</em><br>to Peptide Handling</h1>
+        <p>Step-by-step protocols for receiving, reconstituting, dosing, and storing lyophilised research peptides — written for laboratory use.</p>
+      </div>
+      <div class="ug-hero-vial">
+        <img src="brand_assets/bpc-10mg.png" alt="Research peptide vial" loading="eager">
+      </div>
+    </div>
+    <div class="ug-hero-cards">
+      <a class="ug-hero-card" href="#receiving" onclick="event.preventDefault();document.getElementById('receiving').scrollIntoView({behavior:'smooth'})">
+        <div class="uhc-num">01</div>
+        <div class="uhc-icon"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg></div>
+        <h3>Receiving &amp; Handling</h3>
+        <p>Inspect, equilibrate, and handle correctly on arrival</p>
+      </a>
+      <a class="ug-hero-card" href="#reconstitution" onclick="event.preventDefault();document.getElementById('reconstitution').scrollIntoView({behavior:'smooth'})">
+        <div class="uhc-num">02</div>
+        <div class="uhc-icon"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M10 2v7.527a2 2 0 0 1-.211.896L4.72 20.55a1 1 0 0 0 .9 1.45h12.76a1 1 0 0 0 .9-1.45l-5.069-10.127A2 2 0 0 1 14 9.527V2"/><path d="M8.5 2h7"/></svg></div>
+        <h3>Reconstitution</h3>
+        <p>Solvent selection, preparation, and dissolution steps</p>
+      </a>
+      <a class="ug-hero-card" href="#storage" onclick="event.preventDefault();document.getElementById('storage').scrollIntoView({behavior:'smooth'})">
+        <div class="uhc-num">03</div>
+        <div class="uhc-icon"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M14 14.76V3.5a2.5 2.5 0 0 0-5 0v11.26a4.5 4.5 0 1 0 5 0z"/></svg></div>
+        <h3>Storage Conditions</h3>
+        <p>Short-term, long-term, and ultra-low temperature guidance</p>
+      </a>
+      <a class="ug-hero-card" href="#calculator" onclick="event.preventDefault();document.getElementById('calculator').scrollIntoView({behavior:'smooth'})">
+        <div class="uhc-num">04</div>
+        <div class="uhc-icon"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="4" y="2" width="16" height="20" rx="2"/><line x1="8" y1="6" x2="16" y2="6"/><line x1="8" y1="10" x2="16" y2="10"/><line x1="8" y1="14" x2="11" y2="14"/></svg></div>
+        <h3>Peptide Calculator</h3>
+        <p>Concentration and volume calculator for reconstitution</p>
+      </a>
+    </div>
+  </div>
+</section>
 
 <!-- STICKY TABS -->
 <div class="section-tabs" id="section-tabs">

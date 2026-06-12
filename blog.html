@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="brand_assets/clarix_logomark.png" type="image/png">
+<link rel="apple-touch-icon" href="brand_assets/clarix_logomark.png">
+<title>Peptide Research Blog | Clarix Peptides UK</title>
+<meta name="description" content="Research-focused articles on peptides including BPC-157, TB-500, GHK-Cu, Melanotan II and more. Written for researchers and scientists studying peptide compounds.">
+<meta name="keywords" content="peptide research blog, BPC-157 research, TB-500 guide, GHK-Cu copper peptide, research peptides UK, peptide science">
+<meta property="og:title" content="Peptide Research Blog | Clarix Peptides UK">
+<meta property="og:description" content="In-depth research articles on peptide compounds. BPC-157, TB-500, GHK-Cu, Melanotan II and more.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.clarixpeptides.com/blog">
+<meta property="og:image" content="https://www.clarixpeptides.com/brand_assets/clarix_logo_primary.png">
+<link rel="canonical" href="https://www.clarixpeptides.com/blog">
+<meta name="robots" content="index, follow">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Blog","url":"https://www.clarixpeptides.com/blog","name":"Clarix Peptides Research Blog","description":"Research-focused articles on peptide compounds for UK researchers.","publisher":{"@type":"Organization","name":"Clarix Peptides","url":"https://www.clarixpeptides.com","logo":{"@type":"ImageObject","url":"https://www.clarixpeptides.com/brand_assets/clarix_logo_primary.png"}}}</script>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#0F2240;--navy-mid:#1A3560;--teal:#2BB5A5;--teal-dark:#229E8F;--teal-light:#3DCFBF;--white:#FFFFFF;--off-white:#F7FAFC;--gray-50:#F0F4FA;--gray-100:#E1E8F5;--muted:#6B7A99}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'DM Sans',sans-serif;background:#fff;color:var(--navy);overflow-x:hidden}
+h1,h2,h3,h4,h5,h6{font-family:'Outfit',sans-serif}
+
+#disc-bar{background:var(--navy);color:rgba(255,255,255,.8);font-size:.7rem;letter-spacing:.07em;text-transform:uppercase;padding:9px 48px 9px 20px;text-align:center;position:relative;line-height:1.4}
+#disc-bar button{position:absolute;right:14px;top:50%;transform:translateY(-50%);background:none;border:none;color:rgba(255,255,255,.45);cursor:pointer;font-size:1.1rem;transition:color .2s}
+#disc-bar button:hover{color:#fff}
+#main-nav{position:sticky;top:0;z-index:100;background:#fff;border-bottom:1px solid var(--gray-100);transition:box-shadow .3s}
+#main-nav.scrolled{box-shadow:0 4px 24px rgba(15,34,64,.08)}
+.nav-inner{max-width:1400px;margin:0 auto;padding:0 24px;display:flex;align-items:center;gap:24px;height:120px}
+.nav-logo{flex-shrink:0}
+.nav-logo img{height:110px;width:auto}
+.nav-links{display:flex;align-items:center;gap:2px;flex:1;justify-content:center}
+.nav-links a{font-size:.85rem;font-weight:500;color:var(--navy);text-decoration:none;padding:7px 13px;border-radius:7px;transition:color .2s,background .2s;white-space:nowrap}
+.nav-links a:hover,.nav-links a.active{color:var(--teal);background:rgba(43,181,165,.07)}
+.nav-actions{display:flex;align-items:center;gap:2px;flex-shrink:0}
+.nib{width:40px;height:40px;border-radius:8px;border:none;background:none;cursor:pointer;display:flex;align-items:center;justify-content:center;color:var(--navy);position:relative;transition:color .2s,background .2s}
+.nib:hover{color:var(--teal);background:rgba(43,181,165,.07)}
+#hamburger{display:none}
+@media(max-width:900px){.nav-links{display:none}#hamburger{display:flex}}
+
+#mobile-menu{position:fixed;inset:0;z-index:200;background:#fff;padding:76px 28px 28px;transform:translateX(-100%);transition:transform .3s ease}
+#mobile-menu.open{transform:translateX(0)}
+.mm-close{position:absolute;top:18px;right:18px;width:42px;height:42px;border-radius:10px;border:1px solid var(--gray-100);background:none;cursor:pointer;display:flex;align-items:center;justify-content:center;color:var(--navy)}
+.mm-link{display:block;padding:15px 0;font-size:1.2rem;font-weight:600;color:var(--navy);text-decoration:none;border-bottom:1px solid var(--gray-100);transition:color .15s}
+.mm-link:hover{color:var(--teal)}
+
+/* BLOG HERO */
+.blog-hero{background:var(--navy);padding:80px 24px 72px;position:relative;overflow:hidden}
+.blog-hero-bg{position:absolute;inset:0;background:radial-gradient(ellipse 60% 80% at 80% 50%,rgba(43,181,165,.12) 0%,transparent 60%),radial-gradient(ellipse 40% 50% at 10% 80%,rgba(43,181,165,.07) 0%,transparent 55%);pointer-events:none}
+.blog-hero-inner{max-width:1100px;margin:0 auto;position:relative;z-index:1}
+.blog-hero-tag{display:inline-flex;align-items:center;gap:8px;background:rgba(43,181,165,.15);border:1px solid rgba(43,181,165,.3);border-radius:20px;padding:7px 16px;font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--teal);margin-bottom:20px}
+.blog-hero h1{font-size:clamp(2rem,4vw,3.2rem);font-weight:800;color:#fff;letter-spacing:-.03em;line-height:1.1;margin-bottom:16px}
+.blog-hero h1 em{font-style:normal;color:var(--teal)}
+.blog-hero p{font-size:.95rem;color:rgba(255,255,255,.5);line-height:1.78;max-width:520px}
+
+/* BLOG GRID */
+.blog-section{padding:80px 24px}
+.blog-inner{max-width:1100px;margin:0 auto}
+.blog-featured{display:grid;grid-template-columns:1fr 1fr;gap:32px;margin-bottom:56px}
+@media(max-width:760px){.blog-featured{grid-template-columns:1fr}}
+.blog-feat-img{border-radius:20px;overflow:hidden;background:var(--navy);height:280px;display:flex;align-items:center;justify-content:center;position:relative}
+.blog-feat-img img{height:200px;object-fit:contain;filter:drop-shadow(0 10px 30px rgba(0,0,0,.4))}
+.blog-feat-img .feat-tag{position:absolute;top:16px;left:16px;background:var(--teal);color:#fff;font-size:.68rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:5px 12px;border-radius:20px}
+.blog-feat-body{display:flex;flex-direction:column;justify-content:center}
+.post-meta{font-size:.75rem;color:var(--muted);font-weight:500;margin-bottom:12px;display:flex;align-items:center;gap:10px}
+.post-meta span{display:flex;align-items:center;gap:5px}
+.blog-feat-body h2{font-size:clamp(1.4rem,2.5vw,2rem);font-weight:800;color:var(--navy);line-height:1.2;letter-spacing:-.02em;margin-bottom:14px}
+.blog-feat-body p{font-size:.9rem;color:var(--muted);line-height:1.78;margin-bottom:24px}
+.read-btn{display:inline-flex;align-items:center;gap:8px;background:var(--teal);color:#fff;text-decoration:none;font-weight:700;font-size:.85rem;padding:12px 22px;border-radius:10px;transition:background .2s,transform .15s}
+.read-btn:hover{background:var(--teal-dark);transform:translateY(-1px)}
+
+.blog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+@media(max-width:900px){.blog-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.blog-grid{grid-template-columns:1fr}}
+.blog-card{border:1.5px solid var(--gray-100);border-radius:16px;overflow:hidden;transition:box-shadow .25s,transform .2s,border-color .2s;text-decoration:none;display:block}
+.blog-card:hover{box-shadow:0 12px 40px rgba(15,34,64,.1);transform:translateY(-3px);border-color:rgba(43,181,165,.3)}
+.bc-img{background:var(--navy);height:160px;display:flex;align-items:center;justify-content:center;position:relative}
+.bc-img img{height:110px;object-fit:contain;filter:drop-shadow(0 8px 20px rgba(0,0,0,.4))}
+.bc-img .bc-tag{position:absolute;bottom:12px;left:12px;background:rgba(43,181,165,.9);color:#fff;font-size:.65rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:4px 10px;border-radius:12px}
+.bc-body{padding:20px}
+.bc-date{font-size:.72rem;color:var(--muted);font-weight:500;margin-bottom:8px}
+.bc-body h3{font-size:1rem;font-weight:700;color:var(--navy);line-height:1.35;margin-bottom:8px}
+.bc-body p{font-size:.82rem;color:var(--muted);line-height:1.7;margin-bottom:14px}
+.bc-link{font-size:.8rem;font-weight:700;color:var(--teal);display:flex;align-items:center;gap:5px}
+
+/* FOOTER */
+footer{background:var(--navy);color:rgba(255,255,255,.6);padding:56px 24px 24px}
+.footer-grid{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:40px;padding-bottom:40px;border-bottom:1px solid rgba(255,255,255,.08)}
+@media(max-width:860px){.footer-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:480px){.footer-grid{grid-template-columns:1fr}}
+.fg1{grid-column:span 1}
+.fb-brand img{height:44px;margin-bottom:16px}
+.fb-brand p{font-size:.8rem;line-height:1.75;color:rgba(255,255,255,.45)}
+.f-col h4{font-family:'Outfit',sans-serif;font-size:.72rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.35);margin-bottom:14px}
+.f-col a{display:block;font-size:.82rem;color:rgba(255,255,255,.55);text-decoration:none;margin-bottom:8px;transition:color .15s}
+.f-col a:hover{color:var(--teal)}
+.footer-bottom{max-width:1100px;margin:0 auto;padding-top:20px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px}
+.f-copy{font-size:.75rem;color:rgba(255,255,255,.3)}
+
+@media(max-width:640px){.nav-inner{height:60px;padding:0 14px}.nav-logo img{height:46px}.nib{width:34px;height:34px}#hamburger{display:flex}}
+</style>
+</head>
+<body>
+
+<div id="disc-bar">
+  PRODUCTS SOLD ON CLARIXPEPTIDES.COM ARE FOR RESEARCH PURPOSES ONLY AND ARE NOT FOR HUMAN OR VETERINARY USE.
+  <button onclick="this.parentElement.style.display='none'" aria-label="Dismiss">&#215;</button>
+</div>
+
+<nav id="main-nav">
+  <div class="nav-inner">
+    <a class="nav-logo" href="/"><img src="brand_assets/clarix_logo_primary.png" alt="Clarix Peptides"></a>
+    <div class="nav-links">
+      <a href="/">Home</a>
+      <a href="/shop">Shop</a>
+      <a href="/wholesale">Wholesale</a>
+      <a href="/usage-guide">Usage Guide</a>
+      <a href="/blog" class="active">Blog</a>
+      <a href="/about">About Us</a>
+      <a href="/contact">Contact Us</a>
+    </div>
+    <div class="nav-actions">
+      <button class="nib" id="hamburger" aria-label="Menu">
+        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<div id="mobile-menu">
+  <button class="mm-close" id="mm-close">
+    <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+  </button>
+  <a class="mm-link" href="/">Home</a>
+  <a class="mm-link" href="/shop">Shop</a>
+  <a class="mm-link" href="/wholesale">Wholesale</a>
+  <a class="mm-link" href="/usage-guide">Usage Guide</a>
+  <a class="mm-link" href="/blog">Blog</a>
+  <a class="mm-link" href="/about">About Us</a>
+  <a class="mm-link" href="/contact">Contact Us</a>
+</div>
+
+<section class="blog-hero">
+  <div class="blog-hero-bg"></div>
+  <div class="blog-hero-inner">
+    <div class="blog-hero-tag">
+      <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+      Peptide Research Blog
+    </div>
+    <h1>Research Notes from the <em>Lab Bench</em></h1>
+    <p>In-depth overviews of peptide compounds, handling protocols, and current research. Written for researchers, not marketing departments.</p>
+  </div>
+</section>
+
+<section class="blog-section">
+  <div class="blog-inner">
+
+    <!-- FEATURED POST -->
+    <div class="blog-featured">
+      <div class="blog-feat-img">
+        <span class="feat-tag">Featured</span>
+        <img src="brand_assets/bpc-10mg.png" alt="BPC-157 research peptide">
+      </div>
+      <div class="blog-feat-body">
+        <div class="post-meta">
+          <span>
+            <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+            June 2026
+          </span>
+          <span>
+            <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12,6 12,12 16,14"/></svg>
+            8 min read
+          </span>
+        </div>
+        <h2>BPC-157: A Comprehensive Research Overview</h2>
+        <p>Body Protection Compound 157 is one of the most extensively researched synthetic peptides available today. This overview covers the compound's structure, primary research areas, and what researchers should know before working with it.</p>
+        <a class="read-btn" href="/blog/bpc-157-research-guide">
+          Read Article
+          <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <!-- ARTICLE GRID -->
+    <div class="blog-grid">
+
+      <a class="blog-card" href="/blog/tb-500-research-guide">
+        <div class="bc-img">
+          <img src="brand_assets/tb-5mg.png" alt="TB-500 Thymosin Beta-4">
+          <span class="bc-tag">Research Guide</span>
+        </div>
+        <div class="bc-body">
+          <div class="bc-date">June 2026 &bull; 7 min read</div>
+          <h3>TB-500: Thymosin Beta-4 Research and Tissue Repair</h3>
+          <p>A detailed look at TB-500 including its mechanism of action, actin-binding properties, and the research areas where it has received the most attention.</p>
+          <div class="bc-link">Read Article <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+        </div>
+      </a>
+
+      <a class="blog-card" href="/blog/ghk-cu-copper-peptide">
+        <div class="bc-img">
+          <img src="brand_assets/ghk-50mg.png" alt="GHK-Cu copper peptide">
+          <span class="bc-tag">Research Guide</span>
+        </div>
+        <div class="bc-body">
+          <div class="bc-date">June 2026 &bull; 6 min read</div>
+          <h3>GHK-Cu Copper Peptide: Tissue Remodelling Research</h3>
+          <p>GHK-Cu is a naturally occurring copper complex found in human plasma. This article covers what the research says about its role in collagen synthesis and cellular signalling.</p>
+          <div class="bc-link">Read Article <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+        </div>
+      </a>
+
+      <a class="blog-card" href="/blog/melanotan-ii-research">
+        <div class="bc-img">
+          <img src="brand_assets/mt-10mg.png" alt="Melanotan II research peptide">
+          <span class="bc-tag">Research Guide</span>
+        </div>
+        <div class="bc-body">
+          <div class="bc-date">June 2026 &bull; 6 min read</div>
+          <h3>Melanotan II: Understanding Melanocortin Research</h3>
+          <p>Melanotan II is a synthetic analogue of alpha-MSH with activity across the melanocortin receptor family. Here is what the science looks like and how researchers approach it.</p>
+          <div class="bc-link">Read Article <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+        </div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-grid">
+    <div class="fg1">
+      <div class="fb-brand">
+        <img src="brand_assets/clarix_logo_reverse.png" alt="Clarix Peptides">
+        <p>Premium research peptides supplied to licensed researchers across the UK. All products for research purposes only.</p>
+      </div>
+    </div>
+    <div class="f-col">
+      <h4>Shop</h4>
+      <a href="/shop">All Peptides</a>
+      <a href="/product?id=11">BPC-157</a>
+      <a href="/product?id=13">TB-500</a>
+      <a href="/product?id=9">GHK-Cu</a>
+      <a href="/product?id=15">Melanotan II</a>
+    </div>
+    <div class="f-col">
+      <h4>Information</h4>
+      <a href="/usage-guide">Usage Guide</a>
+      <a href="/blog">Research Blog</a>
+      <a href="/about">About Us</a>
+      <a href="/wholesale">Wholesale</a>
+      <a href="/contact">Contact</a>
+    </div>
+    <div class="f-col">
+      <h4>Legal</h4>
+      <a href="/privacy-policy">Privacy Policy</a>
+      <a href="/terms">Terms &amp; Conditions</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p class="f-copy">© 2026 Clarix Research Ltd. All research peptides are sold for laboratory use only.</p>
+  </div>
+</footer>
+
+<script>
+window.addEventListener('scroll',()=>document.getElementById('main-nav').classList.toggle('scrolled',window.scrollY>10));
+document.getElementById('hamburger').addEventListener('click',()=>document.getElementById('mobile-menu').classList.add('open'));
+document.getElementById('mm-close').addEventListener('click',()=>document.getElementById('mobile-menu').classList.remove('open'));
+</script>
+</body>
+</html>

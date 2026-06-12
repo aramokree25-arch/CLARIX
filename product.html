@@ -14,6 +14,7 @@
 <meta property="og:description" id="meta-og-desc" content="High-purity research peptide from Clarix Peptides.">
 <meta property="og:image" id="meta-og-image" content="https://www.clarixpeptides.com/brand_assets/clarix_logo_primary.png">
 <script id="product-schema" type="application/ld+json">{}</script>
+<script id="product-faq" type="application/ld+json">{}</script>
 <script src="https://cdn.tailwindcss.com"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
@@ -385,6 +386,7 @@ h1,h2,h3,h4,h5,h6{font-family:'Outfit',sans-serif}
       <a href="/shop" class="active">Shop</a>
       <a href="/wholesale">Wholesale</a>
       <a href="/usage-guide">Usage Guide</a>
+      <a href="/blog">Blog</a>
       <a href="/about">About Us</a>
       <a href="/contact">Contact Us</a>
     </div>
@@ -415,6 +417,7 @@ h1,h2,h3,h4,h5,h6{font-family:'Outfit',sans-serif}
   <a class="mm-link" href="/shop">Shop</a>
   <a class="mm-link" href="/wholesale">Wholesale</a>
   <a class="mm-link" href="/usage-guide">Usage Guide</a>
+  <a class="mm-link" href="/blog">Blog</a>
   <a class="mm-link" href="/about">About Us</a>
   <a class="mm-link" href="/contact">Contact Us</a>
 </div>
@@ -745,6 +748,17 @@ function updateSEO(p) {
   document.getElementById('meta-og-desc').content = desc;
   document.getElementById('meta-desc').content = desc;
   if (p.img) document.getElementById('meta-og-image').content = `https://www.clarixpeptides.com${p.img.startsWith('/') ? '' : '/'}${p.img}`;
+  document.getElementById('product-faq').textContent = JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {"@type":"Question","name":`What is ${p.name}?`,"acceptedAnswer":{"@type":"Answer","text":`${p.name} is a research peptide supplied as a lyophilised solid by Clarix Peptides. ${p.desc || ''} For in-vitro laboratory research use only.`}},
+      {"@type":"Question","name":`Where can I buy ${p.name} in the UK?`,"acceptedAnswer":{"@type":"Answer","text":`${p.name} is available from Clarix Peptides UK in ${p.strength} format. HPLC-verified at 99%+ purity with a Certificate of Analysis from an accredited UK laboratory. Fast UK dispatch.`}},
+      {"@type":"Question","name":`What purity is Clarix Peptides' ${p.name}?`,"acceptedAnswer":{"@type":"Answer","text":`Clarix Peptides supplies ${p.name} at greater than 99% purity, independently verified by HPLC testing at an accredited UK laboratory. A Certificate of Analysis is available for download with every order.`}},
+      {"@type":"Question","name":`How should ${p.name} be stored?`,"acceptedAnswer":{"@type":"Answer","text":`Lyophilised ${p.name} should be stored at minus 20 degrees Celsius for long-term preservation. For short-term active use, storage at 2 to 8 degrees Celsius in a sealed container is appropriate. Once reconstituted, store at 4 degrees and use within 28 to 30 days.`}},
+      {"@type":"Question","name":`Does ${p.name} come with a Certificate of Analysis?`,"acceptedAnswer":{"@type":"Answer","text":`Yes. Every batch of ${p.name} from Clarix Peptides is accompanied by a Certificate of Analysis from an independent accredited UK laboratory, confirming purity, identity, and peptide weight accuracy.`}}
+    ]
+  });
   document.getElementById('product-schema').textContent = JSON.stringify({
     "@context": "https://schema.org/",
     "@type": "Product",

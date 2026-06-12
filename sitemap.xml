@@ -20,6 +20,12 @@
   <url><loc>https://www.clarixpeptides.com/product?id=16</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
 
   <url><loc>https://www.clarixpeptides.com/usage-guide</loc><changefreq>monthly</changefreq><priority>0.75</priority></url>
+
+  <url><loc>https://www.clarixpeptides.com/blog</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.clarixpeptides.com/blog/bpc-157-research-guide</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.clarixpeptides.com/blog/tb-500-research-guide</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.clarixpeptides.com/blog/ghk-cu-copper-peptide</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.clarixpeptides.com/blog/melanotan-ii-research</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.clarixpeptides.com/about</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://www.clarixpeptides.com/wholesale</loc><changefreq>monthly</changefreq><priority>0.65</priority></url>
   <url><loc>https://www.clarixpeptides.com/contact</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
