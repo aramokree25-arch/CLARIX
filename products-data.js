@@ -1,6 +1,6 @@
 // Clarix Peptides — shared product catalogue data
 const PRODUCTS = [
-  {id:1,  name:"Retatrutide",       strength:"10mg",  price:69.99, img:"brand_assets/ret-20mg.png",      slug:"retatrutide-10mg",   badge:"Bestseller",
+  {id:1,  name:"Retatrutide",       strength:"10mg",  price:47.99, img:"brand_assets/ret-20mg.png",      slug:"retatrutide-10mg",   badge:"Bestseller",
    desc:"Tri-receptor GIP/GLP-1/glucagon agonist for advanced metabolic research.",
    descFull:"Retatrutide is a novel tri-agonist research peptide that simultaneously targets the GIP (glucose-dependent insulinotropic polypeptide), GLP-1 (glucagon-like peptide-1), and glucagon receptors. This unique triple-receptor activity offers researchers unparalleled insight into multi-pathway metabolic signalling, energy expenditure regulation, adipose tissue biology, and glucose homeostasis. Widely studied as one of the most potent investigational metabolic compounds currently available. Supplied as a pharmaceutical-grade lyophilised powder for in-vitro laboratory research use only.",
    molecularFormula:"Proprietary peptide sequence — data sheet available on request",
@@ -87,7 +87,7 @@ const PRODUCTS = [
 
 // Grouped compounds for shop grid
 const COMPOUNDS = [
-  {slug:"retatrutide",  name:"Retatrutide",          badge:"Bestseller", variants:[{id:1,strength:"10mg",price:69.99,img:"brand_assets/ret-20mg.png"},{id:2,strength:"20mg",price:94.99,img:"brand_assets/ret-20mg.png"}]},
+  {slug:"retatrutide",  name:"Retatrutide",          badge:"Bestseller", variants:[{id:1,strength:"10mg",price:47.99,img:"brand_assets/ret-20mg.png"},{id:2,strength:"20mg",price:94.99,img:"brand_assets/ret-20mg.png"}]},
   {slug:"tesamorelin",  name:"Tesamorelin",           badge:null,         variants:[{id:5,strength:"2mg",price:35.99,img:"brand_assets/tes-5mg.png"},{id:6,strength:"5mg",price:49.99,img:"brand_assets/tes-5mg.png"}]},
   {slug:"cjc-1295",     name:"CJC-1295 (No DAC)",    badge:null,         variants:[{id:7,strength:"2mg",price:21.99,img:"brand_assets/cjc-5mg.png"},{id:8,strength:"5mg",price:34.99,img:"brand_assets/cjc-5mg.png"}]},
   {slug:"ghk-cu",       name:"GHK-Cu",                badge:null,         variants:[{id:9,strength:"50mg",price:24.99,img:"brand_assets/ghk-50mg.png"},{id:10,strength:"100mg",price:42.99,img:"brand_assets/ghk-50mg.png"}]},
